@@ -1,0 +1,11 @@
+t_gap =  5
+is_show_random = 0
+is_live = 0
+# about the color
+cout_down_color = color_tb["purple"]
+show_time_color = color_tb['black']
+# the full screen pixel
+full_sc_width = 1920
+full_sc_height = 1080
+count_down_is_in_concentrate_mode = False
+play_video_path = "./beauty/scenery.mp4"

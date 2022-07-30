@@ -1,0 +1,15 @@
+0. h: show the help information;
+1. i/I: into the interview mode to show the question. I: open the setting file to set!
+2. s: begin to record, type s again to renew record;
+3. e: end to record, and save video;
+4. c: cancel to record video;
+5. x: switch, camera -> video, or video -> camera
+6. t: switch, live -> time, or time -> live;
+7. q: quit the program!
+8. n: switch the camera number(but test fail, don't know why)!
+9. ":" : just like the vim's :, open the configure file, modify;
+10. p: renew the question's json file; txt -> js
+11. 0-9: countdown time:
+    ## s: stop the countdown;
+    ## c: continue to countdown.
+    ## x: switch, cover the weixin or not!

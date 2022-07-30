@@ -1,0 +1,32 @@
+42. 接雨水#https://leetcode.cn/problems/trapping-rain-water
+84. 柱状图中最大的矩形#https://leetcode.cn/problems/largest-rectangle-in-histogram
+739. 每日温度#https://leetcode.cn/problems/daily-temperatures
+402. 移掉 K 位数字#https://leetcode.cn/problems/remove-k-digits
+85. 最大矩形#https://leetcode.cn/problems/maximal-rectangle
+581. 最短无序连续子数组#https://leetcode.cn/problems/shortest-unsorted-continuous-subarray
+剑指 Offer 33. 二叉搜索树的后序遍历序列#https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof
+1996. 游戏中弱角色的数量#https://leetcode.cn/problems/the-number-of-weak-characters-in-the-game
+面试题 17.21. 直方图的水量#https://leetcode.cn/problems/volume-of-histogram-lcci
+503. 下一个更大元素 II#https://leetcode.cn/problems/next-greater-element-ii
+1574. 删除最短的子数组使剩余数组有序#https://leetcode.cn/problems/shortest-subarray-to-be-removed-to-make-array-sorted
+面试题 16.16. 部分排序#https://leetcode.cn/problems/sub-sort-lcci
+316. 去除重复字母#https://leetcode.cn/problems/remove-duplicate-letters
+2104. 子数组范围和#https://leetcode.cn/problems/sum-of-subarray-ranges
+496. 下一个更大元素 I#https://leetcode.cn/problems/next-greater-element-i
+907. 子数组的最小值之和#https://leetcode.cn/problems/sum-of-subarray-minimums
+654. 最大二叉树#https://leetcode.cn/problems/maximum-binary-tree
+321. 拼接最大数#https://leetcode.cn/problems/create-maximum-number
+面试题 03.05. 栈排序#https://leetcode.cn/problems/sort-of-stacks-lcci
+901. 股票价格跨度#https://leetcode.cn/problems/online-stock-span
+1124. 表现良好的最长时间段#https://leetcode.cn/problems/longest-well-performing-interval
+1673. 找出最具竞争力的子序列#https://leetcode.cn/problems/find-the-most-competitive-subsequence
+剑指 Offer II 039. 直方图最大矩形面积#https://leetcode.cn/problems/0ynMMM
+2289. 使数组按非递减顺序排列#https://leetcode.cn/problems/steps-to-make-array-non-decreasing
+1019. 链表中的下一个更大节点#https://leetcode.cn/problems/next-greater-node-in-linked-list
+456. 132 模式#https://leetcode.cn/problems/132-pattern
+1008. 前序遍历构造二叉搜索树#https://leetcode.cn/problems/construct-binary-search-tree-from-preorder-traversal
+1081. 不同字符的最小子序列#https://leetcode.cn/problems/smallest-subsequence-of-distinct-characters
+1063. 有效子数组的数目#https://leetcode.cn/problems/number-of-valid-subarrays
+
+
+

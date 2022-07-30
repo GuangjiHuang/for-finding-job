@@ -1,0 +1,38 @@
+------- help information -------
+1. label_info
+1) left mouse double click: open the questions file
+
+2. label_question
+1) left mouse double click: if answer files exists, go to it, else create it and then open it!
+2) mousewheel double click: delete the question in the js_var!
+3) right mouse double click: save the question to the review topic!
+4) mouse wheel: up: equal to the button previous; down: equal to the button next!
+
+3. the button:
+1) ENT: add the occur and renew the score!
+2) <|: previous question.
+3) |>: next question.
+4) R|>: random next question.
+5) AN: go to answer file if there is answer, otherwise add the * before the question!
+6) RV: review, change to the review topic!
+7) H : help button.
+8) RS: reset, after you choose the topic combox, you can push the reset button.
+9) RL: reload, reload the questions into the js_var, renew the json file!
+
+4. combox
+1) SC: the score, you can set the question's score that means how deeply you master the question!
+2) ot: occur threshold, occur num less equal to this value will show!
+3) st: score threshold, questions with score the less equal to this value will show!
+
+5. time label: to show the time you use, it will reset when you see the next question!
+1) left single click: switch the stop and the usage time!
+2) right single click: change to show the clock time!
+3) mouse wheel click: pop the message dialog to get the minute that you want to stop the time!
+4) mouse wheel(just in the stop_time mode make sense): up:  +5mins; down: -5mins;
+
+6. topic label:
+1) left single click is equal to press the RS button!
+2) mouse wheel double click: pop the simple dialog that you can input the string, then the string will be
+executed as the python statement. for example: self.js_var.pop("xxxx") or self.js_var["xxx"].pop("hhh").
+if the command has the "js_var" key words, then the method self.saveJsvar() will be executed after running
+the command!

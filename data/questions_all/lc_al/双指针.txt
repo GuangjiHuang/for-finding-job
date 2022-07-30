@@ -1,0 +1,50 @@
+# 双指针 #
+42. 接雨水#https://leetcode.cn/problems/trapping-rain-water
+15. 三数之和#https://leetcode.cn/problems/3sum
+11. 盛最多水的容器#https://leetcode.cn/problems/container-with-most-water
+26. 删除有序数组中的重复项#https://leetcode.cn/problems/remove-duplicates-from-sorted-array
+31. 下一个序列#https://leetcode.cn/problems/next-permutation
+88. 合并两个有序数组#https://leetcode.cn/problems/merge-sorted-array
+16. 最接近的三数之和#https://leetcode.cn/problems/3sum-closest
+27. 移除元素#https://leetcode.cn/problems/remove-element
+143. 重排链表#https://leetcode.cn/problems/reorder-list
+剑指offer 06. 从尾到头打印链表#https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof
+167. 两数之和II - 输入有序数组#https://leetcode.cn/problems/two-sum-ii-input-array-is-sorted
+567. 字符串的排列#https://leetcode.cn/problems/permutation-in-string
+283. 移动零#https://leetcode.cn/problems/move-zeroes
+189. 轮转数组#https://leetcode.cn/problems/rotate-array
+18. 四数之和#https://leetcode.cn/problems/4sum
+28. 实现strSt（）#https://leetcode.cn/problems/implement-strstr
+977. 有序数组的平方#https://leetcode.cn/problems/squares-of-a-sorted-array
+剑指offer 22.链表中倒数第k个节点#https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof
+763. 划分字母区间#https://leetcode.cn/problems/partition-labels
+165.比较版本号#https://leetcode.cn/problems/compare-version-numbers
+349. 两个数组的交集#https://leetcode.cn/problems/intersection-of-two-arrays
+19. 删除链表倒数第N个节点#https://leetcode.cn/problems/remove-nth-node-from-end-of-list
+202. 快乐数#https://leetcode.cn/problems/happy-number
+面试题01.05 一次编辑#https://leetcode.cn/problems/one-away-lcci
+82. 排序链表中的重复元素II#https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii
+148. 排序链表#https://leetcode.cn/problems/sort-list
+141. 环形链表#https://leetcode.cn/problems/linked-list-cycle
+838. 推多米诺#https://leetcode.cn/problems/push-dominoes
+876. 链表的中间结点#https://leetcode.cn/problems/middle-of-the-linked-list
+面试题01.06. 字符串压缩#https://leetcode.cn/problems/compress-string-lcci
+75. 颜色分类#https://leetcode.cn/problems/sort-colors
+917. 仅仅反转字母#https://leetcode.cn/problems/reverse-only-letters
+142. 环形链表II#https://leetcode.cn/problems/linked-list-cycle-ii
+557. 反转字符串中的单词II#https://leetcode.cn/problems/reverse-words-in-a-string-iii
+234. 回文链表#https://leetcode.cn/problems/palindrome-linked-list
+253. 会议室II#https://leetcode.cn/problems/meeting-rooms-ii
+541. 反转字符串II#https://leetcode.cn/problems/reverse-string-ii
+剑指 Offer 21. 调整数组顺序使奇数位于偶数前面#https://leetcode.cn/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof
+905. 按奇偶排序数组#https://leetcode.cn/problems/sort-array-by-parity
+160. 相交链表#https://leetcode.cn/problems/intersection-of-two-linked-lists
+344. 反转字符串#https://leetcode.cn/problems/reverse-string
+面试题 10.01. 合并排序的数组#https://leetcode.cn/problems/sorted-merge-lcci
+969. 煎饼排序#https://leetcode.cn/problems/pancake-sorting
+1332. 删除回文子序列#https://leetcode.cn/problems/remove-palindromic-subsequences
+151. 最短无序连续子数组#https://leetcode.cn/problems/reverse-words-in-a-string
+剑指offer57-II 和为s的连续正#https://leetcode.cn/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof
+剑指offer58-II.左旋转字符串#https://leetcode.cn/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof
+86. 分隔链表# https://leetcode.cn/problems/partition-list
+

@@ -1,0 +1,56 @@
+2. 两数相加#https://leetcode.cn/problems/add-two-numbers
+146. LRU 缓存#https://leetcode.cn/problems/lru-cache
+21. 合并两个有序链表#https://leetcode.cn/problems/merge-two-sorted-lists
+剑指 Offer 24. 反转链表#https://leetcode.cn/problems/fan-zhuan-lian-biao-lcof
+25. K 个一组翻转链表#https://leetcode.cn/problems/reverse-nodes-in-k-group
+206. 反转链表#https://leetcode.cn/problems/reverse-linked-list
+剑指 Offer 22. 链表中倒数第k个节点#https://leetcode.cn/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof
+92. 反转链表 II#https://leetcode.cn/problems/reverse-linked-list-ii
+143. 重排链表#https://leetcode.cn/problems/reorder-list
+23. 合并K个升序链表#https://leetcode.cn/problems/merge-k-sorted-lists
+剑指 Offer 06. 从尾到头打印链表#https://leetcode.cn/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof
+24. 两两交换链表中的节点#https://leetcode.cn/problems/swap-nodes-in-pairs
+707. 设计链表#https://leetcode.cn/problems/design-linked-list
+82. 删除排序链表中的重复元素 II#https://leetcode.cn/problems/remove-duplicates-from-sorted-list-ii
+141. 环形链表#https://leetcode.cn/problems/linked-list-cycle
+19. 删除链表的倒数第 N 个结点#https://leetcode.cn/problems/remove-nth-node-from-end-of-list
+剑指 Offer 36. 二叉搜索树与双向链表#https://leetcode.cn/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof
+876. 链表的中间结点#https://leetcode.cn/problems/middle-of-the-linked-list
+138. 复制带随机指针的链表#https://leetcode.cn/problems/copy-list-with-random-pointer
+剑指 Offer 25. 合并两个排序的链表#https://leetcode.cn/problems/he-bing-liang-ge-pai-xu-de-lian-biao-lcof
+83. 删除排序链表中的重复元素#https://leetcode.cn/problems/remove-duplicates-from-sorted-list
+234. 回文链表#https://leetcode.cn/problems/palindrome-linked-list
+148. 排序链表#https://leetcode.cn/problems/sort-list
+203. 移除链表元素#https://leetcode.cn/problems/remove-linked-list-elements
+86. 分隔链表#https://leetcode.cn/problems/partition-list
+142. 环形链表 II#https://leetcode.cn/problems/linked-list-cycle-ii
+460. LFU 缓存#https://leetcode.cn/problems/lfu-cache
+160. 相交链表#https://leetcode.cn/problems/intersection-of-two-linked-lists
+109. 有序链表转换二叉搜索树#https://leetcode.cn/problems/convert-sorted-list-to-binary-search-tree
+剑指 Offer 35. 复杂链表的复制#https://leetcode.cn/problems/fu-za-lian-biao-de-fu-zhi-lcof
+面试题 02.05. 链表求和#https://leetcode.cn/problems/sum-lists-lcci
+面试题 16.25. LRU 缓存#https://leetcode.cn/problems/lru-cache-lcci
+剑指 Offer II 024. 反转链表#https://leetcode.cn/problems/UHnkqh
+328. 奇偶链表#https://leetcode.cn/problems/odd-even-linked-list
+面试题 02.07. 链表相交#https://leetcode.cn/problems/intersection-of-two-linked-lists-lcci
+61. 旋转链表#https://leetcode.cn/problems/rotate-list
+面试题 02.03. 删除中间节点#https://leetcode.cn/problems/delete-middle-node-lcci
+116. 填充每个节点的下一个右侧节点指针#https://leetcode.cn/problems/populating-next-right-pointers-in-each-node
+剑指 Offer II 031. 最近最少使用缓存#https://leetcode.cn/problems/OrIXps
+114. 二叉树展开为链表#https://leetcode.cn/problems/flatten-binary-tree-to-linked-list
+剑指 Offer 18. 删除链表的节点#https://leetcode.cn/problems/shan-chu-lian-biao-de-jie-dian-lcof
+剑指 Offer II 077. 链表排序#https://leetcode.cn/problems/7WHec2
+622. 设计循环队列#https://leetcode.cn/problems/design-circular-queue
+705. 设计哈希集合#https://leetcode.cn/problems/design-hashset
+面试题 02.01. 移除重复节点#https://leetcode.cn/problems/remove-duplicate-node-lcci
+面试题 02.02. 返回倒数第 k 个节点#https://leetcode.cn/problems/kth-node-from-end-of-list-lcci
+1206. 设计跳表#https://leetcode.cn/problems/design-skiplist
+382. 链表随机节点#https://leetcode.cn/problems/linked-list-random-node
+445. 两数相加 II#https://leetcode.cn/problems/add-two-numbers-ii
+147. 对链表进行插入排序#https://leetcode.cn/problems/insertion-sort-list
+1171. 从链表中删去总和值为零的连续节点#https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list
+剑指 Offer II 027. 回文链表#https://leetcode.cn/problems/aMhZSa
+355. 设计推特#https://leetcode.cn/problems/design-twitter
+708. 循环有序列表的插入#https://leetcode.cn/problems/insert-into-a-sorted-circular-linked-list
+面试题 17.12. BiNode#https://leetcode.cn/problems/binode-lcci
+237. 删除链表中的节点#https://leetcode.cn/problems/delete-node-in-a-linked-list

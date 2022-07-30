@@ -1,0 +1,50 @@
+1. 两数之和#https://leetcode.cn/problems/fraction-addition-and-subtraction
+3. 无重复字符的最长子串#https://leetcode.cn/problems/longest-substring-without-repeating-characters
+13. 罗马数字转整数#https://leetcode.cn/problems/roman-to-integer
+217. 存在重复元素#https://leetcode.cn/problems/contains-duplicate
+146. LRU 缓存#https://leetcode.cn/problems/lru-cache
+剑指 Offer 03. 数组中重复的数字#https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof
+560. 和为 K 的子数组#https://leetcode.cn/problems/subarray-sum-equals-k
+面试题 01.01. 判定字符是否唯一#https://leetcode.cn/problems/is-unique-lcci
+567. 字符串的排列#https://leetcode.cn/problems/permutation-in-string
+17. 电话号码的字母组合#https://leetcode.cn/problems/letter-combinations-of-a-phone-number
+347. 前 K 个高频元素#https://leetcode.cn/problems/top-k-frequent-elements
+202. 快乐数#https://leetcode.cn/problems/happy-number
+76. 最小覆盖子串#https://leetcode.cn/problems/minimum-window-substring
+128. 最长连续序列#https://leetcode.cn/problems/longest-consecutive-sequence
+41. 缺失的第一个正数#https://leetcode.cn/problems/first-missing-positive
+349. 两个数组的交集#https://leetcode.cn/problems/intersection-of-two-arrays
+763. 划分字母区间#https://leetcode.cn/problems/partition-labels
+139. 单词拆分#https://leetcode.cn/problems/word-break
+652. 寻找重复的子树#https://leetcode.cn/problems/find-duplicate-subtrees
+49. 字母异位词分组#https://leetcode.cn/problems/group-anagrams
+141. 环形链表#https://leetcode.cn/problems/linked-list-cycle
+169. 多数元素#https://leetcode.cn/problems/majority-element
+剑指 Offer 53 - II. 0～n-1中缺失的数字#https://leetcode.cn/problems/que-shi-de-shu-zi-lcof
+剑指 Offer 48. 最长不含重复字符的子字符串#https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof
+105. 从前序与中序遍历序列构造二叉树#https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal
+350. 两个数组的交集 II#https://leetcode.cn/problems/intersection-of-two-arrays-ii
+138. 复制带随机指针的链表#https://leetcode.cn/problems/copy-list-with-random-pointer
+383. 赎金信#https://leetcode.cn/problems/ransom-note
+380. O(1) 时间插入、删除和获取随机元素#https://leetcode.cn/problems/insert-delete-getrandom-o1
+424. 替换后的最长重复字符#https://leetcode.cn/problems/longest-repeating-character-replacement
+30. 串联所有单词的子串#https://leetcode.cn/problems/substring-with-concatenation-of-all-words
+395. 至少有 K 个重复字符的最长子串#https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters
+36. 有效的数独#https://leetcode.cn/problems/valid-sudoku
+剑指 Offer 50. 第一个只出现一次的字符#https://leetcode.cn/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof
+454. 四数相加 II#https://leetcode.cn/problems/4sum-ii
+面试题 17.15. 最长单词#https://leetcode.cn/problems/longest-word-lcci
+621. 任务调度器#https://leetcode.cn/problems/task-scheduler
+106. 从中序与后序遍历序列构造二叉树#https://leetcode.cn/problems/construct-binary-tree-from-inorder-and-postorder-traversal
+242. 有效的字母异位词#https://leetcode.cn/problems/valid-anagram
+720. 词典中最长的单词#https://leetcode.cn/problems/longest-word-in-dictionary
+剑指 Offer 49. 丑数#https://leetcode.cn/problems/chou-shu-lcof
+460. LFU 缓存#https://leetcode.cn/problems/lfu-cache
+149. 直线上最多的点数#https://leetcode.cn/problems/max-points-on-a-line
+剑指 Offer 39. 数组中出现次数超过一半的数字#https://leetcode.cn/problems/shu-zu-zhong-chu-xian-ci-shu-chao-guo-yi-ban-de-shu-zi-lcof
+904. 水果成篮#https://leetcode.cn/problems/fruit-into-baskets
+448. 找到所有数组中消失的数字#https://leetcode.cn/problems/find-all-numbers-disappeared-in-an-array
+166. 分数到小数#https://leetcode.cn/problems/fraction-to-recurring-decimal
+142. 环形链表 II#https://leetcode.cn/problems/linked-list-cycle-ii
+491. 递增子序列#https://leetcode.cn/problems/increasing-subsequences
+697.数组的度#https://leetcode.cn/problems/degree-of-an-array

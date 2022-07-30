@@ -1,0 +1,49 @@
+136. 只出现一次的数字#https://leetcode.cn/problems/single-number
+面试题 01.01. 判定字符是否唯一#https://leetcode.cn/problems/is-unique-lcci
+78. 子集#https://leetcode.cn/problems/subsets
+67. 二进制求和#https://leetcode.cn/problems/add-binary
+29. 两数相除#https://leetcode.cn/problems/divide-two-integers
+698. 划分为k个相等的子集#https://leetcode.cn/problems/partition-to-k-equal-sum-subsets
+剑指 Offer 53 - II. 0～n-1中缺失的数字#https://leetcode.cn/problems/que-shi-de-shu-zi-lcof
+剑指 Offer II 001. 整数除法#https://leetcode.cn/problems/xoh6Oh
+90. 子集 II#https://leetcode.cn/problems/subsets-ii
+1994. 好子集的数目#https://leetcode.cn/problems/the-number-of-good-subsets
+剑指 Offer 56 - I. 数组中数字出现的次数#https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof
+693. 交替位二进制数#https://leetcode.cn/problems/binary-number-with-alternating-bits
+491. 递增子序列#https://leetcode.cn/problems/increasing-subsequences
+89. 格雷编码#https://leetcode.cn/problems/gray-code
+剑指 Offer 56 - II. 数组中数字出现的次数 II#https://leetcode.cn/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof
+2044. 统计按位或能得到最大值的子集数目#https://leetcode.cn/problems/count-number-of-maximum-bitwise-or-subsets
+1601. 最多可达成的换楼请求数目#https://leetcode.cn/problems/maximum-number-of-achievable-transfer-requests
+287. 寻找重复数#https://leetcode.cn/problems/find-the-duplicate-number
+面试题 01.04. 回文排列#https://leetcode.cn/problems/palindrome-permutation-lcci
+面试题 05.03. 翻转数位#https://leetcode.cn/problems/reverse-bits-lcci
+473. 火柴拼正方形#https://leetcode.cn/problems/matchsticks-to-square
+剑指 Offer II 002. 二进制加法#https://leetcode.cn/problems/JFETK5
+645. 错误的集合#https://leetcode.cn/problems/set-mismatch
+638. 大礼包#https://leetcode.cn/problems/shopping-offers
+1342. 将数字变成 0 的操作次数#https://leetcode.cn/problems/number-of-steps-to-reduce-a-number-to-zero
+389. 找不同#https://leetcode.cn/problems/find-the-difference
+137. 只出现一次的数字 II#https://leetcode.cn/problems/single-number-ii
+847. 访问所有节点的最短路径#https://leetcode.cn/problems/shortest-path-visiting-all-nodes
+剑指 Offer 65. 不用加减乘除做加法#https://leetcode.cn/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof
+1723. 完成所有工作的最短时间#https://leetcode.cn/problems/find-minimum-time-to-finish-all-jobs
+338. 比特位计数#https://leetcode.cn/problems/counting-bits
+187. 重复的DNA序列#https://leetcode.cn/problems/repeated-dna-sequences
+剑指 Offer II 079. 所有子集#https://leetcode.cn/problems/TVdhkn
+393. UTF-8 编码验证#https://leetcode.cn/problems/utf-8-validation
+401. 二进制手表#https://leetcode.cn/problems/binary-watch
+剑指 Offer 64. 求1+2+…+n#https://leetcode.cn/problems/qiu-12n-lcof
+201. 数字范围按位与#https://leetcode.cn/problems/bitwise-and-of-numbers-range
+LCP 49. 环形闯关游戏#https://leetcode.cn/problems/K8GULz
+面试题 08.04. 幂集#https://leetcode.cn/problems/power-set-lcci
+784. 字母大小写全排列#https://leetcode.cn/problems/letter-case-permutation
+剑指 Offer II 005. 单词长度的最大乘积#https://leetcode.cn/problems/aseY1I
+1755. 最接近目标值的子序列和#https://leetcode.cn/problems/closest-subsequence-sum
+2172. 数组的最大与和#https://leetcode.cn/problems/maximum-and-sum-of-array
+1763. 最长的美好子字符串#https://leetcode.cn/problems/longest-nice-substring
+762. 二进制表示中质数个计算置位#https://leetcode.cn/problems/prime-number-of-set-bits-in-binary-representation
+面试题 17.04. 消失的数字#https://leetcode.cn/problems/missing-number-lcci
+464. 我能赢吗#https://leetcode.cn/problems/can-i-win
+260. 只出现一次的数字 III#https://leetcode.cn/problems/single-number-iii
+剑指 Offer II 004. 只出现一次的数字#https://leetcode.cn/problems/WGki4K

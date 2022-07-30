@@ -1,0 +1,5 @@
+# the setting
+resume : topic1 # ml, cv, img, lc, c++&python, resume
+ 客流统计算法 : topic2 # the second part of the topic
+8 : occur_thres # 0 - ...., will select less equal than the value you give
+9 : score_thres # 0-10, will select less equal than the value you give

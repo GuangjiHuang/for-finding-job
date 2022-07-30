@@ -1,0 +1,49 @@
+3. 无重复字符的最长子串#https://leetcode.cn/problems/longest-substring-without-repeating-characters
+239. 滑动窗口最大值#https://leetcode.cn/problems/sliding-window-maximum
+567. 字符串的排列#https://leetcode.cn/problems/permutation-in-string
+76. 最小覆盖子串#https://leetcode.cn/problems/minimum-window-substring
+209. 长度最小的子数组#https://leetcode.cn/problems/minimum-size-subarray-sum
+剑指 Offer 48. 最长不含重复字符的子字符串#https://leetcode.cn/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof
+424. 替换后的最长重复字符#https://leetcode.cn/problems/longest-repeating-character-replacement
+30. 串联所有单词的子串#https://leetcode.cn/problems/substring-with-concatenation-of-all-words
+395. 至少有 K 个重复字符的最长子串#https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters
+1984. 学生分数的最小差值#https://leetcode.cn/problems/minimum-difference-between-highest-and-lowest-of-k-scores
+1044. 最长重复子串#https://leetcode.cn/problems/longest-duplicate-substring
+2024. 考试的最大困扰度#https://leetcode.cn/problems/maximize-the-confusion-of-an-exam
+718. 最长重复子数组#https://leetcode.cn/problems/maximum-length-of-repeated-subarray
+904. 水果成篮#https://leetcode.cn/problems/fruit-into-baskets
+713. 乘积小于 K 的子数组#https://leetcode.cn/problems/subarray-product-less-than-k
+1248. 统计「优美子数组」#https://leetcode.cn/problems/count-number-of-nice-subarrays
+1004. 最大连续1的个数 III#https://leetcode.cn/problems/max-consecutive-ones-iii
+438. 找到字符串中所有字母异位词#https://leetcode.cn/problems/find-all-anagrams-in-a-string
+剑指 Offer II 008. 和大于等于 target 的最短子数组#https://leetcode.cn/problems/2VG8Kg
+220. 存在重复元素 III#https://leetcode.cn/problems/contains-duplicate-iii
+219. 存在重复元素 II#https://leetcode.cn/problems/contains-duplicate-ii
+480. 滑动窗口中位数#https://leetcode.cn/problems/sliding-window-median
+187. 重复的DNA序列#https://leetcode.cn/problems/repeated-dna-sequences
+剑指 Offer 59 - I. 滑动窗口的最大值#https://leetcode.cn/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof
+剑指 Offer II 017. 含有所有字符的最短字符串#https://leetcode.cn/problems/M1oyTv
+剑指 Offer II 009. 乘积小于 K 的子数组#https://leetcode.cn/problems/ZVAVXX
+1763. 最长的美好子字符串#https://leetcode.cn/problems/longest-nice-substring
+1438. 绝对差不超过限制的最长连续子数组#https://leetcode.cn/problems/longest-continuous-subarray-with-absolute-diff-less-than-or-equal-to-limit
+1477. 找两个和为目标值且不重叠的子数组#https://leetcode.cn/problems/find-two-non-overlapping-sub-arrays-each-with-target-sum
+340. 至多包含 K 个不同字符的最长子串#https://leetcode.cn/problems/longest-substring-with-at-most-k-distinct-characters
+632. 最小区间#https://leetcode.cn/problems/smallest-range-covering-elements-from-k-lists
+862. 和至少为 K 的最短子数组727. 最小窗口子序列#https://leetcode.cn/problems/shortest-subarray-with-sum-at-least-k
+1052. 爱生气的书店老板#https://leetcode.cn/problems/grumpy-bookstore-owner
+992. K 个不同整数的子数组#https://leetcode.cn/problems/subarrays-with-k-different-integers
+1839. 所有元音按顺序排布的最长子字符串#https://leetcode.cn/problems/longest-substring-of-all-vowels-in-order
+1156. 单字符重复子串的最大长度#https://leetcode.cn/problems/swap-for-longest-repeated-character-substring
+剑指 Offer II 057. 值和下标之差都在给定的范围内#https://leetcode.cn/problems/7WqeDu
+1343. 大小为 K 且平均值大于等于阈值的子数组数目#https://leetcode.cn/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold
+面试题 17.17. 多次搜索#https://leetcode.cn/problems/multi-search-lcci
+面试题 17.18. 最短超串#https://leetcode.cn/problems/shortest-supersequence-lcci
+1151. 最少交换次数来组合所有的 1#https://leetcode.cn/problems/minimum-swaps-to-group-all-1s-together
+2134. 最少交换次数来组合所有的 1 II#https://leetcode.cn/problems/minimum-swaps-to-group-all-1s-together-ii
+剑指 Offer II 015. 字符串中的所有变位词#https://leetcode.cn/problems/VabMRr
+1658. 将 x 减到 0 的最小操作数#https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero
+1838. 最高频元素的频数#https://leetcode.cn/problems/frequency-of-the-most-frequent-element
+剑指 Offer II 014. 字符串中的变位词#https://leetcode.cn/problems/MPnaiL
+1703. 得到连续 K 个 1 的最少相邻交换次数#https://leetcode.cn/problems/minimum-adjacent-swaps-for-k-consecutive-ones
+930. 和相同的二元子数组#https://leetcode.cn/problems/binary-subarrays-with-sum
+995. K 连续位的最小翻转次数#https://leetcode.cn/problems/minimum-number-of-k-consecutive-bit-flips
