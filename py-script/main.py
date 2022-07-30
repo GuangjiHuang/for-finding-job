@@ -1,15 +1,9 @@
-import os
-import time
 import re
 import cv2 as cv, cv2
 import copy
 import numpy as np
-import random
 from threading import Thread
-from gen_question import *
-import threading
-import inspect
-import ctypes
+from tk_question import *
 
 #
 color_tb = {"red":(0, 0, 255), "green": (0, 255, 0), "blue": (255, 0, 0), 
@@ -119,7 +113,7 @@ def append_time_to_file(file_path, time_duration_sec):
 
 # --------------------------------------------------
 # the gobal var that you have to set
-save_dir = r"./video_save/"
+save_dir = r"../../study-app-data/video-save/"
 video_num = 0
 is_show_random = False
 is_live=False
@@ -130,18 +124,18 @@ full_sc_width = 1920
 full_sc_height = 1080
 count_down_is_in_concentrate_mode = True
 is_use_video = True
-play_video_path = "./beauty/scenery.mp4"
+play_video_path = "../../study-app-data/beauty/scenery.mp4"
 is_load_setting = True
 time_check_count = 0
 time_check_threshold = 1
 file_write_threshold = 5
-json_path = r"./questions/questions.json"
-question_setting_path = "./question.setting"
-answer_dir = "../CV_interviews_Campus-master"
-question_dir = "../CV_interviews_Campus-master/questions_all"
+json_path = r"../data/questions_json/questions.json"
+question_setting_path = r"../config/tk_question_setting.txt"
+answer_dir = "../data/answers"
+question_dir = "../data/questions_all"
 # if load the setting
+setting_path = r"../config/main_setting.txt"
 if is_load_setting:
-	setting_path = "./setting.txt"
 	with open(setting_path, "r", encoding="utf-8") as f:
 		commands = f.readlines()
 	print("----- command setting ---------")

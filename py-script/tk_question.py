@@ -18,13 +18,14 @@ editor = "sublime"
 # and the editor is also the global var
 
 class Myapp(tk.Tk):
-    def __init__(self, json_path, question_setting_path, answer_dir, question_dir):
+    def __init__(self, json_path, question_setting_path, answer_dir, question_dir, record_dir):
         super().__init__()
         # the attribute
         self.json_path = json_path
         self.question_setting_path = question_setting_path
         self.answer_dir = answer_dir
         self.question_dir = question_dir
+        self.record_dir = record_dir
         # the question, plan, record dir
         self.p_q_r_dir = ""
         self.__deal_plan_question_record_dir() # "./everyday/year-month/month-day/"
@@ -47,6 +48,7 @@ class Myapp(tk.Tk):
         # the chorme
         self.chorme = self._init_chorm()
         # the UI
+        self.ico_dir = r"../resource/ico/"
         self.win_width = 460
         self.win_height = 210
         self.pos_x = 1000
@@ -65,10 +67,8 @@ class Myapp(tk.Tk):
         self.__check()
         # the ui
         self.title(f"{self.topic1} - {self._get_kernel()}")
-        #ico_path = r"./dear_me.ico"
-        ico_path = ""
         try:
-            ico_path = random.sample(glob.glob(r"./*.ico"), 1)[0]
+            ico_path = random.sample(glob.glob(rf"{self.ico_dir}/*.ico"), 1)[0]
         except:
             pass
         if os.path.exists(ico_path):
@@ -928,9 +928,9 @@ def runApp(json_path, question_setting_path, answer_dir, question_dir):
 
 if __name__ == "__main__":
     # the path
-    json_path = r"./questions/questions.json"
-    question_setting_path = "./question.setting"
-    answer_dir = "../CV_interviews_Campus-master"
-    question_dir = "../CV_interviews_Campus-master/questions_all"
+    json_path = r"../data/questions_json/questions.json"
+    question_setting_path = r"../config/tk_question_setting.txt"
+    answer_dir = "../data/answers"
+    question_dir = "../data/questions_all"
     # run the app
     runApp(json_path, question_setting_path, answer_dir, question_dir)
