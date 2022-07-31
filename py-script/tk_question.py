@@ -27,6 +27,7 @@ class Myapp(tk.Tk):
         self.question_setting_path = question_setting_path
         self.answer_dir = answer_dir
         self.question_dir = question_dir
+        self.help_txt_path = r"../config/tk_question_help.txt"
         # the question, plan, record dir
         self.record_dir = record_dir
         self.p_q_r_dir = ""
@@ -589,9 +590,8 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
 
     def c_btn_help(self):
         message = "No help information"
-        help_txt_path = "./app_help.txt"
-        if os.path.exists(help_txt_path):
-            with open(help_txt_path, "r", encoding="utf-8") as f:
+        if os.path.exists(self.help_txt_path):
+            with open(self.help_txt_path, "r", encoding="utf-8") as f:
                 message = f.read()
         tkinter.messagebox.showinfo(title="HELP", message=message)
 
@@ -646,7 +646,8 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
         #tk.Button(n_window, text="sure").pack()
         # create the listbox
         lb_font = tkFont.Font(family='Fixdsys', size=11, weight=tkFont.BOLD)
-        lb = tk.Listbox(n_window, width=int(0.9*n_w_width), height=int(0.9*n_w_height), font=lb_font)
+        lb = tk.Listbox(n_window, width=int(0.9*n_w_width), height=int(0.9*n_w_height), font=lb_font, bg="#262824", fg="#f0f0f0")
+        #lb = tk.Listbox(n_window, width=int(0.9*n_w_width), height=int(0.9*n_w_height), font=lb_font)
         lb.pack()
         def just_select(Event):
             ret_get = lb.curselection()
