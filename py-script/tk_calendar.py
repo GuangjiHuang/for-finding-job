@@ -9,19 +9,17 @@ from tkinter import ttk
 
 datetime = calendar.datetime.datetime
 timedelta = calendar.datetime.timedelta
-editor = "sublime"
+editor = "sublime" # sublime, Gvim, notepad
 
 class Calendar:
 
-    def __init__(self, point=None, position=None, main_window=None, everyday_dir=None):
+    def __init__(self, point=None, position=None, record_dir=None):
         # point    提供一个基点，来确定窗口位置
         # position 窗口在点的位置 'ur'-右上, 'ul'-左上, 'll'-左下, 'lr'-右下
         # self.master = tk.Tk()
-        #self.main_window = ShowBoard("./everyday/")
-        self.main_window = main_window
         self.__init_list_box__()
         #
-        self.everyday_dir = everyday_dir if everyday_dir is not None else r"./everyday/"
+        self.record_dir = record_dir # general: ../data/everyday/
         #k
         self.master = tk.Toplevel()
         self.master.withdraw()
@@ -122,7 +120,7 @@ class Calendar:
 
     def jump_to_all(self):
         print("jump to all questions!")
-        all_file_dir = os.path.join(self.everyday_dir, "all")
+        all_file_dir = os.path.join(self.record_dir, "all")
         if not os.path.exists(all_file_dir):
             os.makedirs(all_file_dir)
         #
@@ -166,7 +164,7 @@ class Calendar:
         return " " * num
 
     def _renew_list_box(self, year, month, day):
-        self.select_dir = f"{self.everyday_dir}/{year}-{month:02d}/{month:02d}-{day:02d}/"
+        self.select_dir = f"{self.record_dir}/{year}-{month:02d}/{month:02d}-{day:02d}/"
         self.lb.delete(0, tk.END)
         if not os.path.exists(self.select_dir):
             self.lb.insert(tk.END, "NONE")
@@ -300,7 +298,7 @@ class Calendar:
         self._calendar.bind('<Button-1>', self._pressed)
 
     def _is_day_has_files(self, year, month, day):
-        file_dir = f"{self.everyday_dir}/{year}-{month:02d}/{month:02d}-{day:02d}"
+        file_dir = f"{self.record_dir}/{year}/{year}-{month:02d}/{month:02d}-{day:02d}"
         file_path_ls = glob.glob(f"{file_dir}/*.txt")
         flag = False
         if len(file_path_ls) == 0:
@@ -461,25 +459,3 @@ class Calendar:
             return True
         else:
             return False
-
-
-if __name__ == '__main__':
-    root = tk.Tk()
-
-    width, height = root.winfo_reqwidth() + 50, 50  # 窗口大小
-    x, y = (root.winfo_screenwidth() - width) / 2, (root.winfo_screenheight() - height) / 2
-    root.geometry('%dx%d+%d+%d' % (width, height, x, y))  # 窗口位置居中
-
-    date_str = tk.StringVar()
-    date = ttk.Entry(root, textvariable=date_str)
-    date.place(x=0, y=0, relx=5 / 20, rely=1 / 6, relwidth=14 / 20, relheigh=2 / 3)
-
-    # Calendar((x, y), 'ur').selection() 获取日期，x,y为点坐标
-    main_app = None
-    date_str_gain = lambda: [
-        date_str.set(date)
-        for date in [Calendar((x, y), 'ur', main_app).selection()]
-        if date]
-    tk.Button(root, text='日期:', command=date_str_gain).place(x=0, y=0, relx=1 / 20, rely=1 / 6, relwidth=4 / 20,
-                                                             relheigh=2 / 3)
-    root.mainloop()

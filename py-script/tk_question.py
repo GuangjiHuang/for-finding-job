@@ -14,8 +14,10 @@ from to_json import txt_to_js
 from tk_calendar import Calendar
 #
 is_debug = False
-editor = "sublime"
+editor = "sublime" # sublime, Gvim, notepad
 # and the editor is also the global var
+
+__all__ = ["runApp", "is_debug"]
 
 class Myapp(tk.Tk):
     def __init__(self, json_path, question_setting_path, answer_dir, question_dir, record_dir):
@@ -25,10 +27,10 @@ class Myapp(tk.Tk):
         self.question_setting_path = question_setting_path
         self.answer_dir = answer_dir
         self.question_dir = question_dir
-        self.record_dir = record_dir
         # the question, plan, record dir
+        self.record_dir = record_dir
         self.p_q_r_dir = ""
-        self.__deal_plan_question_record_dir() # "./everyday/year-month/month-day/"
+        self.__deal_plan_question_record_dir() # "../data/everyday/year/year-month/month-day/"
 
         # the data
         self.has_topic2_ls = set()
@@ -274,14 +276,14 @@ class Myapp(tk.Tk):
     def _left_s_click(self, e):
         # click the left
         x, y = 700, 1000
-        for date in [Calendar((x, y), 'ur', self).selection()]:
+        for date in [Calendar((x, y), 'ur', self.record_dir).selection()]:
             if date:
                 print(date)
         # click the right
 
     def __deal_plan_question_record_dir(self):
         year, month, day = time.strftime("%Y-%m-%d", time.localtime()).split("-")
-        self.p_q_r_dir = f"./everyday/{year}-{month}/{month}-{day}"
+        self.p_q_r_dir = f"{self.record_dir}/{year}/{year}-{month}/{month}-{day}"
         if not os.path.exists(self.p_q_r_dir):
             os.makedirs(self.p_q_r_dir)
 
@@ -921,8 +923,8 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
             ret_question = random.sample(question_meet_need, 1)[0]
         return ret_question
 
-def runApp(json_path, question_setting_path, answer_dir, question_dir):
-    app = Myapp(json_path, question_setting_path, answer_dir, question_dir)
+def runApp(json_path, question_setting_path, answer_dir, question_dir, record_dir):
+    app = Myapp(json_path, question_setting_path, answer_dir, question_dir, record_dir)
     # the loop
     app.mainloop()
 
@@ -932,5 +934,6 @@ if __name__ == "__main__":
     question_setting_path = r"../config/tk_question_setting.txt"
     answer_dir = "../data/answers"
     question_dir = "../data/questions_all"
+    record_dir = "../data/everyday"
     # run the app
-    runApp(json_path, question_setting_path, answer_dir, question_dir)
+    runApp(json_path, question_setting_path, answer_dir, question_dir, record_dir)

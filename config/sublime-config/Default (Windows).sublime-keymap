@@ -1,0 +1,4 @@
+[
+	{"keys": ["alt+f"], "command": "toggle_full_screen"},
+	{"keys": ["alt+d"], "command": "toggle_distraction_free"},
+]

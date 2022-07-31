@@ -1,8 +1,11 @@
 import re
-import cv2 as cv, cv2
+import time
+import os
+import cv2 as cv
 import copy
 import numpy as np
 from threading import Thread
+import random
 from tk_question import *
 
 #
@@ -19,31 +22,26 @@ def newline(num):
 def get_video_path(save_dir):
 	# check the save_dir
 	if not os.path.exists(save_dir):
-		os.mkdir(save_dir)
+		os.makedirs(save_dir)
 		print(f"make the directory: {save_dir}")
 	now_time = time.strftime("%Y-%m-%d %H-%M")
 	save_path = f"{save_dir}{now_time}.mp4"
 	return save_path
 # 
-def check_plan_file(dir_path, file_name_ls):
+def check_plan_file(everyday_dir, file_name_ls):
 	# get the date
-	t_local = time.localtime()
-	year = time.strftime("%Y", t_local)
-	month = time.strftime("%m", t_local)
-	day = time.strftime("%d", t_local)
-	weekday = time.strftime("%a", t_local)
-	# the dir
-	sub_dir = f"{year}-{month}"
-	sub_sub_dir = f"{month}-{day}"
-	file_dir = f"{dir_path}/{sub_dir}/{sub_sub_dir}"
-	if not os.path.exists(file_dir):
-		os.makedirs(file_dir)
+	t_tm = time.localtime()
+	year, month, day = t_tm.tm_year, t_tm.tm_mon, t_tm.tm_mday
+	abbre_weekday = time.strftime("%a", t_tm)
+	#
+	if not os.path.exists(everyday_dir):
+		os.makedirs(everyday_dir)
 	for file_name in file_name_ls:
 		# the message
 		head = f"==============================\n" +\
-			f"{year}-{month}-{day}{space(2)}{weekday}.{space(5)}{file_name.upper()} \n" +\
+			f"{year}-{month}-{day}{space(2)}{abbre_weekday}.{space(5)}{file_name.upper()} \n" +\
 			f"=============================="
-		file_path = os.path.join(file_dir, file_name+".txt")
+		file_path = os.path.join(everyday_dir, file_name+".txt")
 		if os.path.exists(file_path):
 			continue
 		with open(file_path, "w", encoding="utf-8") as f:
@@ -133,6 +131,8 @@ json_path = r"../data/questions_json/questions.json"
 question_setting_path = r"../config/tk_question_setting.txt"
 answer_dir = "../data/answers"
 question_dir = "../data/questions_all"
+record_dir = "../data/everyday"
+editor = "sublime" # you can choose the Gvim, sublime, notepad
 # if load the setting
 setting_path = r"../config/main_setting.txt"
 if is_load_setting:
@@ -149,7 +149,9 @@ if is_load_setting:
 		except:
 			print("there are some wrong with the command: {command}")
 # today's date and the path
-everyday_dir = "./everyday/" + time.strftime("%Y-%m/", time.localtime()) + time.strftime("%m-%d", time.localtime())
+t_tm = time.localtime()
+year, month, day = t_tm.tm_year, t_tm.tm_mon, t_tm.tm_mday
+everyday_dir = f"{record_dir}/{year}/{year}-{month:02}/{month:02}-{day:02}"
 file_name_ls = ["plan", "question", "record"]
 # --------------------------------------------------
 # test if can open the video and the camera
@@ -181,13 +183,13 @@ cap_video.release()
 cap  = cv.VideoCapture(video_num)
 # deal with the video writer
 save_path = get_video_path(save_dir)
-width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
 if is_use_video and is_valid_video:
 	width = 640
 	height = 480
 print(f"the video's width: {width}, height: {height}")
-fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+fourcc = cv.VideoWriter_fourcc(*'mp4v')
 fps = 25
 #
 if not os.path.exists(save_dir):
@@ -213,7 +215,7 @@ while (True):
 		# then check the plan file
 		# check file if exists
 		# check if you have make the plan
-		check_plan_file("./everyday", file_name_ls)
+		check_plan_file(everyday_dir, file_name_ls)
 
 	if is_live:
 		if bg_change_flag:
@@ -272,7 +274,7 @@ while (True):
 					pass
 		# get the message
 		# show the window
-		Thread(target=runApp, args=(json_path, question_setting_path, answer_dir, question_dir)).start()
+		Thread(target=runApp, args=(json_path, question_setting_path, answer_dir, question_dir, record_dir)).start()
 		has_thread = True
 
 	if key_val_0 == ord('t'):
@@ -307,7 +309,7 @@ while (True):
 				pass
 			is_end = True
 		save_path = get_video_path(save_dir)
-		out = cv2.VideoWriter(save_path, fourcc, 30, (width, height))
+		out = cv.VideoWriter(save_path, fourcc, 30, (width, height))
 		print("save the video now ......")
 		is_save = True
 		is_record = True
@@ -327,7 +329,7 @@ while (True):
 			is_end = True
 			out.release()
 		cap.release()
-		cv2.destroyAllWindows()
+		cv.destroyAllWindows()
 		# quit the tk windoiw
 		exit()
 	elif key_val_0 == ord('e'):
@@ -417,13 +419,13 @@ while (True):
 		height_step = int(width // (help_text_len+5))
 		# add the first line to -- help information ---
 		help_information = "------ help information (Author: hgj&ysq) ------"
-		cv2.putText(help_img, help_information, (int(0.1*width), 15), cv.FONT_HERSHEY_COMPLEX, 0.5, color_tb["red"], 1)
+		cv.putText(help_img, help_information, (int(0.1*width), 15), cv.FONT_HERSHEY_COMPLEX, 0.5, color_tb["red"], 1)
 		for i, item in enumerate(help_list):
-			cv2.putText(help_img, item, (20, height_step*(i+1)), cv.FONT_HERSHEY_COMPLEX, 0.5, color_tb["yellow"], 1)
+			cv.putText(help_img, item, (20, height_step*(i+1)), cv.FONT_HERSHEY_COMPLEX, 0.5, color_tb["yellow"], 1)
 		# show teh image
 		cv.moveWindow(window_name, full_sc_width-30-width, full_sc_height-70-height)
-		cv2.imshow(window_name, help_img)
-		cv2.waitKey(0)
+		cv.imshow(window_name, help_img)
+		cv.waitKey(0)
 		# here have to set the bg change flag
 		bg_change_flag = True
 	elif key_val_0 in [ord(str(i)) for i in range(10)]:
@@ -462,7 +464,7 @@ while (True):
 					quit_flag = True
 					break
 			# destory the window
-			cv2.destroyWindow("Information")
+			cv.destroyWindow("Information")
 		# if you chose the quit, then continue
 		if quit_flag:
 			continue
@@ -540,11 +542,11 @@ while (True):
 			if not is_show_random:
 				scenery_video_path = "./beauty/scenery.mp4"
 				# check if the path is exist and if the path can open
-				scen_cap = cv2.VideoCapture(scenery_video_path)
+				scen_cap = cv.VideoCapture(scenery_video_path)
 				if scen_cap.isOpened():
-					scen_img_num = scen_cap.get(cv2.CAP_PROP_FRAME_COUNT)
-					scen_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-					scen_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+					scen_img_num = scen_cap.get(cv.CAP_PROP_FRAME_COUNT)
+					scen_width = int(cap.get(cv.CAP_PROP_FRAME_WIDTH))
+					scen_height = int(cap.get(cv.CAP_PROP_FRAME_HEIGHT))
 				else:
 					is_show_random = True
 					# fail to open the video, 1) the path not exists; 2) there is some problem with the video
@@ -562,14 +564,14 @@ while (True):
 					full_screen[..., 2] = random.randint(0, 255)
 				else:
 					select_scen_num = random.randint(1, scen_img_num)
-					scen_cap.set(cv2.CAP_PROP_POS_FRAMES, select_scen_num)
+					scen_cap.set(cv.CAP_PROP_POS_FRAMES, select_scen_num)
 					_, full_screen = scen_cap.read()
 					if (full_sc_width / scen_width) > (full_sc_height / scen_height):
 						scale_sz = full_sc_height / scen_height
 					else:
 						scale_sz = full_sc_width / scen_width
-					#full_screen = cv2.resize(full_screen, (int(scale_sz*scen_width*0.9), int(scale_sz*scen_height*0.9)))
-					full_screen = cv2.resize(full_screen, (full_sc_width, full_sc_height))
+					#full_screen = cv.resize(full_screen, (int(scale_sz*scen_width*0.9), int(scale_sz*scen_height*0.9)))
+					full_screen = cv.resize(full_screen, (full_sc_width, full_sc_height))
 				cv.imshow(window_name, full_screen)
 				key_val_3 = cv.waitKey(2000) & 0xff
 				count -= 1
