@@ -115,14 +115,14 @@ save_dir = r"../../study-app-data/video-save/"
 video_num = 0
 is_show_random = False
 is_live=False
-t_gap = 5
+t_gap = 0.05
 count_down_color = color_tb["green"]
 show_time_color = color_tb["red"]
 full_sc_width = 1920
 full_sc_height = 1080
 count_down_is_in_concentrate_mode = True
 is_use_video = True
-play_video_path = "../../study-app-data/beauty/scenery.mp4"
+play_video_path = r"../../study-app-data/beauty/scenery.mp4"
 is_load_setting = True
 time_check_count = 0
 time_check_threshold = 1
@@ -537,10 +537,12 @@ while (True):
 				is_count_end = True
 		# recover the window size
 		if is_count_end:
-			cv.moveWindow(window_name, -10, -10)
-			cv.setWindowProperty(window_name, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
+			count_end_named_window = "full screen"
+			cv.namedWindow(count_end_named_window, cv.WINDOW_NORMAL)
+			cv.setWindowProperty(count_end_named_window, cv.WND_PROP_TOPMOST, 1)
+			cv.setWindowProperty(count_end_named_window, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
 			if not is_show_random:
-				scenery_video_path = "./beauty/scenery.mp4"
+				scenery_video_path = play_video_path
 				# check if the path is exist and if the path can open
 				scen_cap = cv.VideoCapture(scenery_video_path)
 				if scen_cap.isOpened():
@@ -572,7 +574,7 @@ while (True):
 						scale_sz = full_sc_width / scen_width
 					#full_screen = cv.resize(full_screen, (int(scale_sz*scen_width*0.9), int(scale_sz*scen_height*0.9)))
 					full_screen = cv.resize(full_screen, (full_sc_width, full_sc_height))
-				cv.imshow(window_name, full_screen)
+				cv.imshow(count_end_named_window, full_screen)
 				key_val_3 = cv.waitKey(2000) & 0xff
 				count -= 1
 				if key_val_3 == ord('q') or count<0:
@@ -586,7 +588,7 @@ while (True):
 			# wait_time
 			wait_time = 2
 			while True:
-				cv.imshow(window_name, waiting_img)
+				cv.imshow(count_end_named_window, waiting_img)
 				key_val_4 = cv.waitKey(1000)
 				wait_time -= 1
 				if wait_time <0 or key_val_4 in [ord(' '), ord('c'), ord('q'), ord('e')]:
@@ -623,8 +625,8 @@ while (True):
 					w_full_screen[..., 0] = col_b = random.randint(0, init_col)
 					w_full_screen[..., 1] = col_g = random.randint(0, init_col)
 					w_full_screen[..., 2] = col_r = random.randint(0, init_col)
-					cv.putText(w_full_screen, "Need Working!", (int(0.4*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-					cv.imshow(window_name, w_full_screen)
+					cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+					cv.imshow(count_end_named_window, w_full_screen)
 					key_val_5 = cv.waitKey(init_wt)
 					if key_val_5 in [ord(' '), ord('c'), ord('q'), ord('e')]:
 						break
@@ -632,6 +634,8 @@ while (True):
 						n -= 0.2
 					else:
 						n += 1
+		# here destroy the count_end_named_window, this is very important
+		cv.destroyWindow(count_end_named_window)
 		if is_need_to_write_file and not quit_flag:
 			# end the countdown, open the record file and the question file
 			# here use the threads to open the file
@@ -645,7 +649,6 @@ while (True):
 		bg_change_flag = True
 		# move window to the right bottom conner
 		cv.moveWindow(window_name, full_sc_width - 30 - width, full_sc_height - 70 - height)
-		cv.setWindowProperty(window_name, cv.WND_PROP_FULLSCREEN, cv.WINDOW_NORMAL)
 		cv.imshow(window_name, img_o)
 	if is_save:
 		out.write(img)

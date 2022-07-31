@@ -184,6 +184,7 @@ class Myapp(tk.Tk):
         self.lb_topic.pack()
         self.lb_topic.bind("<Button-1>", lambda e: self._re_set()) # delete the question
         self.lb_topic.bind("<Double-2>", lambda e: self.__super_do()) # __super_do
+        self.lb_topic.bind("<Button-3>", lambda e: self._jump_to_git_mind()) # right single click the topic, jump to the everyday plan of the gitmind
         self.lb_topic.place(x=0, y=190, anchor='w')
         # ---
         self.cb_topic1 = ttk.Combobox(self, width=6)
@@ -519,6 +520,9 @@ class Myapp(tk.Tk):
         # remember to renew the self.has_topic2_ls <hgj: very important>
         self.renewHasTopic2Ls()
 
+    def _jump_to_git_mind(self):
+        git_mind_address = r"https://gitmind.cn/app/doc/b3136af99a41035e22bdda90cc2559b4"
+        self.chorme.open(git_mind_address, new=2)
 
     def __super_do(self):
         # pop the dialog to get the command string

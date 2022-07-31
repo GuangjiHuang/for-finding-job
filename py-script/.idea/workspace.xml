@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="" />
+    <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../bash.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../bash.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/main_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/main_setting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-07/07-31/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-07/07-31/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-07/07-31/question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-07/07-31/question.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-07/07-31/record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-07/07-31/record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../git_pull.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../git_push.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../push.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../push.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tk_question.py" beforeDir="false" afterPath="$PROJECT_DIR$/tk_question.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +39,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.tk_question">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py-script" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.tk_calendar" />
       </list>
     </recent_temporary>
@@ -122,8 +134,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tk_question.py</url>
-          <line>290</line>
+          <line>291</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>162</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

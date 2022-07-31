@@ -1,3 +1,3 @@
-cd camera-show
-python test_camara.py
+cd ./py-script
+python main.py
 TIMEOUT /T -1 /NOBREAK

@@ -36,3 +36,4 @@
 executed as the python statement. for example: self.js_var.pop("xxxx") or self.js_var["xxx"].pop("hhh").
 if the command has the "js_var" key words, then the method self.saveJsvar() will be executed after running
 the command!
+3) single right click is jumping to the git mind's everyday plan!

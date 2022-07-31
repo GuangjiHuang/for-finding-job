@@ -2,5 +2,5 @@
 2022-7-31  Sun.     RECORD 
 ==============================
 
-11:26-11:31       5 mins
-R1. 
+23:30-23:40      10 mins
+R1. tk_question, topic right single click jump to the git mind's everyday plan. 增加了这一个功能。

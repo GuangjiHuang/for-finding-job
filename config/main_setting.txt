@@ -8,4 +8,4 @@ show_time_color = color_tb['black']
 full_sc_width = 1920
 full_sc_height = 1080
 count_down_is_in_concentrate_mode = False
-play_video_path = "./beauty/scenery.mp4"
+play_video_path = "../../study-app-data/beauty/scenery.mp4"
