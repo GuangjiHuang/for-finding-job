@@ -22,3 +22,4 @@ LCP 02. 分式化简#https://leetcode.cn/problems/deep-dark-fraction
 1735. 生成乘积数组的方案数#https://leetcode.cn/problems/count-ways-to-make-array-with-product
 1201. 丑数 III#https://leetcode.cn/problems/ugly-number-iii
 1250. 检查「好数组」#https://leetcode.cn/problems/check-if-it-is-a-good-array
+279. 完全平方数#https://leetcode.cn/problems/perfect-squares/

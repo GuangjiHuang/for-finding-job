@@ -646,13 +646,16 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
         pos_x = 300
         pos_y = 300
         n_window.geometry(f"{n_w_width}x{n_w_height}+{pos_x}+{pos_y}")
-        #tk.Label(n_window, text="this is the new window").pack()
-        #tk.Button(n_window, text="sure").pack()
+        #n_window.geometry(f"{1000}x{n_w_height}+{pos_x}+{pos_y}")
+        #n_window.geometry(f"+{pos_x}+{pos_y}")
+        #n_window.config(height=200)
         # create the listbox
         lb_font = tkFont.Font(family='Fixdsys', size=11, weight=tkFont.BOLD)
+        #lb = tk.Listbox(n_window, width=int(0.9*n_w_width), height=int(0.9*n_w_height), font=lb_font, bg="#262824", fg="#f0f0f0")
         lb = tk.Listbox(n_window, width=int(0.9*n_w_width), height=int(0.9*n_w_height), font=lb_font, bg="#262824", fg="#f0f0f0")
         #lb = tk.Listbox(n_window, width=int(0.9*n_w_width), height=int(0.9*n_w_height), font=lb_font)
-        lb.pack()
+        lb.config(width=0)
+        lb.pack(fill="both", expand=True)
         def just_select(Event):
             ret_get = lb.curselection()
             if len(ret_get) == 0:
@@ -681,6 +684,10 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
         for question_dict in self.questions_ls:
             question_info = list(question_dict.keys())[0]
             lb.insert(tk.END, question_info)
+
+        # reset the window's size
+        #n_auto_width = n_window.winfo_width()
+        #n_window.wm_geometry(f"{n_auto_width+100}x{n_w_height}")
         n_window.focus()
         n_window.mainloop()
 

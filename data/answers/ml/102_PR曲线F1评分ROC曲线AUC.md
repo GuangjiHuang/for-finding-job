@@ -56,10 +56,12 @@ $$
 > 真阳性率（Y），也称为灵敏度，衡量的是**分类正确的正样本个数占真正的正样本个数的比例**。
 >
 > 假阳性率（X），也称为特异度，衡量的是**错误识别为正例的负样本个数占真正的负样本个数的比例。**
+>
+> *hgj*：分析的对象是所有被分为正样本的样本。Sample = TP + FP， 然后再分析TP占真正的正样本的比例，然后分析FP（这个本来就是属于负样本）占负样本的比列。
 
 ![img](https://pic1.zhimg.com/80/v2-383b1279e560ca96c85204ccaf564037_720w.jpg?source=1940ef5c)
 
-## AUC
+## AUC（area under curve）
 
 参考链接：[AUC的计算方法及相关总结](https://blog.csdn.net/renzhentinghai/article/details/81095857)
 $$
