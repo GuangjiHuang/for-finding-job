@@ -80,3 +80,7 @@ P19. tk_question: 给lc topic增加双链接，在_double_click xxx 这个函数
 21:09-21:12       3 mins ---------- free ----------
 21:12-21:32      20 mins
 P20. tk_question: contitue to add the lc topic's local link. Need to be quick!
+
+21:32-22:56      84 mins ---------- free ----------
+22:56-23:26      30 mins
+P21. 运动。

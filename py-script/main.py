@@ -217,7 +217,7 @@ while (True):
 		# then check the plan file
 		# check file if exists
 		# check if you have make the plan
-		check_plan_file(everyday_dir, file_name_ls)
+		check_plan_file(record_dir, file_name_ls)
 
 	if is_live:
 		if bg_change_flag:

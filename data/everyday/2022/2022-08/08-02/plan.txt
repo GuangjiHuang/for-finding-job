@@ -1,0 +1,6 @@
+==============================
+2022-8-2  Tue.     PLAN 
+==============================
+
+00:40-01:15      35 mins
+P1. continue to write the code of the tk_question.py, creat the new function to deal with the lc topic. 

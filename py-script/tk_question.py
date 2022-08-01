@@ -426,16 +426,58 @@ class Myapp(tk.Tk):
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(content)
 
+    def _just_for_lc_double_link(self):
+        # split the self.link
+        link_ls = self.link.split("#")
+        if len(link_ls) == 1:
+            # just the one link: try to create the file and then open it, and add the link to the self.link and renew the js_var
+            file_name = self.question_info.strip("\n") + ".md"
+            dir_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}"
+            file_path = f"{dir_path}/{file_name}"
+            question_path = f"{self.question_dir}/{self.topic1}/{self.topic2}.txt"
+            if not os.path.exists(dir_path):
+                os.makedirs(dir_path)
+            # create the file
+            if not os.path.exists(file_path):
+                with open(file_path, "w", encoding="utf-8") as f:
+                    f.close()
+            # renew the js_var and the questions_all
+            with open(question_path, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+            # find the line and then replace the line
+            for i in range(len(lines)):
+                if self.question_info.strip("\n") in lines[i]:
+                    # find the line, then add the file name
+                    lines[i] = lines[i].rstrip("\n")
+                    lines[i] += "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                    break
+            # write the lines to the file
+            with open(question_path, "w", encoding="utf-8") as f:
+                f.write("".join(lines))
+            # the link
+            self.link += "#" + self.question_info.rstrip("\n") + ".md"
+            self.js_var[self.topic1][self.topic2][self.question_info]["link"] = self.link
+            self.saveJsvar()
+        else:
+            # two link, so just open it
+            file_name = self.link.split("#")[-1]
+            file_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}/{file_name}"
+        # open the file
+        file_path = os.path.abspath(file_path)
+        os.system(f"sublime {file_path}")
+        #Thread(target=lambda: os.system(f"D:\\Typora\\Typora.exe {file_path}"), args=()).start()
+
+
     def _left_double_click_question_label(self):
-        if "Empty" in self.question_info or "empty" in self.question_info or self.question_info == "":
+        if "Empty" in self.question_info or "empty" in self.question_info or  self.question_info == "":
             print("No question to open!")
             return
-        # the special case for the "lc" classes
-        if "lc" in self.topic1:
-            pass
-        # if is lc, just try to open the local file
-
-        if self.link == "" or "lc" in self.topic1:
+        # for the leecode double link
+        if "lc" in self.topic1 and self.link != "":
+            self._just_for_lc_double_link()
+            return
+        #
+        if self.link == "":
             # use the typora to open the file, file name is the same as the question
             file_name = self.question_info.strip("\n") + ".md"
             if self.topic1 in self.has_topic2_ls:
@@ -449,33 +491,19 @@ class Myapp(tk.Tk):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
             # creat the file
+            file_path = rf"{file_path}"
             if not os.path.exists(file_path):
                 with open(file_path, "w", encoding="utf-8") as f:
                     pass
             # renew the js_var and the questions_all
             with open(question_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            if self.link == "":
-                replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
-                new_content = content.replace(self.question_info, replace_lines)
-                # renew the self.link
-                self.link = file_name
-            elif len(self.link.split("#")) == 1:
-                # use the re to replace
-                question_info_without_n = self.question_info.rstrip("\n")
-                #pattern = re.compile(rf"{question_info_without_n}.*\n{0,1}")
-                pattern = rf"{question_info_without_n}.*\n"
-                pattern = pattern + r"{0,1}"
-                match_str = re.search(pattern, content)
-                if match_str:
-                    match_str = match_str.group(0)
-                replace_str = match_str.strip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
-                new_content = re.sub(pattern, replace_str, content)
-                # renew the self.link, has the http link
-                self.link += "#" + self.question_info.rstrip("\n") + ".md"
+            replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+            new_content = content.replace(self.question_info, replace_lines)
             with open(question_path, "w", encoding="utf-8") as f:
                 f.write(new_content)
-            # renew the js_var
+            # renew the js_var and the save js_var
+            self.link = file_name
             if self.topic1 in self.has_topic2_ls:
                 self.js_var[self.topic1][self.topic2][self.question_info]["link"] = self.link
             else:
