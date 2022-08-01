@@ -2,5 +2,5 @@
 if "%1" == "h" goto begin 
     mshta vbscript:createobject("wscript.shell").run("%~nx0 h",0)(window.close)&&exit 
 :begin f
-cd ./stud-app/py-script
+cd ./study-app/py-script
 python tk_question.py

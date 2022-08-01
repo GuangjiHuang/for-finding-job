@@ -12,6 +12,7 @@ from tkinter import W, ttk
 import tkinter.font as tkFont
 from to_json import txt_to_js
 from tk_calendar import Calendar
+import re
 #
 is_debug = False
 editor = "sublime" # sublime, Gvim, notepad
@@ -426,10 +427,15 @@ class Myapp(tk.Tk):
             f.write(content)
 
     def _left_double_click_question_label(self):
-        if "Empty" in self.question_info or "empty" in self.question_info or  self.question_info == "":
+        if "Empty" in self.question_info or "empty" in self.question_info or self.question_info == "":
             print("No question to open!")
             return
-        if self.link == "":
+        # the special case for the "lc" classes
+        if "lc" in self.topic1:
+            pass
+        # if is lc, just try to open the local file
+
+        if self.link == "" or "lc" in self.topic1:
             # use the typora to open the file, file name is the same as the question
             file_name = self.question_info.strip("\n") + ".md"
             if self.topic1 in self.has_topic2_ls:
@@ -443,19 +449,33 @@ class Myapp(tk.Tk):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
             # creat the file
-            file_path = rf"{file_path}"
             if not os.path.exists(file_path):
                 with open(file_path, "w", encoding="utf-8") as f:
                     pass
             # renew the js_var and the questions_all
             with open(question_path, "r", encoding="utf-8") as f:
                 content = f.read()
-            replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
-            new_content = content.replace(self.question_info, replace_lines)
+            if self.link == "":
+                replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                new_content = content.replace(self.question_info, replace_lines)
+                # renew the self.link
+                self.link = file_name
+            elif len(self.link.split("#")) == 1:
+                # use the re to replace
+                question_info_without_n = self.question_info.rstrip("\n")
+                #pattern = re.compile(rf"{question_info_without_n}.*\n{0,1}")
+                pattern = rf"{question_info_without_n}.*\n"
+                pattern = pattern + r"{0,1}"
+                match_str = re.search(pattern, content)
+                if match_str:
+                    match_str = match_str.group(0)
+                replace_str = match_str.strip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                new_content = re.sub(pattern, replace_str, content)
+                # renew the self.link, has the http link
+                self.link += "#" + self.question_info.rstrip("\n") + ".md"
             with open(question_path, "w", encoding="utf-8") as f:
                 f.write(new_content)
-            # renew the js_var and the save js_var
-            self.link = file_name
+            # renew the js_var
             if self.topic1 in self.has_topic2_ls:
                 self.js_var[self.topic1][self.topic2][self.question_info]["link"] = self.link
             else:
@@ -522,7 +542,7 @@ class Myapp(tk.Tk):
 
     def _jump_to_git_mind(self):
         git_mind_address = r"https://gitmind.cn/app/doc/b3136af99a41035e22bdda90cc2559b4"
-        self.chorme.open(git_mind_address, new=2)
+        self.chorme.open(git_mind_address, new=1)
 
     def __super_do(self):
         # pop the dialog to get the command string
@@ -532,7 +552,7 @@ class Myapp(tk.Tk):
         try:
             exec(command)
             if "js_var" in command:
-                # call the function to save the self.js_var
+                # call the function to save the self.js_va1
                 self.saveJsvar()
             tkinter.messagebox.showinfo(title="Success!", message=f"successfully execute the command:\n {command}")
         except Exception as e:
@@ -606,7 +626,11 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
             self.lb_info.config(text=show_info)
             return
         if "http" in self.link:
-            address = self.link
+            link_ls = self.link.split("#")
+            if len(link_ls) >= 2:
+                address = link_ls[0].strip()
+            else:
+                address = self.link
             self.chorme.open(address, new=2)
         else:
             if self.topic1 != "review":
@@ -662,7 +686,7 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
                 return
             index = ret_get[0]
             # renew the question
-            self.question_info = lb.get(index)
+            #self.question_info = lb.get(index)
             self.question = self.questions_ls[index]
             self.question_info = list(self.question.keys())[0]
             self.score = self.question[self.question_info]["score"]
@@ -681,9 +705,24 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
         #
         lb.bind("<Double-1>", just_select)
         lb.bind("<Double-3>", on_jump_to_answer)
+        #
+        is_show_score_occur = False
+        # get the gap_len
+        if "lc" in self.topic1:
+            gap_len = 40
+        else:
+            gap_len = 75
+        string_format = "{0:{3}<" + str(gap_len) + "} # {1:2} {2:.2}"
         for question_dict in self.questions_ls:
             question_info = list(question_dict.keys())[0]
-            lb.insert(tk.END, question_info)
+            occur_num = question_dict[question_info]["occur"]
+            score_val = float(question_dict[question_info]["score"])
+            if is_show_score_occur:
+                question_info_verbose = string_format.format(question_info, occur_num, score_val, chr(12288))
+            else:
+                question_info_verbose = question_info
+            #question_info_verbose = f"{question_info:#<{gap_len}}#{occur_num:2} {score_val:.2}"
+            lb.insert(tk.END, question_info_verbose)
 
         # reset the window's size
         #n_auto_width = n_window.winfo_width()
@@ -764,7 +803,7 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
         self.old_time = time.time()
 
     def change_score(self):
-        score_val = int(self.cb_score.get())
+        score_val = float(self.cb_score.get())
         # self.occur has already been add 1
         self.score = (self.score * (self.occur-1) + score_val) / (self.occur)
         # renew the js_var

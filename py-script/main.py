@@ -28,12 +28,14 @@ def get_video_path(save_dir):
 	save_path = f"{save_dir}{now_time}.mp4"
 	return save_path
 # 
-def check_plan_file(everyday_dir, file_name_ls):
+def check_plan_file(record_dir, file_name_ls):
+	global everyday_dir
 	# get the date
 	t_tm = time.localtime()
 	year, month, day = t_tm.tm_year, t_tm.tm_mon, t_tm.tm_mday
 	abbre_weekday = time.strftime("%a", t_tm)
 	#
+	everyday_dir = f"{record_dir}/{year}/{year}-{month:02}/{month:02}-{day:02}"
 	if not os.path.exists(everyday_dir):
 		os.makedirs(everyday_dir)
 	for file_name in file_name_ls:
@@ -469,7 +471,7 @@ while (True):
 		if quit_flag:
 			continue
 		# set the count after showing finish
-		count = int(count_tm // 6 / 2)
+		count = int(count_tm / 5)
 		img_o = img
 		# resive the window
 		c_w, c_h = 266, 100
@@ -575,7 +577,7 @@ while (True):
 					#full_screen = cv.resize(full_screen, (int(scale_sz*scen_width*0.9), int(scale_sz*scen_height*0.9)))
 					full_screen = cv.resize(full_screen, (full_sc_width, full_sc_height))
 				cv.imshow(count_end_named_window, full_screen)
-				key_val_3 = cv.waitKey(2000) & 0xff
+				key_val_3 = cv.waitKey(1000) & 0xff
 				count -= 1
 				if key_val_3 == ord('q') or count<0:
 					break
