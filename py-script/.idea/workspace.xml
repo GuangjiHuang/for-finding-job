@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../config/tk_question_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/tk_question_setting.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/answers/lc_al/数论/279. 完全平方数.md" beforeDir="false" afterPath="$PROJECT_DIR$/../data/answers/lc_al/数论/279. 完全平方数.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/plan.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/question.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/record.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/questions_all/lc_al/双指针.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/lc_al/双指针.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/questions_all/lc_al/数论.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/lc_al/数论.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/coding/LC.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/coding/LC.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/resume/跟踪.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/resume/跟踪.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tk_question.py" beforeDir="false" afterPath="$PROJECT_DIR$/tk_question.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tk_calendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/tk_calendar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.tk_question">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py-script" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,8 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.tk_calendar" />
       </list>
     </recent_temporary>
@@ -127,6 +126,7 @@
       <workItem from="1659354384233" duration="8154000" />
       <workItem from="1659401538665" duration="2349000" />
       <workItem from="1659403918399" duration="5928000" />
+      <workItem from="1659436398295" duration="11277000" />
     </task>
     <servers />
   </component>
@@ -161,10 +161,29 @@
           <line>445</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>686</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>544</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="flag_item" language="Python" />
+        <watch expression="flag_new_line" language="Python" />
+        <watch expression="lines[-1]" language="Python" />
+        <watch expression="last_line" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/py_script$tk_question.coverage" NAME="tk_question Coverage Results" MODIFIED="1659409905333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$tk_question.coverage" NAME="tk_question Coverage Results" MODIFIED="1659436998468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$main.coverage" NAME="main Coverage Results" MODIFIED="1659449507689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

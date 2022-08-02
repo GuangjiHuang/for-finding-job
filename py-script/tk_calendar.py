@@ -103,7 +103,7 @@ class Calendar:
     def count_questions_num(self, file_path):
         if not os.path.exists(file_path):
             return 0
-        with open(file_path, "r") as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
         count = 0
         add_flag = False
@@ -164,7 +164,7 @@ class Calendar:
         return " " * num
 
     def _renew_list_box(self, year, month, day):
-        self.select_dir = f"{self.record_dir}/{year}-{month:02d}/{month:02d}-{day:02d}/"
+        self.select_dir = f"{self.record_dir}/{year}/{year}-{month:02d}/{month:02d}-{day:02d}/"
         self.lb.delete(0, tk.END)
         if not os.path.exists(self.select_dir):
             self.lb.insert(tk.END, "NONE")
@@ -305,7 +305,7 @@ class Calendar:
             return False
         else:
             for file_path in file_path_ls:
-                with open(file_path, "r")  as f:
+                with open(file_path, "r", encoding="utf-8") as f:
                     if f.read().strip(" \n\t") == "":
                         f.close()
                         # then remove the f

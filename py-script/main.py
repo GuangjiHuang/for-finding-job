@@ -354,7 +354,6 @@ while (True):
 #
 	elif key_val_0 == ord(':'):
 		# setting the parameter
-		setting_path = "./setting.txt"
 		if os.path.exists(setting_path):
 			# use the gvim to open the file
 			try:
@@ -409,7 +408,7 @@ while (True):
 	elif key_val_0 == ord('h'):
 		# this is the help
 		# read the help text
-		help_path = "./help.txt"
+		help_path = "../config/main_help.txt"
 		help_list = list()
 		with open(help_path, "r", encoding="utf-8") as f:
 			help_list = f.readlines()
@@ -435,6 +434,7 @@ while (True):
 		if t_num == 0:
 			t_num = 10
 		count_tm = t_num * 60 * t_gap
+		count_tm_copy = count_tm
 		# if the count_tm gt 10 min, you need to have the plan
 		quit_flag = False
 		if  count_tm >= 10 * 60:
@@ -488,8 +488,8 @@ while (True):
 			plan_path = os.path.join(everyday_dir, "plan.txt")
 			question_path = os.path.join(everyday_dir, "question.txt")
 			record_path = os.path.join(everyday_dir, "record.txt")
-			for _path in [plan_path, question_path, record_path]:
-				append_time_to_file(_path, count_tm)
+			#for _path in [plan_path, question_path, record_path]:
+			append_time_to_file(plan_path, count_tm)
 
 			os.system(f"{editor} {plan_path}")
 		while count_tm>0:
@@ -507,17 +507,62 @@ while (True):
 				if is_need_to_write_file:
 					# change the bg
 					img_bg = np.zeros((c_h, c_w, 3), np.uint8)
-					quit_text_1 = "modify plan?"
-					quit_text_2 = "Y[any key], N[b]."
-					cv.putText(img_bg, quit_text_1, (int(0.2 * c_w), int(0.3 * c_h)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 255, 255), 1)
-					cv.putText(img_bg, quit_text_2, (int(0.2 * c_w), int(0.8 * c_h)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 255), 1)
+					quit_text_1 = "finish or terminate?"
+					quit_text_2 = "finish[a], terminate[b]."
+					cv.putText(img_bg, quit_text_1, (int(0.1 * c_w), int(0.3 * c_h)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 255, 255), 1)
+					cv.putText(img_bg, quit_text_2, (int(0.1 * c_w), int(0.8 * c_h)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 255), 1)
 					cv.imshow(window_name, img_bg)
-					if cv.waitKey() & 0xff != ord('b'):
-						# you have to open the file to modify the plan
-						os.system(f"{editor} {plan_path}")
-					# set is_need_to_write_file to False
-					is_need_to_write_file = False
-				break
+					key_val_quit = cv.waitKey() & 0xff
+					if key_val_quit not in [ord('a'), ord('b')]:
+						break
+					else:
+						# here open the file
+						lines = []
+						with open(plan_path, "r", encoding="utf-8") as f:
+							lines = f.readlines()
+						#
+						if key_val_quit == ord('a'):
+							# change the last time to now
+							change_time = time.strftime("%H:%M", time.localtime())
+							time_pattern = r"- *(\d{2}:\d{2})"
+							for i in range(len(lines)):
+								line = lines[len(lines)-i-1]
+								t_m = re.search(time_pattern, line)
+								if t_m:
+									time_point = t_m.group(1)
+									line = line.replace(time_point, change_time)
+									# renew the lines
+									lines[len(lines)-i-1] = line
+									# then break
+									break
+							# still need to add the content to the question and the record
+							is_need_to_write_file = True
+							is_count_end = True
+						elif key_val_quit == ord('b'):
+							flag_new_line = False
+							flag_item = False
+							# delete the plan's content of the last line
+							for i in range(len(lines)):
+								last_line = lines[-1]
+								last_line = last_line.strip("\n ")
+								if len(last_line) > 0:
+									flag_item = True
+									if flag_new_line:
+										lines[-1] = last_line
+										break
+									else:
+										lines.pop()
+								else:
+									lines.pop()
+									if flag_item:
+										flag_new_line = True
+							# write the content to the file
+							with open(plan_path, "w", encoding="utf-8") as f:
+								f.write("".join(lines))
+							# set is_need_to_write_file to False
+							is_need_to_write_file = False
+						# at last, will break the loop
+						break
 			elif key_val_1 == ord('x'): ## contenctrate, cover the weixin and the qq
 				count_down_is_in_concentrate_mode = not count_down_is_in_concentrate_mode
 				if count_down_is_in_concentrate_mode:
@@ -637,8 +682,15 @@ while (True):
 					else:
 						n += 1
 		# here destroy the count_end_named_window, this is very important
-		cv.destroyWindow(count_end_named_window)
-		if is_need_to_write_file and not quit_flag:
+		if is_count_end:
+			cv.destroyWindow(count_end_named_window)
+		if is_need_to_write_file:
+			# first, write the time
+			question_path = os.path.join(everyday_dir, "question.txt")
+			record_path = os.path.join(everyday_dir, "record.txt")
+			write_question_record_time_duration = count_tm_copy - count_tm
+			for _path in [question_path, record_path]:
+				append_time_to_file(_path, write_question_record_time_duration)
 			# end the countdown, open the record file and the question file
 			# here use the threads to open the file
 			def run_two_files():
