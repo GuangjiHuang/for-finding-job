@@ -1,5 +1,5 @@
 # 双指针 #
-42. 接雨水#https://leetcode.cn/problems/trapping-rain-water
+42. 接雨水#https://leetcode.cn/problems/trapping-rain-water#42. 接雨水.md
 15. 三数之和#https://leetcode.cn/problems/3sum
 11. 盛最多水的容器#https://leetcode.cn/problems/container-with-most-water
 26. 删除有序数组中的重复项#https://leetcode.cn/problems/remove-duplicates-from-sorted-array

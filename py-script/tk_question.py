@@ -12,6 +12,8 @@ from tkinter import W, ttk
 import tkinter.font as tkFont
 from to_json import txt_to_js
 from tk_calendar import Calendar
+import pathlib
+from subprocess import Popen
 import re
 #
 is_debug = False
@@ -307,10 +309,11 @@ class Myapp(tk.Tk):
             file_path = os.path.join(self.p_q_r_dir, "record.txt")
         # check if the file exists
         if not os.path.exists(file_path):
-            with open(file_path, "w") as f:
+            with open(file_path, "w", encoding="utf-8") as f:
                 print(f"create the file: {file_path}")
                 f.close()
         # use the gvim to open the file
+        file_path = f'"{file_path}"'
         Thread(target=lambda: os.system(f"{editor} {file_path}"), args=()).start()
 
     def _left_double_click_info_label(self):
@@ -319,6 +322,7 @@ class Myapp(tk.Tk):
         else:
             question_path = f"{self.question_dir}/{self.topic1}.txt"
         # use notepad open the question_pqth
+        question_path = f'"{question_path}"'
         open_question_file = lambda: os.system(f"{editor} {question_path}")
         Thread(target=open_question_file, args=()).start()
 
@@ -438,9 +442,9 @@ class Myapp(tk.Tk):
             if not os.path.exists(dir_path):
                 os.makedirs(dir_path)
             # create the file
+            file_path = rf"{file_path}"
             if not os.path.exists(file_path):
-                with open(file_path, "w", encoding="utf-8") as f:
-                    f.close()
+                pathlib.Path(file_path).touch()
             # renew the js_var and the questions_all
             with open(question_path, "r", encoding="utf-8") as f:
                 lines = f.readlines()
@@ -463,10 +467,11 @@ class Myapp(tk.Tk):
             file_name = self.link.split("#")[-1]
             file_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}/{file_name}"
         # open the file
-        file_path = os.path.abspath(file_path)
-        os.system(f"sublime {file_path}")
-        #Thread(target=lambda: os.system(f"D:\\Typora\\Typora.exe {file_path}"), args=()).start()
-
+        file_path = f'"{file_path}"' # add the ' ', sovle the bug
+        run_cmd = f"Typora {file_path}"
+        open_new_file = lambda: os.system(run_cmd)
+        Thread(target=open_new_file, args=()).start()
+        #Popen(run_cmd)
 
     def _left_double_click_question_label(self):
         if "Empty" in self.question_info or "empty" in self.question_info or  self.question_info == "":
@@ -475,45 +480,45 @@ class Myapp(tk.Tk):
         # for the leecode double link
         if "lc" in self.topic1 and self.link != "":
             self._just_for_lc_double_link()
-            return
-        #
-        if self.link == "":
-            # use the typora to open the file, file name is the same as the question
-            file_name = self.question_info.strip("\n") + ".md"
-            if self.topic1 in self.has_topic2_ls:
-                dir_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}"
-                file_path = f"{dir_path}/{file_name}"
-                question_path = f"{self.question_dir}/{self.topic1}/{self.topic2}.txt"
-            else:
-                dir_path = f"{self.answer_dir}/{self.topic1}"
-                file_path = f"{dir_path}/{file_name}"
-                question_path = f"{self.question_dir}/{self.topic1}.txt"
-            if not os.path.exists(dir_path):
-                os.makedirs(dir_path)
-            # creat the file
-            file_path = rf"{file_path}"
-            if not os.path.exists(file_path):
-                with open(file_path, "w", encoding="utf-8") as f:
-                    pass
-            # renew the js_var and the questions_all
-            with open(question_path, "r", encoding="utf-8") as f:
-                content = f.read()
-            replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
-            new_content = content.replace(self.question_info, replace_lines)
-            with open(question_path, "w", encoding="utf-8") as f:
-                f.write(new_content)
-            # renew the js_var and the save js_var
-            self.link = file_name
-            if self.topic1 in self.has_topic2_ls:
-                self.js_var[self.topic1][self.topic2][self.question_info]["link"] = self.link
-            else:
-                self.js_var[self.topic1][self.question_info]["link"] = self.link
-            self.saveJsvar()
-            # open the file
-            open_new_file = lambda: os.system(f"D:\\Typora\\Typora.exe {file_path}")
-            Thread(target=open_new_file, args=()).start()
         else:
-            self.c_btn_answer()
+            if self.link == "":
+                # use the typora to open the file, file name is the same as the question
+                file_name = self.question_info.strip("\n") + ".md"
+                if self.topic1 in self.has_topic2_ls:
+                    dir_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}"
+                    file_path = f"{dir_path}/{file_name}"
+                    question_path = f"{self.question_dir}/{self.topic1}/{self.topic2}.txt"
+                else:
+                    dir_path = f"{self.answer_dir}/{self.topic1}"
+                    file_path = f"{dir_path}/{file_name}"
+                    question_path = f"{self.question_dir}/{self.topic1}.txt"
+                if not os.path.exists(dir_path):
+                    os.makedirs(dir_path)
+                # creat the file
+                file_path = rf"{file_path}"
+                if not os.path.exists(file_path):
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        pass
+                # renew the js_var and the questions_all
+                with open(question_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                new_content = content.replace(self.question_info, replace_lines)
+                with open(question_path, "w", encoding="utf-8") as f:
+                    f.write(new_content)
+                # renew the js_var and the save js_var
+                self.link = file_name
+                if self.topic1 in self.has_topic2_ls:
+                    self.js_var[self.topic1][self.topic2][self.question_info]["link"] = self.link
+                else:
+                    self.js_var[self.topic1][self.question_info]["link"] = self.link
+                self.saveJsvar()
+                # open the file
+                file_path = f'"{file_path}"'
+                open_new_file = lambda: os.system(f"Typora {file_path}")
+                Thread(target=open_new_file, args=()).start()
+            else:
+                self.c_btn_answer()
 
     def _change_cb_topic1(self, *args):
         # renew the cb_topic1 and cb_topic2
@@ -684,6 +689,7 @@ b5444ca31ceb0bd3302dbbba2b74f70a5d1b352b7bf332afc1259cb6650d13287e009ce7c16bd591
                         if os.path.exists(answer_path):
                             break
             # use the typora to open the file
+            answer_path = f'"{answer_path}"'
             open_file = lambda: os.system(f"D:\\Typora\\Typora.exe {answer_path}")
             Thread(target=open_file, args=()).start()
 

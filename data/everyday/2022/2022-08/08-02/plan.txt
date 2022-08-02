@@ -4,3 +4,14 @@
 
 00:40-01:15      35 mins
 P1. continue to write the code of the tk_question.py, creat the new function to deal with the lc topic. 
+
+01:15-08:33     438 mins ---------- free ----------
+08:33-08:43      10 mins
+P2. typing 10 minutes.
+
+08:43-08:49       6 mins ---------- free ----------
+08:49-09:19      30 mins
+P3. try to debug the tk_question.py of the: 不能正常在本地打开lc中的md文件。
+
+-11.15    xxxmins
+P3. 继续解决问题。
