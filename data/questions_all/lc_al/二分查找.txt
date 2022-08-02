@@ -7,7 +7,7 @@
 剑指 Offer 51. 数组中的逆序对#https://leetcode.cn/problems/shu-zu-zhong-de-ni-xu-dui-lcof
 34. 在排序数组中查找元素的第一个和最后一个位置#https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array
 剑指 Offer 04. 二维数组中的查找#https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof
-300. 最长递增子序列#https://leetcode.cn/problems/longest-increasing-subsequence
+300. 最长递增子序列#https://leetcode.cn/problems/longest-increasing-subsequence#300. 最长递增子序列.md
 540. 有序数组中的单一元素#https://leetcode.cn/problems/single-element-in-a-sorted-array
 349. 两个数组的交集#https://leetcode.cn/problems/intersection-of-two-arrays
 209. 长度最小的子数组#https://leetcode.cn/problems/minimum-size-subarray-sum

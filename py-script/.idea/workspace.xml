@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/plan.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/question.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-02/record.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/questions_all/coding/LC.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/coding/LC.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/questions_all/resume/跟踪.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/resume/跟踪.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/coding/DL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/coding/DL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/lc_al/二分查找.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/lc_al/二分查找.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tk_calendar.py" beforeDir="false" afterPath="$PROJECT_DIR$/tk_calendar.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,9 +175,5 @@
         <watch expression="last_line" language="Python" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/py_script$tk_question.coverage" NAME="tk_question Coverage Results" MODIFIED="1659436998468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py_script$main.coverage" NAME="main Coverage Results" MODIFIED="1659449507689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
