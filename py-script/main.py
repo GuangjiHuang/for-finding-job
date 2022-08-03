@@ -137,6 +137,9 @@ record_dir = "../data/everyday"
 editor = "sublime" # you can choose the Gvim, sublime, notepad
 # if load the setting
 setting_path = r"../config/main_setting.txt"
+# is_use_duplicate
+is_use_duplicate_window = True
+is_shine_screen = False
 if is_load_setting:
 	with open(setting_path, "r", encoding="utf-8") as f:
 		commands = f.readlines()
@@ -586,8 +589,16 @@ while (True):
 		if is_count_end:
 			count_end_named_window = "full screen"
 			cv.namedWindow(count_end_named_window, cv.WINDOW_NORMAL)
+			cv.moveWindow(count_end_named_window, 0, 0)
 			cv.setWindowProperty(count_end_named_window, cv.WND_PROP_TOPMOST, 1)
 			cv.setWindowProperty(count_end_named_window, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
+			if is_use_duplicate_window:
+				count_end_named_window_dp = "full screen dp"
+				cv.namedWindow(count_end_named_window_dp, cv.WINDOW_NORMAL)
+				cv.moveWindow(count_end_named_window_dp, 1920, 0)
+				cv.setWindowProperty(count_end_named_window_dp, cv.WND_PROP_TOPMOST, 1)
+				cv.setWindowProperty(count_end_named_window_dp, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
+				# move the window to the rigth screen
 			if not is_show_random:
 				scenery_video_path = play_video_path
 				# check if the path is exist and if the path can open
@@ -622,6 +633,8 @@ while (True):
 					#full_screen = cv.resize(full_screen, (int(scale_sz*scen_width*0.9), int(scale_sz*scen_height*0.9)))
 					full_screen = cv.resize(full_screen, (full_sc_width, full_sc_height))
 				cv.imshow(count_end_named_window, full_screen)
+				if is_use_duplicate_window:
+					cv.imshow(count_end_named_window_dp, full_screen)
 				key_val_3 = cv.waitKey(1000) & 0xff
 				count -= 1
 				if key_val_3 == ord('q') or count<0:
@@ -636,6 +649,8 @@ while (True):
 			wait_time = 2
 			while True:
 				cv.imshow(count_end_named_window, waiting_img)
+				if is_use_duplicate_window:
+					cv.imshow(count_end_named_window_dp, waiting_img)
 				key_val_4 = cv.waitKey(1000)
 				wait_time -= 1
 				if wait_time <0 or key_val_4 in [ord(' '), ord('c'), ord('q'), ord('e')]:
@@ -674,6 +689,11 @@ while (True):
 					w_full_screen[..., 2] = col_r = random.randint(0, init_col)
 					cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
 					cv.imshow(count_end_named_window, w_full_screen)
+					if is_use_duplicate_window:
+						cv.imshow(count_end_named_window_dp, w_full_screen)
+					# is_shine_screen = False, set the inti_wt to 0
+					if not is_shine_screen:
+						init_wt = 0
 					key_val_5 = cv.waitKey(init_wt)
 					if key_val_5 in [ord(' '), ord('c'), ord('q'), ord('e')]:
 						break
@@ -684,6 +704,8 @@ while (True):
 		# here destroy the count_end_named_window, this is very important
 		if is_count_end:
 			cv.destroyWindow(count_end_named_window)
+			if is_use_duplicate_window:
+				cv.destroyWindow(count_end_named_window_dp)
 		if is_need_to_write_file:
 			# first, write the time
 			question_path = os.path.join(everyday_dir, "question.txt")
