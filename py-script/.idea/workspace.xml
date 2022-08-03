@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../coding/python/DL/cnn_impl.py" beforeDir="false" afterPath="$PROJECT_DIR$/../coding/python/DL/cnn_impl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../config/main_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/main_setting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-03/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-03/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-03/question.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-03/question.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-03/record.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-03/record.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -122,6 +126,8 @@
       <workItem from="1659403918399" duration="5928000" />
       <workItem from="1659436398295" duration="11277000" />
       <workItem from="1659495602701" duration="1707000" />
+      <workItem from="1659508773344" duration="1122000" />
+      <workItem from="1659513687386" duration="342000" />
     </task>
     <servers />
   </component>
@@ -161,6 +167,16 @@
           <line>621</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>527</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -171,5 +187,8 @@
         <watch expression="last_line" language="Python" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/py_script$main.coverage" NAME="main Coverage Results" MODIFIED="1659514023391" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

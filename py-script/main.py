@@ -15,18 +15,18 @@ color_tb = {"red":(0, 0, 255), "green": (0, 255, 0), "blue": (255, 0, 0),
 #
 
 def progress(img_h, img_w, p_h, t_toal, t_left):
-	img = np.zeros((img_h, img_w, 3), np.uint8)
+	img = 66 * np.ones((img_h, img_w, 3), np.uint8)
 	# the progress width and the height
 	if p_h > img_h:
 		p_h = img_h
-	p_w_r = math.floor(t_left / t_toal) * img_w
+	p_w_r = math.floor(t_left / t_toal * img_w)
 	p_w_l = img_w - p_w_r
 	# set the value
 	h1 = (img_h - p_h) // 2
 	h2 = (img_h + p_h) // 2
-	h1 = 0 if h1<0 else h1
+	h1 = 0 if h1 < 0 else h1
 	h2 = img_h if h2>img_h else h2
-	img[h1:h2, 0:p_w_l, 0] = 255
+	img[h1:h2, 0:p_w_l, 1] = 255
 	img[h1:h2, p_w_l:, 2] = 255
 	return img
 
@@ -583,7 +583,7 @@ while (True):
 							# set is_need_to_write_file to False
 							is_need_to_write_file = False
 						# at last, will break the loop
-						break
+				break
 			elif key_val_1 == ord('x'): ## contenctrate, cover the weixin and the qq
 				count_down_is_in_concentrate_mode = not count_down_is_in_concentrate_mode
 				if count_down_is_in_concentrate_mode:
@@ -609,14 +609,14 @@ while (True):
 			cv.namedWindow(count_end_named_window, cv.WINDOW_NORMAL)
 			cv.moveWindow(count_end_named_window, 0, 0)
 			cv.setWindowProperty(count_end_named_window, cv.WND_PROP_TOPMOST, 1)
-			#cv.setWindowProperty(count_end_named_window, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
+			cv.setWindowProperty(count_end_named_window, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
 			if is_use_duplicate_window:
 				count_end_named_window_dp = "full screen dp"
 				cv.namedWindow(count_end_named_window_dp, cv.WINDOW_NORMAL)
-				#cv.moveWindow(count_end_named_window_dp, 192, 0)
+				cv.moveWindow(count_end_named_window_dp, 1920, 0)
 				cv.setWindowProperty(count_end_named_window_dp, cv.WND_PROP_TOPMOST, 1)
-				#cv.setWindowProperty(count_end_named_window_dp, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
-				# move the window to the rigth screen
+				cv.setWindowProperty(count_end_named_window_dp, cv.WND_PROP_FULLSCREEN, cv.WINDOW_FULLSCREEN)
+			    #move the window to the rigth screen
 			if not is_show_random:
 				scenery_video_path = play_video_path
 				# check if the path is exist and if the path can open
@@ -652,7 +652,7 @@ while (True):
 					full_screen = cv.resize(full_screen, (full_sc_width, full_sc_height))
 				cv.imshow(count_end_named_window, full_screen)
 				if is_use_duplicate_window:
-					full_screen_dp = progress(full_sc_height, full_sc_width, int(full_sc_height/3), count_total, count)
+					full_screen_dp = progress(full_sc_height, full_sc_width, int(full_sc_height/66), count_total, count)
 					cv.imshow(count_end_named_window_dp, full_screen_dp)
 				key_val_3 = cv.waitKey(1000) & 0xff
 				count -= 1
