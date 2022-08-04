@@ -39,12 +39,34 @@ def conv2d(in_fm, weights, stride, padding):
     #
     return out_fm
 
+
+def conv_v2(in_fm, weights, s, p):
+    # get the in_fm  and the weights shape
+    h_in, w_in, c_in = in_fm.shape
+    k = weights.shape[0]
+    # calculate the fm_out's shape
+    h_out = (h_in + 2 * p - k) // s + 1
+    w_out = (w_in + 2 * p - k) // s + 1
+    # create the out_fm
+    out_fm = np.zeros((h_out, w_out))
+    # create the padding input feature map
+    in_fm_p = np.zeros((h_in+2*p, w_in+2*p, c_in))
+    in_fm_p[p:h_in+p, p:w_in+p] = in_fm
+    # then conv and loop
+    for h in range(h_out):
+        for w in range(w_out):
+            out_fm[h][w] = np.sum(weights * in_fm_p[h*s:h*s+k, w*s:w*s+k])
+    # and then return the result
+    return out_fm
+
 if __name__ == "__main__":
     torch.random.manual_seed(0)
     i_img = torch.randint(0, 2, (1, 3, 10, 10))
     weight = torch.randint(0, 2, (1, 3, 5, 5))
+    p = 0
+    s = 1
     # cal the conv
-    ret = F.conv2d(i_img, weight, padding=1, stride=2)
+    ret = F.conv2d(i_img, weight, stride=s, padding=p)
     ret = torch.squeeze(ret)
     print(ret.shape)
     print(ret)
@@ -52,9 +74,14 @@ if __name__ == "__main__":
     print("my own conv")
     input_img_np = np.transpose(i_img.numpy().squeeze(), (1, 2, 0))
     weight_np = np.transpose(weight.numpy().squeeze(), (1, 2, 0))
-    ret_conv = conv2d(input_img_np, weight_np, 2, 1)
+    ret_conv = conv2d(input_img_np, weight_np, s, p)
     print(ret_conv.shape)
     print(ret_conv)
+    #
+    print("my second conv")
+    ret_conv_2th = conv_v2(input_img_np, weight_np, s, p)
+    print(ret_conv_2th)
+
 
 
 

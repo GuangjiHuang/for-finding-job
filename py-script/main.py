@@ -19,6 +19,10 @@ def progress(img_h, img_w, p_h, t_toal, t_left):
 	# the progress width and the height
 	if p_h > img_h:
 		p_h = img_h
+	# solve the problem that if the t_toal is the 0
+	if t_toal <=0 :
+		t_toal = 1
+		t_left = 1
 	p_w_r = math.floor(t_left / t_toal * img_w)
 	p_w_l = img_w - p_w_r
 	# set the value
@@ -99,10 +103,13 @@ def get_time_idnum(file_path):
 	#
 	return time_point, idnum_str
 
-def append_time_to_file(file_path, time_duration_sec):
+def append_time_to_file(file_path, time_duration_sec, start_time=None):
 	# add the now time
 	time_duration_min = int(time_duration_sec / 60)
-	now_time = time.time()
+	if start_time is None:
+		now_time = time.time()
+	else:
+		now_time = start_time # need the start_time is the time.time() format return
 	now_time_str = time.strftime("%H:%M", time.localtime(now_time))
 	next_time = now_time + time_duration_sec
 	next_time_str = time.strftime("%H:%M", time.localtime(next_time))
@@ -121,7 +128,11 @@ def append_time_to_file(file_path, time_duration_sec):
 		append_content = f"{newline(2)}{now_time_str}-{next_time_str}{space(5)}{time_duration_min:3} mins\n" \
 						 f"{idnum_str}"
 	else:
-		append_content = f"{newline(2)}{time_point}-{now_time_str}{space(5)}{free_time_duration:3} mins ---------- free ----------\n" \
+		if free_time_duration >= 60:
+			free_time_str = f"{newline(2)}{time_point}-{now_time_str}{space(5)}{free_time_duration/60:.2} hours ---------- free ----------\n"
+		else:
+			free_time_str = f"{newline(2)}{time_point}-{now_time_str}{space(5)}{free_time_duration:2} mins  ---------- free ----------\n"
+		append_content = f"{free_time_str}" \
 						 f"{now_time_str}-{next_time_str}{space(5)}{time_duration_min:3} mins\n" \
 						 f"{idnum_str}"
 	with open(file_path, "a+", encoding="utf-8") as f:
@@ -129,7 +140,7 @@ def append_time_to_file(file_path, time_duration_sec):
 		f.close()
 
 # --------------------------------------------------
-# the gobal var that you have to set
+# the global var that you have to set
 save_dir = r"../../study-app-data/video-save/"
 video_num = 0
 is_show_random = False
@@ -157,6 +168,8 @@ setting_path = r"../config/main_setting.txt"
 # is_use_duplicate
 is_use_duplicate_window = True
 is_shine_screen = False
+# if open the question and record file
+is_open_question_record = False
 if is_load_setting:
 	with open(setting_path, "r", encoding="utf-8") as f:
 		commands = f.readlines()
@@ -544,6 +557,7 @@ while (True):
 						#
 						if key_val_quit == ord('a'):
 							# change the last time to now
+							time_that_write_plan = time.time()
 							change_time = time.strftime("%H:%M", time.localtime())
 							time_pattern = r"- *(\d{2}:\d{2})"
 							for i in range(len(lines)):
@@ -706,10 +720,13 @@ while (True):
 					w_full_screen[..., 0] = col_b = random.randint(0, init_col)
 					w_full_screen[..., 1] = col_g = random.randint(0, init_col)
 					w_full_screen[..., 2] = col_r = random.randint(0, init_col)
-					cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-					cv.imshow(count_end_named_window, w_full_screen)
+					# here copy the img to the be used by the duplicated window!
 					if is_use_duplicate_window:
+						w_full_screen_cp = w_full_screen.copy()
+						cv.putText(w_full_screen_cp, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
 						cv.imshow(count_end_named_window_dp, w_full_screen)
+					cv.putText(w_full_screen, "Time Out!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+					cv.imshow(count_end_named_window, w_full_screen)
 					# is_shine_screen = False, set the inti_wt to 0
 					if not is_shine_screen:
 						init_wt = 0
@@ -726,19 +743,24 @@ while (True):
 			if is_use_duplicate_window:
 				cv.destroyWindow(count_end_named_window_dp)
 		if is_need_to_write_file:
-			# first, write the time
-			question_path = os.path.join(everyday_dir, "question.txt")
-			record_path = os.path.join(everyday_dir, "record.txt")
-			write_question_record_time_duration = count_tm_copy - count_tm
-			for _path in [question_path, record_path]:
-				append_time_to_file(_path, write_question_record_time_duration)
-			# end the countdown, open the record file and the question file
-			# here use the threads to open the file
-			def run_two_files():
-				os.system(f"{editor} {question_path}")
-				os.system(f"{editor} {record_path}")
-			Thread(target=run_two_files, args=()).start()
-			# after writing, set the is_need_to_write_file to false
+			if is_open_question_record:
+				# first, write the time
+				question_path = os.path.join(everyday_dir, "question.txt")
+				record_path = os.path.join(everyday_dir, "record.txt")
+				write_question_record_time_duration = count_tm_copy - count_tm
+				for _path in [question_path, record_path]:
+					append_time_to_file(_path, write_question_record_time_duration, start_time=time_that_write_plan)
+				# end the countdown, open the record file and the question file
+				# here use the threads to open the file
+				def run_two_files():
+					os.system(f"{editor} {question_path}")
+					os.system(f"{editor} {record_path}")
+				Thread(target=run_two_files, args=()).start()
+				# after writing, set the is_need_to_write_file to false
+			else:
+				# open the plan file
+				Thread(target=lambda: os.system(f"{editor} {plan_path}"), args=()).start()
+
 			is_need_to_write_file = False
 		# here have to set the bg change flag
 		bg_change_flag = True
