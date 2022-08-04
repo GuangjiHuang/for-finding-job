@@ -723,9 +723,9 @@ while (True):
 					# here copy the img to the be used by the duplicated window!
 					if is_use_duplicate_window:
 						w_full_screen_cp = w_full_screen.copy()
-						cv.putText(w_full_screen_cp, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-						cv.imshow(count_end_named_window_dp, w_full_screen)
-					cv.putText(w_full_screen, "Time Out!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+						cv.putText(w_full_screen_cp, "Time Out!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+						cv.imshow(count_end_named_window_dp, w_full_screen_cp)
+					cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
 					cv.imshow(count_end_named_window, w_full_screen)
 					# is_shine_screen = False, set the inti_wt to 0
 					if not is_shine_screen:
