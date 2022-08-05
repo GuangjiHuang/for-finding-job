@@ -386,6 +386,8 @@ while (True):
 			is_end = True
 #
 	elif key_val_0 == ord(':'):
+		# record the old_play_video_path
+		old_play_video_path = play_video_path
 		# setting the parameter
 		if os.path.exists(setting_path):
 			# use the gvim to open the file
@@ -409,8 +411,17 @@ while (True):
 					print(command)
 				except:
 					print("there are some wrong with the command: {command}")
-		# the bg_change_flag
-		bg_change_flag = True
+		# check the new video path
+		if not cv.VideoCapture(play_video_path).isOpened():
+			play_video_path = old_play_video_path
+		else:
+			if is_use_video and is_valid_video:
+				# change the video
+				cap.release()
+				cap = cv.VideoCapture(play_video_path)
+				print(f"change the video: {old_play_video_path} -> {play_video_path}")
+		# the bg_change_flag <hgj : why use the change flag?>
+		bg_change_flag = False
 #
 	elif key_val_0 == ord('n'):
 		if not video_num.isdigit():
