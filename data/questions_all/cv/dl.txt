@@ -59,3 +59,4 @@
 49.Faster_R_CNN和Mask_R_CNN的损失函数详解#49_Faster_R_CNN和Mask_R_CNN的损失函数详解.md
 50.手推公式总结#手推公式总结.md
 51.PR曲线+mAP以及ROC曲线+AUC.md#51.PR曲线+mAP以及ROC曲线+AUC.md.md
+52.反向传播的公式推导，对于每一层进行公式可视化。#52.反向传播的公式推导，对于每一层进行公式可视化。.md
