@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../config/main_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/main_setting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -31,7 +32,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.test-img">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py-script" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -122,8 +123,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test-img" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.test-img" />
         <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.tk_calendar" />
       </list>
@@ -151,6 +152,7 @@
       <workItem from="1659578196534" duration="1014000" />
       <workItem from="1659662865634" duration="1163000" />
       <workItem from="1659664463487" duration="495000" />
+      <workItem from="1659837685879" duration="679000" />
     </task>
     <servers />
   </component>
@@ -197,7 +199,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/py_script$test_img.coverage" NAME="test-img Coverage Results" MODIFIED="1659664793176" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py_script$main.coverage" NAME="main Coverage Results" MODIFIED="1659663985132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$test_img.coverage" NAME="test-img Coverage Results" MODIFIED="1659837991707" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$main.coverage" NAME="main Coverage Results" MODIFIED="1659838075127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

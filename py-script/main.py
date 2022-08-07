@@ -489,6 +489,7 @@ while (True):
 			# make the new window
 			cv.namedWindow("Information")
 			cv.moveWindow("Information", int(0.5*full_sc_width), int(0.1*full_sc_height))  # move the window to the middle
+
 			infor_width = int(0.3 * full_sc_width)
 			infor_height = int(0.2 * full_sc_height)
 			information_img = np.zeros((infor_height, infor_width, 3), np.uint8)
@@ -522,7 +523,8 @@ while (True):
 		c_w, c_h = 266, 100
 		#cv.resizeWindow(window_name, c_h, c_w)
 		# move window to the right bottom conner
-		cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-70-c_h)
+		#cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-70-c_h)
+		cv.moveWindow(window_name, full_sc_width*2-30-c_w, full_sc_height-70-c_h) # move to the second screen right bottom conner
 		# the end flag
 		is_count_end = False
 		# here set the flag that mark if you need to record
@@ -615,6 +617,16 @@ while (True):
 					cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-20-c_h) # height -70 -> -20
 				else:
 					cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-70-c_h) # move back
+			#
+			elif key_val_1 == ord('l'):
+				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
+			#
+			elif key_val_1 == ord('m'):
+				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
+			#
+			elif key_val_1 == ord('r'):
+				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
+			#
 			elif key_val_1 == ord('s'):
 				cv.putText(img_bg, "stop! key 'c' to go!", (int(0.2*c_w), int(0.8*c_h)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 255), 1)
 				while True:
