@@ -13,3 +13,4 @@ count_down_is_in_concentrate_mode = False
 play_video_path = "../../study-app-data/beauty/euro-high.mp4"
 is_use_duplicate_window = True
 is_shine = True
+is_double_screen = True

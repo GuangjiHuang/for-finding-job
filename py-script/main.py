@@ -170,6 +170,13 @@ is_use_duplicate_window = True
 is_shine_screen = False
 # if open the question and record file
 is_open_question_record = False
+is_double_screen = True
+# renew the is_double_screen just the computer name is the lab-hgj
+computer_name = os.popen("hostname").read()
+is_double_screen_computer = True
+if "lab-hgj" not in computer_name:
+	is_double_screen_computer = False
+#
 if is_load_setting:
 	with open(setting_path, "r", encoding="utf-8") as f:
 		commands = f.readlines()
@@ -523,8 +530,12 @@ while (True):
 		c_w, c_h = 266, 100
 		#cv.resizeWindow(window_name, c_h, c_w)
 		# move window to the right bottom conner
-		#cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-70-c_h)
-		cv.moveWindow(window_name, full_sc_width*2-30-c_w, full_sc_height-70-c_h) # move to the second screen right bottom conner
+		if is_double_screen and is_double_screen_computer:
+			# move to the second screen right bottom
+			cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
+		else:
+			# move the first screen right bottom
+			cv.moveWindow(window_name, full_sc_width - 30 - c_w, full_sc_height - 70 - c_h)
 		# the end flag
 		is_count_end = False
 		# here set the flag that mark if you need to record
@@ -619,12 +630,15 @@ while (True):
 					cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-70-c_h) # move back
 			#
 			elif key_val_1 == ord('l'):
-				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
+				# move to the first screen right bottom
+				cv.moveWindow(window_name, full_sc_width - 30 - c_w, full_sc_height - 70 - c_h)
 			#
-			elif key_val_1 == ord('m'):
-				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
+			elif key_val_1 == ord('m') and is_double_screen and is_double_screen_computer:
+				# move to the second screen left bottom
+				cv.moveWindow(window_name, full_sc_width+10, full_sc_height - 70 - c_h)
 			#
-			elif key_val_1 == ord('r'):
+			elif key_val_1 == ord('r') and is_double_screen and is_double_screen_computer:
+				# move to the second screen right bottom
 				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
 			#
 			elif key_val_1 == ord('s'):
