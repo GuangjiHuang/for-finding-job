@@ -48,7 +48,7 @@
 382. 链表随机节点#https://leetcode.cn/problems/linked-list-random-node
 445. 两数相加 II#https://leetcode.cn/problems/add-two-numbers-ii
 147. 对链表进行插入排序#https://leetcode.cn/problems/insertion-sort-list
-1171. 从链表中删去总和值为零的连续节点#https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list
+1171. 从链表中删去总和值为零的连续节点#https://leetcode.cn/problems/remove-zero-sum-consecutive-nodes-from-linked-list#1171. 从链表中删去总和值为零的连续节点.md
 剑指 Offer II 027. 回文链表#https://leetcode.cn/problems/aMhZSa
 355. 设计推特#https://leetcode.cn/problems/design-twitter
 708. 循环有序列表的插入#https://leetcode.cn/problems/insert-into-a-sorted-circular-linked-list

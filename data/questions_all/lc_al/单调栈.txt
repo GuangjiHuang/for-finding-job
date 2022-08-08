@@ -1,7 +1,7 @@
 42. 接雨水#https://leetcode.cn/problems/trapping-rain-water
-84. 柱状图中最大的矩形#https://leetcode.cn/problems/largest-rectangle-in-histogram
+84. 柱状图中最大的矩形#https://leetcode.cn/problems/largest-rectangle-in-histogram#84. 柱状图中最大的矩形.md
 739. 每日温度#https://leetcode.cn/problems/daily-temperatures
-402. 移掉 K 位数字#https://leetcode.cn/problems/remove-k-digits
+402. 移掉 K 位数字#https://leetcode.cn/problems/remove-k-digits#402. 移掉 K 位数字.md
 85. 最大矩形#https://leetcode.cn/problems/maximal-rectangle
 581. 最短无序连续子数组#https://leetcode.cn/problems/shortest-unsorted-continuous-subarray
 剑指 Offer 33. 二叉搜索树的后序遍历序列#https://leetcode.cn/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof

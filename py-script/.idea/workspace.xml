@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../config/main_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/main_setting.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-08/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-08/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/lc_al/单调栈.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/lc_al/单调栈.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/resume/模型部署.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/resume/模型部署.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/review.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/review.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -155,6 +157,7 @@
       <workItem from="1659664463487" duration="495000" />
       <workItem from="1659837685879" duration="679000" />
       <workItem from="1659927406822" duration="1852000" />
+      <workItem from="1659949270210" duration="136000" />
     </task>
     <servers />
   </component>

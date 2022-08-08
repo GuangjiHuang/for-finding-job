@@ -523,7 +523,7 @@ while (True):
 		if quit_flag:
 			continue
 		# set the count after showing finish
-		count = int(count_tm / 5)
+		count = int(count_tm / 8) # divide 8, just like the 5, some cost time to deal with the image and show image
 		count_total = count
 		img_o = img
 		# resive the window
