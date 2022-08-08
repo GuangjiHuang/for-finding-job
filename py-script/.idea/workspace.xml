@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-08/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-08/plan.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/questions_all/lc_al/单调栈.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/lc_al/单调栈.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../data/questions_all/resume/模型部署.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/resume/模型部署.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_all/review.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/review.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +32,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.tk_question">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="py-script" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,9 +123,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test-img" />
-        <item itemvalue="Python.tk_question" />
         <item itemvalue="Python.tk_calendar" />
       </list>
     </recent_temporary>
@@ -192,6 +189,11 @@
           <line>445</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tk_question.py</url>
+          <line>655</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -202,8 +204,5 @@
         <watch expression="last_line" language="Python" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/py_script$main.coverage" NAME="main Coverage Results" MODIFIED="1659928981037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
