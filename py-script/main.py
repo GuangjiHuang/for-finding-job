@@ -655,6 +655,7 @@ while (True):
 			if count_tm == 0:
 				is_count_end = True
 		# recover the window size
+		rest_time_start = time.time() # record the beginning of the rest time
 		if is_count_end:
 			count_end_named_window = "full screen"
 			cv.namedWindow(count_end_named_window, cv.WINDOW_NORMAL)
@@ -758,11 +759,21 @@ while (True):
 					w_full_screen[..., 1] = col_g = random.randint(0, init_col)
 					w_full_screen[..., 2] = col_r = random.randint(0, init_col)
 					# here copy the img to the be used by the duplicated window!
+					rest_time_end = time.time()
+					rest_time_gap = int(rest_time_end - rest_time_start)
+					rest_hours = int(rest_time_gap // 3600)
+					rest_minutes = int((rest_time_gap - rest_hours * 3600) // 60)
+					rest_seconds = int(rest_time_gap - rest_hours * 3600 - rest_minutes * 60)
+					#
+					rest_time_str = f"REST: {rest_hours:02}:{rest_minutes:02}:{rest_seconds:02}"
+					rest_time_offset = 100
 					if is_use_duplicate_window:
 						w_full_screen_cp = w_full_screen.copy()
 						cv.putText(w_full_screen_cp, "Time Out!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+						cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.5*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 0.5, (255-col_b, 255-col_g, 255-col_r), 1)
 						cv.imshow(count_end_named_window_dp, w_full_screen_cp)
 					cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+					cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.5 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 0.5, (255 - col_b, 255 - col_g, 255 - col_r), 1)
 					cv.imshow(count_end_named_window, w_full_screen)
 					# is_shine_screen = False, set the inti_wt to 0
 					if not is_shine_screen:
