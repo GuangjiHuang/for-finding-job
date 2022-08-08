@@ -1,4 +1,4 @@
-t_gap = 0.1
+t_gap = 5
 is_show_random = 0
 is_live = 0
 # about the color
