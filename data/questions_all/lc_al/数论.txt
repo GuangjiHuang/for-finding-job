@@ -3,6 +3,7 @@
 -3.求两个数的公因子#
 -4.判断一个数是不是素数#https://blog.csdn.net/CPOHUI/article/details/78667490?spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-78667490-blog-96584293.pc_relevant_aa&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-78667490-blog-96584293.pc_relevant_aa&utm_relevant_index=6#-4.判断一个数是不是素数.md
 -5.求一个自然数的所有的质因数#https://blog.csdn.net/u012737193/article/details/79825057?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-79825057-blog-21286991.pc_relevant_multi_platform_whitelistv2_ad_hc&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-79825057-blog-21286991.pc_relevant_multi_platform_whitelistv2_ad_hc&utm_relevant_index=1
+-6.求根号2，保留两位小数。#https://blog.csdn.net/xiaxl/article/details/94438829
 592. 分数加减运算#https://leetcode.cn/problems/fraction-addition-and-subtraction
 258. 各位相加#https://leetcode.cn/problems/add-digits
 204. 计数质数#https://leetcode.cn/problems/count-primes

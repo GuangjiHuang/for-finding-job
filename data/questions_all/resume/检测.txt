@@ -5,3 +5,6 @@
 5.yolov4有哪些tricks，用来训练的技巧？#5.yolov4有哪些tricks，用来训练的技巧？.md
 6.有没有和其它的版本的YOLO对比过性能，比如yolov3，为什么效果不好？#6.有没有和其它的版本的YOLO对比过性能，比如yolov3，为什么效果不好？.md
 7.yolov4和yolov3哪个检测速度更加快，哪个的精度更加高，从模型的哪些方面进行分析？#7.yolov4和yolov3哪个检测速度更加快，哪个的精度更加高，从模型的哪些方面进行分析？.md
+8.Repulsion loss#https://blog.csdn.net/Aced96/article/details/108851253
+9.检测模型训练的时候会用到nms吗？#https://www.csdn.net/tags/MtTaMg4sMDI3NzQwLWJsb2cO0O0O.html
+10.怎样判断该场景下人流量是密集还是稀疏？#10.怎样判断该场景下人流量是密集还是稀疏？.md
