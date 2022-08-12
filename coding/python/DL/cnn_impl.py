@@ -59,10 +59,28 @@ def conv_v2(in_fm, weights, s, p):
     # and then return the result
     return out_fm
 
+def conv_v3(in_fm, weights, s, p):
+    # get the shape of the in_fm and the weights
+    h_in, w_in, c_in = in_fm.shape
+    k = weights.shape[0]
+    # calculate the h_out and the w_out
+    h_out = (h_in + 2 * p - k) // s + 1
+    w_out = (w_in + 2 * p - k) // s + 1
+    # create the out_Fm
+    out_fm = np.zeros((h_out, w_out))
+    # padding and then calculate the wise value
+    in_fm_padding = np.zeros((h_in+2*p, w_in+2*p, c_in))
+    in_fm_padding[p:p+h_in, p:p+w_in] = in_fm
+    #
+    for h in range(h_out):
+        for w in range(w_out):
+            out_fm[h][w] = np.sum(weights * in_fm_padding[s*h:s*h+k, s*w:s*w+k])
+    return out_fm
+
 if __name__ == "__main__":
     torch.random.manual_seed(0)
-    i_img = torch.randint(0, 2, (1, 3, 10, 10))
-    weight = torch.randint(0, 2, (1, 3, 5, 5))
+    i_img = torch.randint(0, 2, (1, 3, 5, 5))
+    weight = torch.randint(0, 2, (1, 3, 3, 3))
     p = 0
     s = 1
     # cal the conv
@@ -79,8 +97,8 @@ if __name__ == "__main__":
     print(ret_conv)
     #
     print("my second conv")
-    ret_conv_2th = conv_v2(input_img_np, weight_np, s, p)
-    print(ret_conv_2th)
+    ret_conv_3th = conv_v3(input_img_np, weight_np, s, p)
+    print(ret_conv_3th)
 
 
 
