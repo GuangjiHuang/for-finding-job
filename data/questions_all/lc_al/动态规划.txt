@@ -2,7 +2,7 @@
 42. 接雨水 #https://leetcode.cn/problems/trapping-rain-water
 53. 最大子数组和 #https://leetcode.cn/problems/maximum-subarray
 70. 爬楼梯 #https://leetcode.cn/problems/climbing-stairs
-45. 跳跃游戏 II #https://leetcode.cn/problems/jump-game
+45. 跳跃游戏 II #https://leetcode.cn/problems/jump-game-ii/
 22. 括号生成 #https://leetcode.cn/problems/generate-parentheses
 55. 跳跃游戏 #https://leetcode.cn/problems/jump-game
 121. 买卖股票的最佳时机 #https://leetcode.cn/problems/best-time-to-buy-and-sell-stock
