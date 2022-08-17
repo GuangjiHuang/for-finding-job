@@ -25,4 +25,5 @@ P4. lc coding： 继续将两道题做出来。应该是可以做出来的，要
 
 01:40-01:42      2 mins  ---------- free ----------
 01:42-01:52      10 mins
-P5. lc coding: 1) 用10 minute 搞掂正则表达式匹配这个题目。ace！ 
+P5. lc coding: 1) 用10 minute 搞掂正则表达式匹配这个题目。ace！
+-> fail. 
