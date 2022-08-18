@@ -41,3 +41,13 @@ P7. lc coding: 1) ac 正则匹配； 2）dp + 2 道题； 2） 回溯： +1 道�
 09:51-10:06      15 mins
 P8. lc coding: 1)正则匹配； 2）编辑距离。
 -> 1) fail to slove the problem.
+
+10:06-14:20     4.2 hours ---------- free ----------
+14:20-14:30      10 mins
+P9. typing 10 races. 
+=> 9 races. 73WPM. that is very good score!
+
+14:30-14:35      5 mins  ---------- free ----------
+14:35-14:50      15 mins
+P10. lc coding: 1) regular expression. ace!
+-> can not ace! continue to solve the problem.
