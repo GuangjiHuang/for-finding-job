@@ -191,3 +191,5 @@ PCA的应用也很广泛，这里列举其中几项：
 
 [机器学习--主成分分析(PCA)算法的原理及优缺点](https://www.cnblogs.com/lsm-boke/p/11760224.html)
 
+[PCA（降维）原理与实现](https://blog.csdn.net/wyfiveron/article/details/105113186) 这里有原理和代码的实现。可以试试
+
