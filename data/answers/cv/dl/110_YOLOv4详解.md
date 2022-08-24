@@ -332,7 +332,7 @@ SPP模块，其实在Yolov3中已经存在了，在**Yolov4**的C++代码文件�
 
 **注意：**这里最大池化采用**padding操作**，移动的步长为1，比如13×13的输入特征图，使用5×5大小的池化核池化，**padding=2**，因此池化后的特征图仍然是13×13大小。
 
-![img](https://pic2.zhimg.com/80/v2-f0a07a504f94f3cfb25f8ce7420faa39_720w.jpg)
+<img src="https://pic2.zhimg.com/80/v2-f0a07a504f94f3cfb25f8ce7420faa39_720w.jpg" alt="img" style="zoom:150%;" />
 
 在2019提出的《**DC-SPP-Yolo**》文章：[https://arxiv.org/ftp/arxiv/papers/1903/1903.08589.pdf](https://link.zhihu.com/?target=https%3A//arxiv.org/ftp/arxiv/papers/1903/1903.08589.pdf)
 
