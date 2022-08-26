@@ -106,3 +106,8 @@ $\phi (x|\theta_{k})$的值代表：x由参数$\theta_{k}$下的高斯模型生�
 
 [K-means算法和高斯混合模型的异同](https://blog.csdn.net/qq_38150441/article/details/80498590)
 
+## hgj add
+参考文章：
+[混合高斯模型的基本原理，以及通过混合高斯模型进行背景建模的基本思想](https://blog.csdn.net/hotboyboy/article/details/88652385)
+[opencv背景建模(混合高斯模型)](https://blog.csdn.net/zengshaoqing/article/details/118417641?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-118417641-blog-38234173.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-2-118417641-blog-38234173.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=3)
+[OPENCV混合高斯模型原理](https://blog.csdn.net/xiaoliu1204/article/details/38234173)
