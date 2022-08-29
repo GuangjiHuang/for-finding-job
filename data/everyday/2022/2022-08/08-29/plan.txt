@@ -25,3 +25,18 @@ P4. lc coding: 1) z transform; 2) matrix traversal.
 09:39-09:54      15 mins
 P5. 简历投递；1）投一个华为先。
 -》 ok。刚好填好简历。还没有进行投递呢。
+
+09:54-12:16     2.4 hours ---------- free ----------
+12:16-12:26      10 mins
+P6. lc coding: 1) lc string * string.
+-> not finish. time out.
+
+12:26-12:41     15 mins  ---------- free ----------
+12:41-12:56      15 mins
+P7. lc coding: 1) 17. the combination of the phone number.
+-> ok. finish the job. good job, guys.
+
+12:56-12:54     -2 mins  ---------- free ----------
+12:54-12:59       5 mins
+P8. lc coding: 1) 堆排序。
+-> ok. but cost lots of time.
