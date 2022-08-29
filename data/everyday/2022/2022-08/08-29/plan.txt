@@ -10,3 +10,18 @@ P1. lc coding; 54.
 00:43-00:48       5 mins
 P2. lc coding； 14。
 -> ok. cost the 5 minutes to solve the problem.
+
+00:48-08:42     7.9 hours ---------- free ----------
+08:42-09:02      20 mins
+P3. 20 minutes : 做好两个芯片的关键的参数的比价。
+-》 ok。finish the work。
+
+09:02-09:15     13 mins  ---------- free ----------
+09:15-09:35      20 mins
+P4. lc coding: 1) z transform; 2) matrix traversal.
+-> ok. but it cost me lots of time. But I finish it at last.
+
+09:35-09:39      4 mins  ---------- free ----------
+09:39-09:54      15 mins
+P5. 简历投递；1）投一个华为先。
+-》 ok。刚好填好简历。还没有进行投递呢。

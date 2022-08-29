@@ -13,4 +13,4 @@ play_video_path = "../../study-app-data/beauty/scenery.mp4"
 #play_video_path = "../../study-app-data/beauty/euro-high.mp4"
 is_use_duplicate_window = True
 is_shine_screen = False
-is_double_screen = False
+is_double_screen = True
