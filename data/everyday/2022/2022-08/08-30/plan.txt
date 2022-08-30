@@ -1,0 +1,22 @@
+==============================
+2022-8-30  Tue.     PLAN 
+==============================
+
+08:30-08:35       5 mins
+P1. typing. 5 races.
+-> 5 races. 65WPM.
+
+08:35-08:38      3 mins  ---------- free ----------
+08:38-08:48      10 mins
+P2. lc coding： 1）复习一下c++中的优先队列的自定义的比价函数。
+-> has been tested. 1) lambda function; fail; 2) noraml function: ok. 3) functionor, ok.
+
+08:48-08:56      8 mins  ---------- free ----------
+08:56-09:26      30 mins
+P3. lc coding: finish 4 ti; 1)二维数组中的查找；2）树的子结构；3）qiank个高频词； 4）组合总和II。
+-> ok. finish. 
+
+09:26-10:32     1.1 hours ---------- free ----------
+10:32-11:02      30 mins
+P4. lc coding: 1) review.
+-> fail.
