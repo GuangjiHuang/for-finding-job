@@ -55,3 +55,8 @@ P10. lc coding; 二叉树的公共祖先。自己写一遍。
 19:13-19:23      10 mins
 P11. 投简历，京东。
 -》ok。投递了。
+
+19:23-23:08     3.8 hours ---------- free ----------
+23:08-23:23      15 mins
+P12. lc coding: 1) link list sort. heap sort. up-> down; down->up.
+-> can not solve the problem. That is very terrible.
