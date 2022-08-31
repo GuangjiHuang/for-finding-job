@@ -91,7 +91,7 @@
 424. 替换后的最长重复字符#https://leetcode.cn/problems/longest-repeating-character-replacement
 695. 岛屿的最大面积#https://leetcode.cn/problems/max-area-of-island
 剑指 Offer 63. 股票的最大利润#https://leetcode.cn/problems/gu-piao-de-zui-da-li-run-lcof
-402. 移掉 K 位数字#https://leetcode.cn/problems/remove-k-digitse
+402. 移掉 K 位数字#https://leetcode.cn/problems/remove-k-digits
 39. 组合总和#https://leetcode.cn/problems/combination-sum
 162. 寻找峰值#https://leetcode.cn/problems/find-peak-element
 395. 至少有 K 个重复字符的最长子串#https://leetcode.cn/problems/longest-substring-with-at-least-k-repeating-characters
