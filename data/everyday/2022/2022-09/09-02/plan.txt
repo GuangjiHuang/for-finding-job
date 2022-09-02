@@ -1,0 +1,43 @@
+==============================
+2022-9-2  Fri.     PLAN 
+==============================
+
+08:37-08:47      10 mins
+P1. lc coding: hard: basic calculator.
+-> that is ok. Has been sloved the problem. That is very good job. guy.
+
+08:47-08:54      7 mins  ---------- free ----------
+08:54-09:04      10 mins
+P2. make the plan in the gitmind.
+-》ok。
+
+09:04-09:08      4 mins  ---------- free ----------
+09:08-09:23      15 mins
+P3. 快速总结一下激活函数，函数公式，优缺点，应用场合。
+-》 sigmoid，tanh，ReLu， Leaky ReLU， swish， mish
+-》 关于零点对称的好处；关于梯度消失和爆炸的问题；关于计算量的问题。
+
+09:23-09:31      8 mins  ---------- free ----------
+09:31-09:41      10 mins
+P4. 找一下有没有什么新的公司可以进行投递的。
+-》ok。开了唯品会和UR这两个公司。
+
+09:41-09:49      8 mins  ---------- free ----------
+09:49-09:59      10 mins
+P5. 过一遍简历上的知识点。仔细看看。
+-》 ok。心里稍微好了一点点。
+
+09:59-10:23     24 mins  ---------- free ----------
+10:23-10:33      10 mins
+P6. lc coding。 基本计算器II。
+-》 copy the answer。 只有加减乘除，没有括号的情况。将乘除的运算结果压入栈中。
+
+10:33-10:45     12 mins  ---------- free ----------
+10:45-11:00      15 mins
+P7. 重新整理一个简历投递的信息。
+=》ok。
+
+11:00-11:28     28 mins  ---------- free ----------
+11:28-11:38      10 mins
+P8. coding. lc。 逆波兰计算器。
+-> ok. finish. very good job, ugy.
