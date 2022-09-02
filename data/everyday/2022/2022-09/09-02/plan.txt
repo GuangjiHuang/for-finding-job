@@ -41,3 +41,22 @@ P7. 重新整理一个简历投递的信息。
 11:28-11:38      10 mins
 P8. coding. lc。 逆波兰计算器。
 -> ok. finish. very good job, ugy.
+
+11:38-14:34     2.9 hours ---------- free ----------
+14:34-14:49      15 mins
+P9. lc coding; 1) 排列； 排列II.
+-> that is ok.  Very good job. 
+
+14:49-14:54      5 mins  ---------- free ----------
+14:54-14:59       5 mins
+P10. lc coding; 搞掂组合的问题。
+
+14:59-15:02      3 mins  ---------- free ----------
+15:02-15:47      45 mins
+P11. lc coding; 关于组合的问题。 5道题，搞掂试试。
+-》 not finish。
+
+15:47-20:19     4.5 hours ---------- free ----------
+20:19-20:34      15 mins
+P12. lc coding: 1) 基本计算器III. give you 15 minutes to finish the problem.
+-> wirte, but not finish.
