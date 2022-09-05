@@ -74,3 +74,13 @@ P14. lc coding; string * string
 20:46-20:56      10 mins
 P15. lc coding; str * str;
 -> ok. look all of them.
+
+20:56-22:38     1.7 hours ---------- free ----------
+22:38-22:48      10 mins
+P16. lc coding: 1) string * string. use my own way to finish it.
+-> fail to solve the problem.
+
+22:48-23:51     1.1 hours ---------- free ----------
+23:51-00:01      10 mins
+P17. lc coding: 1) string * string
+-> ok. but time out.

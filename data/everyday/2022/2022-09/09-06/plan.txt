@@ -1,0 +1,7 @@
+==============================
+2022-9-6  Tue.     PLAN 
+==============================
+
+00:06-00:31      25 mins
+P1. lc coding: 1) array sort, using the heap sort; 2) link list sort. use the up->down merge sort, down -> up merge sort.
+-> that is ok. good job, guys.
