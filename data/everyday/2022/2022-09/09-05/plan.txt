@@ -29,3 +29,48 @@ P5. lc coding； 字符串匹配。
 10:54-11:04      10 mins
 P6. 智力题目，两题。
 =》 关于等车的题，ok。关于砝码的问题，fail。
+
+11:04-14:19     3.2 hours ---------- free ----------
+14:19-14:29      10 mins
+P7. typing. 10 races.
+-> 9 races. 65WPM.
+
+14:29-14:45     16 mins  ---------- free ----------
+14:45-14:55      10 mins
+P8. coding。
+-> fail to coding.
+
+14:55-15:02      7 mins  ---------- free ----------
+15:02-15:12      10 mins
+P9. lc coding: implementation the str.str(). OK. that is very good job.
+
+15:12-15:18      6 mins  ---------- free ----------
+15:18-15:38      20 mins
+P10. 数学以及智力题训练。
+-》 九宫格ok。xconsx定积分ok。10个老鼠快速shichu毒药ok。
+-》 圆上任意取三个点，锐角三角形，直角三角形，钝角三角形。没有很明白。
+
+15:38-16:21     43 mins  ---------- free ----------
+16:21-16:36      15 mins
+P11. img 。看看 canny检测的步骤是什么。
+-> ok. but fail.
+
+16:36-16:50     14 mins  ---------- free ----------
+16:50-17:10      20 mins
+P12. 简历复习。
+-》that is ok。
+
+17:10-18:53     1.7 hours ---------- free ----------
+18:53-19:03      10 mins
+P13. lc coding; 搞懂求取next的法方法。
+=> fail, cannot understand.
+
+19:03-19:06      3 mins  ---------- free ----------
+19:06-19:16      10 mins
+P14. lc coding; string * string 
+-> failt to solve.
+
+19:16-20:46     1.5 hours ---------- free ----------
+20:46-20:56      10 mins
+P15. lc coding; str * str;
+-> ok. look all of them.
