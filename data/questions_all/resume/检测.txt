@@ -8,3 +8,4 @@
 8.Repulsion loss#https://blog.csdn.net/Aced96/article/details/108851253
 9.检测模型训练的时候会用到nms吗？#https://www.csdn.net/tags/MtTaMg4sMDI3NzQwLWJsb2cO0O0O.html
 10.怎样判断该场景下人流量是密集还是稀疏？#10.怎样判断该场景下人流量是密集还是稀疏？.md
+11.介绍一下copy past的方法，这个是什么，有什么用？#11.介绍一下copy past的方法，这个是什么，有什么用？.md
