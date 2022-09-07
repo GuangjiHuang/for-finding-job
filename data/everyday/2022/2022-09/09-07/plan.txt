@@ -1,0 +1,22 @@
+==============================
+2022-9-7  Wed.     PLAN 
+==============================
+
+08:26-08:36      10 mins
+P1. typing. 10 races.
+-> ok. 67WPM. 10 races.
+
+08:36-08:54     18 mins  ---------- free ----------
+08:54-09:04      10 mins
+P2. lc coding; string * string.
+-> ok. that is very good.
+
+09:04-09:06      2 mins  ---------- free ----------
+09:06-09:11       5 mins
+P3. lc coding ; pow(double x, int n);
+-> ok. that is very good.
+
+09:11-09:32     21 mins  ---------- free ----------
+09:32-09:42      10 mins
+P4. lc coding; 两数相除。
+-》 没有解决。
