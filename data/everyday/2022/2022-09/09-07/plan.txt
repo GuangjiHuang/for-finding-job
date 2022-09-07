@@ -30,3 +30,18 @@ P5. lc coding; 1) pow(x, y); 2) 字符串相乘。 3）修改两数相除。
 12:38-12:53      15 mins
 P6. lc coding: 32. 最长括号。
 -> ok. but cost me lots of time.
+
+12:53-14:31     1.6 hours ---------- free ----------
+14:31-14:41      10 mins
+P7. lc coding： test the quick mul.
+=》 ok。 that is very good。
+
+14:41-14:44      3 mins  ---------- free ----------
+14:44-14:54      10 mins
+P8. lc coding; lc 16.
+-> ok. but costs me lots of time. too much time.
+
+14:54-15:00      6 mins  ---------- free ----------
+15:00-15:10      10 mins
+P9. lc coding; hard 41.
+=> fail to solve the problem.

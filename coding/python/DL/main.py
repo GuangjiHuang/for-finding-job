@@ -1,27 +1,17 @@
-sentence = input()
-words = input()
-# get the new sentence
-#
-words = words.lower()
-word_ls = words.split(" ")
-sentence_ls = sentence.split(" ")
-word_dict = dict()
-for i, word in enumerate(word_ls):
-    word_dict[word] = str(i)
+import re
+#str = "输入_test@qq.com测试ha-ha.wang@SINA.COM.CN"
+#str = "输入@qq.com"
+str = "测试样例hello-world@qq.com-cn"
+#str = input()
+pattern = re.compile(r'([a-zA-Z0-9_][a-zA-Z0-9_.-]{1,}@[0-9a-zA-Z]*(\.[0-9a-zA-Z]{2,}){1,})')
+ret_ls = pattern.findall(str)
 
-ret_ls = list()
-for sen in sentence_ls:
-    if sen.lower() in word_dict.keys():
-        sentence = sentence.replace(sen, word_dict[sen.lower()])
-#
-quote_num = 0
-new_sentence = ""
-for i in range(len(sentence)):
-    if sentence[i] == '"':
-        quote_num += 1
-    if quote_num%2 and sentence[i] in word_dict.values():
-        new_sentence += word_ls[int(sentence[i])]
-    else:
-        new_sentence += sentence[i]
+ans = list()
+for ret in ret_ls:
+    ans.append(ret[0])
+if len(ans) == 0:
+    print("false")
+else:
+    ret_str = "true " + " ".join(ans)
+    print(ret_str)
 
-print(new_sentence)
