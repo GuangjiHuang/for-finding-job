@@ -28,7 +28,7 @@
 43. 字符串相乘#https://leetcode.cn/problems/multiply-strings
 17. 电话号码的字母组合#https://leetcode.cn/problems/letter-combinations-of-a-phone-number
 34.在排序数组中查找元素的第一个和最后一个位置#https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array
-347. 前 K 个高频元素#https://leetcode.cn/problems/top-k-frequent-elements
+347. 前 K 个高频元素#https://leetcode.cn/problems/top-k-frequent-elements#347. 前 K 个高频元素.md
 剑指 Offer 04. 二维数组中的查找#https://leetcode.cn/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof
 剑指 Offer 26. 树的子结构#https://leetcode.cn/problems/shu-de-zi-jie-gou-lcof
 剑指 Offer 46. 把数字翻译成字符串#https://leetcode.cn/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof
