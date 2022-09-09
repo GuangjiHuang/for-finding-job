@@ -35,3 +35,8 @@ P6. lc coding: 83.
 10:32-10:42      10 mins
 P7. lc coding: lc 38.
 -> that is ok. but costs me lost of time.
+
+10:42-12:22     1.7 hours ---------- free ----------
+12:22-12:37      15 mins
+P8. lc coding; 缺失的第一个正数。
+=> not finish the problme.
