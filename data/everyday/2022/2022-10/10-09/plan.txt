@@ -1,0 +1,12 @@
+==============================
+2022-10-9  Sun.     PLAN 
+==============================
+
+08:49-08:59      10 mins
+P1. typing. 10 races.
+-> good job. 70WPM. 10 races.
+
+08:59-10:07     1.1 hours ---------- free ----------
+10:07-10:27      20 mins
+P2. learn the mysql's alter command;
+-> that is ok. You can use the alter to change or modify the table's field. And the others. Go ahead;

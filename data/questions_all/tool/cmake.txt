@@ -1,0 +1,1 @@
+1.linux下vscodevim因为esc和cap键交换导致esc失效的解决办法#1.linux下vscodevim因为esc和cap键交换导致esc失效的解决办法.md

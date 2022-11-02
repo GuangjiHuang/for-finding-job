@@ -1,0 +1,32 @@
+==============================
+2022-10-19  Wed.     PLAN 
+==============================
+
+08:35-08:45      10 mins
+P1. typeing 10 minutes.
+-> 10 races, the result is the 69MPW. Maybe you have a good job.
+
+08:45-09:36     51 mins  ---------- free ----------
+09:36-09:51      15 mins
+P2. see the gailv ti.
+-》 that is not ok. Still need to continue to learning.
+
+09:51-14:32     4.7 hours ---------- free ----------
+14:32-14:42      10 mins
+P3. typing 10 races.
+-> 8 races., 74WPM. That is a really good job, guy!  
+
+14:42-16:30     1.8 hours ---------- free ----------
+16:30-16:45      15 mins
+P4. try to use the 15 minutes to finish the cmake's option' usage. I think that is very useful.
+-> that is ok. option(variable "help text" value). the value is the ON or the OFF, is the boolean value.
+
+16:45-16:53      8 mins  ---------- free ----------
+16:53-17:13      20 mins
+P5. make clear the variable type in the cmake.
+-> that is ok. There are three type of the variable in the cmake, the normal variable, and the cache variable, and the environment variable. That is very useful, you can use the set command to set the variable's value.
+
+17:13-19:13     2.0 hours ---------- free ----------
+19:13-19:18       5 mins
+P6. typing 5 minutes.
+-> that is ok. Good job, 5 races, 73 WPM.
