@@ -91,8 +91,8 @@ def txt_to_js(dir_path, js_path, o_js_var, mode="cover"):
 
 if __name__ == "__main__":
     # test the function
-    txt_dir_path = "../CV_interviews_Campus-master/questions_all/"
-    js_path = "./questions/questions.json"
+    txt_dir_path = "../data/questions_all"
+    js_path = "../data/questions_json/questions.json"
 
     try:
         with open(js_path, "r", encoding="utf-8") as f:

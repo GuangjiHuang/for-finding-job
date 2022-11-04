@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-08/plan.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/everyday/2022/2022-08/08-08/plan.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config/main_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/main_setting.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_all/review.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/review.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/tool/gdb.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/tool/gdb.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tk_question.py" beforeDir="false" afterPath="$PROJECT_DIR$/tk_question.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_json.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,9 +124,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="to_json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="py-script" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/to_json.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.tk_question" />
+        <item itemvalue="Python.to_json" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.test-img" />
         <item itemvalue="Python.tk_calendar" />
@@ -155,6 +181,7 @@
       <workItem from="1659837685879" duration="679000" />
       <workItem from="1659927406822" duration="1852000" />
       <workItem from="1659949270210" duration="136000" />
+      <workItem from="1667549061212" duration="4265000" />
     </task>
     <servers />
   </component>
@@ -176,23 +203,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tk_question.py</url>
-          <line>708</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tk_question.py</url>
-          <line>520</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tk_question.py</url>
           <line>445</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/tk_question.py</url>
-          <line>655</line>
-          <option name="timeStamp" value="25" />
+          <line>476</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -204,5 +221,9 @@
         <watch expression="last_line" language="Python" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/py_script$tk_question.coverage" NAME="tk_question Coverage Results" MODIFIED="1667553257625" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$to_json.coverage" NAME="to_json Coverage Results" MODIFIED="1667551663092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

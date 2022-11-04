@@ -502,7 +502,8 @@ class Myapp(tk.Tk):
                 # renew the js_var and the questions_all
                 with open(question_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                replace_lines = self.question_info.rstrip("\n") + "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                # hgj important, add the \n before the #
+                replace_lines = self.question_info.rstrip("\n") + "\n#" + self.question_info.rstrip("\n") + ".md" + "\n"
                 new_content = content.replace(self.question_info, replace_lines)
                 with open(question_path, "w", encoding="utf-8") as f:
                     f.write(new_content)
