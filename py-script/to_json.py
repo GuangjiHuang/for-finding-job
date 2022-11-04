@@ -66,6 +66,7 @@ def txt_to_js(dir_path, js_path, o_js_var, mode="cover"):
     if o_js_var == {}:
         mode = "cover"
     files_dirs = os.listdir(dir_path)
+    files_dirs.sort()
     files_dirs_path = [os.path.join(dir_path, file_dir) for file_dir in files_dirs]
     # the js_var to store the result
     for i, file_dir_path in enumerate(files_dirs_path):
