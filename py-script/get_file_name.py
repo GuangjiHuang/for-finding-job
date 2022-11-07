@@ -1,6 +1,7 @@
 import os
 
-main_dir = "./"
+#os.chdir(os.path.dirname(__file__))
+main_dir = "../data/answers/PLang/c++"
 sub_dirs = os.listdir(main_dir)
 save_path = "./file_names.txt"
 sub_dirs = [sub_dir for sub_dir in sub_dirs if os.path.isdir(sub_dir)]
@@ -13,5 +14,5 @@ for sub_dir in sub_dirs:
     content += "\n".join(files_ls)
 print(content)
 # write the content to the file
-with open(save_path, "w") as f:
-    f.write(content)
+#with open(save_path, "w") as f:
+#    f.write(content)     

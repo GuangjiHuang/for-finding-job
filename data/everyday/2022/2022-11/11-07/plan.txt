@@ -1,0 +1,78 @@
+==============================
+2022-11-7  Mon.     PLAN 
+==============================
+
+08:41-08:51      10 mins
+P1. typing 10 races.
+-> that is ok. 
+  
+
+08:51-08:58      7 mins  ---------- free ----------
+08:58-09:13      15 mins
+P2. 1) review the Enlgish 2) learned the new Enlgish wrods.
+-> that is ok. 
+
+09:13-09:25     12 mins  ---------- free ----------
+09:25-10:00      35 mins
+P3. review the program language, and then write something to record what you has been learned.
+-》 that is not ok.
+
+10:00-10:13     13 mins  ---------- free ----------
+10:13-10:28      15 mins
+P4. 复习一下python的正则表达式。
+-> I think that is ok. re.match, re.search, re.findall, re.sub, re.finditer. and the re.compile, re.falg.
+
+10:28-14:25     4.0 hours ---------- free ----------
+14:25-14:35      10 mins
+P5. typeing 10 minutes
+-> that is ok. Good job, guys!
+
+14:35-14:47     12 mins  ---------- free ----------
+14:47-14:57      10 mins
+P6. review the English words. 
+-> Has been reviewd the chapter 10, I think that is ok. good job, guys.
+
+14:57-15:01      4 mins  ---------- free ----------
+15:01-15:11      10 mins
+P7. python learning: make clear the difference between the pattern that you wirte by yourself and the re.compile.
+-> maybe the efficence is the biggest difference.
+
+15:11-15:17      6 mins  ---------- free ----------
+15:17-15:32      15 mins
+P8. give me 15 minute to rename to file name in order of the c++.
+-> that maybe ok.
+
+15:32-15:41      9 mins  ---------- free ----------
+15:41-15:56      15 mins
+P9. change the question ls.
+-》 that is ok。
+
+15:56-16:03      7 mins  ---------- free ----------
+16:03-16:13      10 mins
+P10. vs code how to open the function arguments promote.
+-> that is ok. Try to do that again.
+
+16:13-19:08     2.9 hours ---------- free ----------
+19:08-19:33      25 mins
+P11. make the consume of the report.
+-> that is ok.
+
+19:33-19:46     13 mins  ---------- free ----------
+19:46-20:06      20 mins
+P12. move the code to the 3080, and then run the code and then conqure the computer.
+-> I think that is ok. 
+
+20:06-20:39     33 mins  ---------- free ----------
+20:39-21:09      30 mins
+P13. read the code, about the pytorch training. 2) test the mpa to see the mpa is what?
+-> need to do that again.
+
+21:09-21:52     43 mins  ---------- free ----------
+21:52-22:07      15 mins
+P14. try to use the 15 minutes to understand the code.
+-> can not solve the problem.
+
+22:07-22:23     16 mins  ---------- free ----------
+22:23-22:38      15 mins
+P15. try again to understand the code, and then change the code to generate the txt file.
+-> ok. That is ok, good job, guys. 

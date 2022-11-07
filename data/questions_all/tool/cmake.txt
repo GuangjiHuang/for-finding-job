@@ -1,1 +1,2 @@
 1.linux下vscodevim因为esc和cap键交换导致esc失效的解决办法#1.linux下vscodevim因为esc和cap键交换导致esc失效的解决办法.md
+2.怎样设置c++的标准，比如使用c++17
