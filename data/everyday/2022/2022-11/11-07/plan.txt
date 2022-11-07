@@ -76,3 +76,13 @@ P14. try to use the 15 minutes to understand the code.
 22:23-22:38      15 mins
 P15. try again to understand the code, and then change the code to generate the txt file.
 -> ok. That is ok, good job, guys. 
+
+22:38-23:06     28 mins  ---------- free ----------
+23:06-23:16      10 mins
+P16. find the code that generate the shield image, and then try to run the code and then see what happen.
+-> can not find the source file.
+
+23:16-23:21      5 mins  ---------- free ----------
+23:21-23:31      10 mins
+P17. create the git repository for the yolov4-pytorch.
+-> fail, the capacity is too big. So need to ripe of the video.
