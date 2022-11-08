@@ -1,3 +1,2 @@
-1.vscode查看函数参数的快捷方式？
-#1.vscode查看函数参数的快捷方式？.md
-#1.vscode查看函数参数的快捷方式？.md
+1.vscode查看函数参数的快捷方式？#1.vscode查看函数参数的快捷方式？.md
+2.vscode配置python的调试环境，使用conda怎样配置

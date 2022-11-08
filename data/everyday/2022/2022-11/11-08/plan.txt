@@ -1,3 +1,26 @@
 ==============================
 2022-11-8  Tue.     PLAN 
 ==============================
+
+08:56-09:06      10 mins
+P1. figure out the .gitignore
+-> I tink that is ok. Just push the py code.
+
+09:06-09:33     27 mins  ---------- free ----------
+09:33-09:43      10 mins
+P2. see if we can run the program that using the training *.pth .
+-> not fnish. Try to test again.
+
+09:43-15:22     5.7 hours ---------- free ----------
+15:22-15:52      30 mins
+P3. write the configuration file, that using the yaml. Including the model path, model, data set and the others.
+
+15:52-18:16     2.4 hours ---------- free ----------
+18:16-18:36      20 mins
+P4. learn how to change the mpa code.
+-> that is ok. 
+
+18:36-20:07     1.5 hours ---------- free ----------
+20:07-20:22      15 mins
+P5. learn the os.walk, and then write the code to find the inter_sec using the re modlue
+-> ok. You have finish the job, good job, guys!
