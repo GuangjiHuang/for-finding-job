@@ -24,3 +24,8 @@ P4. learn how to change the mpa code.
 20:07-20:22      15 mins
 P5. learn the os.walk, and then write the code to find the inter_sec using the re modlue
 -> ok. You have finish the job, good job, guys!
+
+20:22-23:15     2.9 hours ---------- free ----------
+23:15-23:35      20 mins
+P6. read the vscode documentation about the terminal.
+-> that is ok. good job.
