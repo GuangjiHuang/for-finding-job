@@ -1,1 +1,5 @@
 1.powershell查看环境变量的方法
+#1.powershell查看环境变量的方法.md
+
+2.shell命令行的glob排除某一些文件的方法
+3.cp和mv遇到同名的文件会怎样？
