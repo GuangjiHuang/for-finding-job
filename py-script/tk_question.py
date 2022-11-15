@@ -185,7 +185,7 @@ class Myapp(tk.Tk):
         # ---
         self.lb_topic = tk.Label(self, text="topic: ", font=("", 12), anchor="w", justify="left", fg='purple')
         self.lb_topic.pack()
-        self.lb_topic.bind("<Button-1>", lambda e: self._re_set()) # delete the question
+        self.lb_topic.bind("<Button-1>", lambda e: self._re_set()) #
         self.lb_topic.bind("<Double-2>", lambda e: self.__super_do()) # __super_do
         self.lb_topic.bind("<Button-3>", lambda e: self._jump_to_git_mind()) # right single click the topic, jump to the everyday plan of the gitmind
         self.lb_topic.place(x=0, y=190, anchor='w')

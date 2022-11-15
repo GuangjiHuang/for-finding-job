@@ -34,6 +34,8 @@ def fileToDict(file_path, topic1, topic2, o_js_var):
                 link = question_ls[-1].strip()
                 question = question_ls[0].strip()
                 question += "\n" # this step is very important<hgj>
+            else: # just the question
+                question = question.strip()+"\n"
             # renew the questions_with_count
             tmp_dict = {question: {"occur": 0, "score": 0, "link": link}}
             questions_with_count.update(tmp_dict)
