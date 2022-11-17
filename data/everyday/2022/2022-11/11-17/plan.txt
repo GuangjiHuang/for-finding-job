@@ -39,3 +39,9 @@ P7. clean the web page, and then write them down as the reference.
 16:33-16:42      9 mins  ---------- free ----------
 16:42-17:07      25 mins
 P8. fix the app's code bug. about the add the \n, clear this character.
+-> I think that is ok. Good job, guy!
+
+17:07-18:44     1.6 hours ---------- free ----------
+18:44-18:54      10 mins
+P9. typing 10 minutes.
+-> I think that is ok. Good job, guy!
