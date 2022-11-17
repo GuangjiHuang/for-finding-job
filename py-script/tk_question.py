@@ -435,7 +435,7 @@ class Myapp(tk.Tk):
         link_ls = self.link.split("#")
         if len(link_ls) == 1:
             # just the one link: try to create the file and then open it, and add the link to the self.link and renew the js_var
-            file_name = self.question_info.strip("\n") + ".md"
+            file_name = self.question_info.strip() + ".md"
             dir_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}"
             file_path = f"{dir_path}/{file_name}"
             question_path = f"{self.question_dir}/{self.topic1}/{self.topic2}.txt"
@@ -450,16 +450,16 @@ class Myapp(tk.Tk):
                 lines = f.readlines()
             # find the line and then replace the line
             for i in range(len(lines)):
-                if self.question_info.strip("\n") in lines[i]:
+                if self.question_info.strip() in lines[i]:
                     # find the line, then add the file name
-                    lines[i] = lines[i].rstrip("\n")
-                    lines[i] += "#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                    lines[i] = lines[i].rstrip()
+                    lines[i] += "#" + self.question_info.rstrip() + ".md" + "\n"
                     break
             # write the lines to the file
             with open(question_path, "w", encoding="utf-8") as f:
                 f.write("".join(lines))
             # the link
-            self.link += "#" + self.question_info.rstrip("\n") + ".md"
+            self.link += "#" + self.question_info.rstrip() + ".md"
             self.js_var[self.topic1][self.topic2][self.question_info]["link"] = self.link
             self.saveJsvar()
         else:
@@ -483,7 +483,7 @@ class Myapp(tk.Tk):
         else:
             if self.link == "":
                 # use the typora to open the file, file name is the same as the question
-                file_name = self.question_info.strip("\n") + ".md"
+                file_name = self.question_info.strip() + ".md"
                 if self.topic1 in self.has_topic2_ls:
                     dir_path = f"{self.answer_dir}/{self.topic1}/{self.topic2}"
                     file_path = f"{dir_path}/{file_name}"
@@ -503,7 +503,7 @@ class Myapp(tk.Tk):
                 with open(question_path, "r", encoding="utf-8") as f:
                     content = f.read()
                 # hgj important, add the \n before the #
-                replace_lines = self.question_info.rstrip("\n") + "\n#" + self.question_info.rstrip("\n") + ".md" + "\n"
+                replace_lines = self.question_info.rstrip() + "#" + self.question_info.rstrip() + ".md" + "\n"
                 new_content = content.replace(self.question_info, replace_lines)
                 with open(question_path, "w", encoding="utf-8") as f:
                     f.write(new_content)

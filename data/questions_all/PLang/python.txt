@@ -1,6 +1,5 @@
-1.python设置workspace目录的方法
-#1.python设置workspace目录的方法.md
-2.python的正则表达式
-#2.python的正则表达式.md
-#2.python的正则表达式.md
+1.python设置workspace目录的方法#1.python设置workspace目录的方法.md
+2.python的正则表达式#2.python的正则表达式.md
 3.python递归遍历文件夹下的所有的子文件
+4.python生成随机文件名的方法#4.python生成随机文件名的方法.md
+5.yolo格式标签转化为xml格式标签#5.yolo格式标签转化为xml格式标签.md

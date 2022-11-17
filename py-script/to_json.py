@@ -15,7 +15,7 @@ def fileToDict(file_path, topic1, topic2, o_js_var):
     questions_with_count = dict()
     with open(file_path, "r", encoding="utf-8") as f:
         questions = f.readlines()
-        questions = [question for question in questions if len(question.strip()) > 0 and not question.strip().startswith("#")]
+        questions = [question.strip() for question in questions if len(question.strip()) > 0 and not question.strip().startswith("#")]
         if len(questions) == 0:
             # renew the o_js_var
             if topic2 == "":
@@ -33,9 +33,8 @@ def fileToDict(file_path, topic1, topic2, o_js_var):
             if len(question_ls) == 2:
                 link = question_ls[-1].strip()
                 question = question_ls[0].strip()
-                question += "\n" # this step is very important<hgj>
-            else: # just the question
-                question = question.strip()+"\n"
+            else:
+                question = question.strip()
             # renew the questions_with_count
             tmp_dict = {question: {"occur": 0, "score": 0, "link": link}}
             questions_with_count.update(tmp_dict)
@@ -105,7 +104,7 @@ if __name__ == "__main__":
         o_js_var = {}
 
     #o_js_var = {}
-    txt_to_js(txt_dir_path, js_path, o_js_var, mode="cover")
+    txt_to_js(txt_dir_path, js_path, o_js_var, mode="new")
 
     # open and then load the json file
     is_show_js = False

@@ -2,44 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863fb20f-b2f6-447f-bcf0-3badba60a8c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../config/tk_question_setting.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../config/tk_question_setting.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/PLang/python.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/PLang/python.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/office/画图.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/office/画图.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/review.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/review.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/tool/linux.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/tool/linux.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../data/questions_all/tool/vscode.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_all/tool/vscode.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../data/questions_json/questions.json" beforeDir="false" afterPath="$PROJECT_DIR$/../data/questions_json/questions.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/0-9.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/tk_question.py" beforeDir="false" afterPath="$PROJECT_DIR$/tk_question.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/to_json.py" beforeDir="false" afterPath="$PROJECT_DIR$/to_json.py" afterDir="false" />
     </list>
@@ -218,6 +187,7 @@
       <workItem from="1667557867747" duration="1958000" />
       <workItem from="1667563568508" duration="240000" />
       <workItem from="1668476570803" duration="2893000" />
+      <workItem from="1668674630069" duration="1796000" />
     </task>
     <servers />
   </component>
@@ -252,6 +222,11 @@
           <line>86</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/to_json.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -264,8 +239,8 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/py_script$tk_question.coverage" NAME="tk_question Coverage Results" MODIFIED="1668479462373" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$tk_question.coverage" NAME="tk_question Coverage Results" MODIFIED="1668676259712" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/py_script$read_img_inorder.coverage" NAME="read_img_inorder Coverage Results" MODIFIED="1667558513595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/py_script$to_json.coverage" NAME="to_json Coverage Results" MODIFIED="1668479116437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/py_script$to_json.coverage" NAME="to_json Coverage Results" MODIFIED="1668676205221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

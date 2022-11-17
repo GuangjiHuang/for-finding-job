@@ -2,7 +2,19 @@
 2.shell命令行的glob排除某一些文件的方法
 3.cp和mv遇到同名的文件会怎样？
 4.linux glob以及wildcard的理解。
-5.开机自动跳过密码输入界面的问题。
-6.脚本在开机自启动的两种方法。
+5.开机自动跳过密码输入界面的问题。#5.开机自动跳过密码输入界面的问题。.md
+6.脚本在开机自启动的两种方法。#6.脚本在开机自启动的两种方法。.md
 7.ubuntu开机启动自动挂载的设置。
 8.ls -d -f的妙用以及echo结合通配符显示文件的方法。
+9.ubuntu使用snap安装pycharm的命令。
+10.linux登录shell和交互shell的区别以及配置文件的加载
+11.终端、shell、tty、pst、consle的区别#11.终端、shell、tty、pst、consle的区别.md
+12.linux中的Xserver以及xclient联系区别
+13.linux显示远程linux的图像设置#13.linux显示远程linux的图像设置.md
+14.linux显示、新增、删除环境变量的方法
+15.ssh的-X和-Y参数以及远程显示图像需要怎样的设置
+16.ssh中的.ssh/.config的配置
+17.$-中的hmiBH分别是什么意思
+18.远程连接穿透内网的配置方法#18.远程连接穿透内网的配置方法.md
+19.linux的压缩命令总结
+20.linux的X图形显示#20.linux的X图形显示.md
