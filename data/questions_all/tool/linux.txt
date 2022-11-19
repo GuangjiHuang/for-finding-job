@@ -23,3 +23,7 @@
 23.pattern match和glob extenstion的区别#23.pattern match和glob extenstion的区别.md
 24.gnu's readline库对命令行进行输入设置#24.gnu's readline库对命令行进行输入设置.md
 25.bash中的set的命令的应用以及option#25.bash中的set的命令的应用以及option.md
+26.使用curl和wget进行下载文件
+27.字符串比较、模式匹配、正则匹配的区别
+28.关于shell、conda、git使用代理的设置
+29.clash在linux服务器的设置应用#29.clash在linux服务器的设置应用.md
