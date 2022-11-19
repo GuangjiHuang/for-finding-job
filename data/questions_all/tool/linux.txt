@@ -22,3 +22,4 @@
 22.使用ssh产生秘钥以及ssh进行秘钥复制到认证中的方法
 23.pattern match和glob extenstion的区别#23.pattern match和glob extenstion的区别.md
 24.gnu's readline库对命令行进行输入设置#24.gnu's readline库对命令行进行输入设置.md
+25.bash中的set的命令的应用以及option#25.bash中的set的命令的应用以及option.md
