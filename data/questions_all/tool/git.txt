@@ -3,3 +3,4 @@
 3.git怎样在本地新建和配置好一个仓库#3.git怎样在本地新建和配置好一个仓库.md
 4.git解决.ignore不起作用的问题#4.git解决.ignore不起作用的问题.md
 5.ssh验证是否可以连接到github上的命令#5.ssh验证是否可以连接到github上的命令.md
+6.git和branch相关的操作#6.git和branch相关的操作.md

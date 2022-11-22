@@ -27,3 +27,9 @@
 27.字符串比较、模式匹配、正则匹配的区别
 28.关于shell、conda、git使用代理的设置
 29.clash在linux服务器的设置应用#29.clash在linux服务器的设置应用.md
+30.ubuntu怎样设置桌面图标#30.ubuntu怎样设置桌面图标.md
+31.linux的conda和pip源配置
+32.bash的字体、光标显示形状和颜色设置#32.bash的字体、光标显示形状和颜色设置.md
+33.linux下怎样安装多个不同版本的cuda，然后切换着使用#33.linux下怎样安装多个不同版本的cuda，然后切换着使用.md
+
+34.ps和pgrep的应用以及进程通信的信号的种类

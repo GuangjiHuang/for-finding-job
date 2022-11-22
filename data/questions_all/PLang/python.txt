@@ -4,3 +4,6 @@
 4.python生成随机文件名的方法#4.python生成随机文件名的方法.md
 5.yolo格式标签转化为xml格式标签#5.yolo格式标签转化为xml格式标签.md
 6.怎样使用pip以及requirements.txt来安装package
+7.python的环境变量问题，路径问题
+8.python的natsort模块#8.python的natsort模块.md
+9.python的abc模块
