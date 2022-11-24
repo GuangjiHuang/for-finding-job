@@ -33,3 +33,6 @@
 33.linux下怎样安装多个不同版本的cuda，然后切换着使用#33.linux下怎样安装多个不同版本的cuda，然后切换着使用.md
 34.ps和pgrep的应用以及进程通信的信号的种类
 35.tr命令的使用以及字符操作#35.tr命令的使用以及字符操作.md
+36.linux端口控制设置#36.linux端口控制设置.md
+37.ubuntu重装gpu驱动#37.ubuntu重装gpu驱动.md
+38.shell中shopt中所有关于glob的扩展

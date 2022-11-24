@@ -1,2 +1,7 @@
 1.conda怎样设置默认的启动环境#1.conda怎样设置默认的启动环境.md
-
+2.conda的虚拟环境使用pip安装包时说这个包已经在另一个虚拟环境安装的问题#2.conda的虚拟环境使用pip安装包时说这个包已经在另一个虚拟环境安装的问题.md
+3.conda清理不用的缓存和包#3.conda清理不用的缓存和包.md
+4.pip清理不用的缓存和包
+5.pytorch的安装方法以及怎样识别cpu和gpu版本#5.pytorch的安装方法以及怎样识别cpu和gpu版本.md
+6.conda的pip解决虚拟环境耦合的问题
+7.conda和pip源的设置问题#7.conda和pip源的设置问题.md
