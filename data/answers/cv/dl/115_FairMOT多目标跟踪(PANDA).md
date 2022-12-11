@@ -85,3 +85,8 @@
 
 1. 使用anchor free作为检测模型，可以更好的和reid结合
 2. 将检测和reid放在一个网络，相比D&T两阶段跟踪结构，速度更快
+3. 黄光积的测试。
+4. add the new iteams.
+5. the iteam 5.
+5. the iteam 5.
+6. this 

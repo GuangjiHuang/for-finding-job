@@ -36,3 +36,4 @@
 36.linux端口控制设置#36.linux端口控制设置.md
 37.ubuntu重装gpu驱动#37.ubuntu重装gpu驱动.md
 38.shell中shopt中所有关于glob的扩展
+39.linux编译c++源码出现未定义，链接到conda的解决方法#39.linux编译c++源码出现未定义，链接到conda的解决方法.md

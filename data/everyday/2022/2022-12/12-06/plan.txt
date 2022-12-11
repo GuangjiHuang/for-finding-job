@@ -1,0 +1,12 @@
+==============================
+2022-12-6  Tue.     PLAN 
+==============================
+
+10:11-10:41      30 mins
+P1. 看看socket的文档。 
+-> I think that is ok. Try to do the good job.
+
+10:41-19:53     9.2 hours ---------- free ----------
+19:53-19:58       5 mins
+P2. 测试一下使用work-management打开的情况，看着效果真的还是很不错的。
+-> I think that is ok.

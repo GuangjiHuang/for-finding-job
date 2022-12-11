@@ -1,0 +1,32 @@
+==============================
+2022-12-7  Wed.     PLAN 
+==============================
+
+10:24-10:34      10 mins
+P1. test to make the 10 minutes plan.
+-> I think this test is not ok. Try again.
+
+10:34-21:00     1e+01 hours ---------- free ----------
+21:00-21:06       6 mins
+P2. 完成gui startup部分的注释。 修改代码。
+-> Has been finished!
+
+21:06-21:09      3 mins  ---------- free ----------
+21:09-21:34      25 mins
+P3. make clear the gui's help documentation.
+-> Has been finished.
+
+21:34-21:41      7 mins  ---------- free ----------
+21:41-22:11      30 mins
+P4. 完成record等的文档。
+-> Has been finished, but time out! About 5 finites.
+
+22:11-22:30     19 mins  ---------- free ----------
+22:30-22:40      10 mins
+P5. help 部分的代码完成。
+-> Ok, but not I wanted! Still need to change the code, using the less.
+
+22:40-22:50     10 mins  ---------- free ----------
+22:50-23:00      10 mins
+P6. change the help code, using the less, add the newline to the help txt.
+-> Good job, has been finished!

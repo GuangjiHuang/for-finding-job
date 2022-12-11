@@ -1,0 +1,5 @@
+1.vim更改不同模式下的cursor的形状和颜色#1.vim更改不同模式下的cursor的形状和颜色.md
+2.vim中cterm和gui以及cterm以及xterm的关系
+3.xterm的颜色表#3.xterm的颜色表.md
+4.换行自动注释的问题以及formatoptions#4.换行自动注释的问题以及formatoptions.md
+5.vim中的ctrl-w和ctrl-u的作用#5.vim中的ctrl-w和ctrl-u的作用.md

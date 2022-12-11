@@ -7,3 +7,4 @@
 7.python的环境变量问题，路径问题
 8.python的natsort模块#8.python的natsort模块.md
 9.python的abc模块
+10.python的list在前面插入一个list的方法#10.python的list在前面插入一个list的方法.md

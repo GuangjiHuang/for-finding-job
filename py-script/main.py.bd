@@ -2,7 +2,6 @@ import re
 import math
 import time
 import os
-import socket
 import cv2 as cv
 import copy
 import numpy as np
@@ -13,9 +12,7 @@ from tk_question import *
 #
 color_tb = {"red":(0, 0, 255), "green": (0, 255, 0), "blue": (255, 0, 0), 
 		"yellow": (0, 255, 255), "purple": (255, 0, 255), "black": (0, 0, 0), "white": (255, 255, 255)}
-# change dir to here
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
-print(__file__)
+#
 
 def progress(img_h, img_w, p_h, t_toal, t_left):
 	img = 66 * np.ones((img_h, img_w, 3), np.uint8)
@@ -141,37 +138,6 @@ def append_time_to_file(file_path, time_duration_sec, start_time=None):
 	with open(file_path, "a+", encoding="utf-8") as f:
 		f.write(append_content)
 		f.close()
-def check_pipeline(piple_path="./pipeline.txt"):
-	global timer_mins, pipeline_file_mtime, pipeline_dict
-	while True:
-		time.sleep(1)
-		now_mtime = os.stat(piple_path).st_mtime
-		#print(f"ctime: {now_mtime}, mtime: {now_mtime}")
-		if pipeline_file_mtime != now_mtime:
-			# renew the time
-			pipeline_file_mtime = now_mtime
-			# read the content
-			with open(piple_path, "r") as f:
-				content = f.read()
-				content = content.strip()
-				if content.isdigit():
-					timer_mins = int(content)
-				else:
-					pipeline_dict.clear()
-					pipeline_dict.update({content: content})
-# not work
-def sockServer():
-	global timer_mins
-	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-	sock.bind(("localhost", 8002))
-	sock.listen(5)
-	M = 1 <<  10
-	while True:
-		#time.sleep(1)
-		connection, address = sock.accept()
-		buf = connection.recv(M).decode()
-		connection.send(f"Timer time: {timer_mins}?".encode())
-		connection.close()
 
 # --------------------------------------------------
 # the global var that you have to set
@@ -229,14 +195,6 @@ t_tm = time.localtime()
 year, month, day = t_tm.tm_year, t_tm.tm_mon, t_tm.tm_mday
 everyday_dir = f"{record_dir}/{year}/{year}-{month:02}/{month:02}-{day:02}"
 file_name_ls = ["plan", "question", "record"]
-
-# --------------------------------------------------
-# the thread to run the socket or check the pipeline file
-timer_mins = 0
-pipeline_file_mtime = os.stat("./pipeline.txt").st_mtime
-pipeline_dict = {}
-#Thread(target=sockServer, args=()).start()
-Thread(target=check_pipeline, args=()).start()
 # --------------------------------------------------
 # test if can open the video and the camera
 print("test the camera and the video!")
@@ -344,9 +302,8 @@ while (True):
 	cv.imshow(window_name, img_show)
 	key_val_0 = cv.waitKey(25) & 0xff
 	# the interview mode
-	if key_val_0 in [ord('i'), ord('I')] or pipeline_dict.get("i", False) or pipeline_dict.get("I", False):
-		pipeline_dict.clear()
-		if key_val_0 == ord('I') or pipeline_dict.get("I", False):
+	if key_val_0 in [ord('i'), ord('I')]:
+		if key_val_0 == ord('I'):
 			# open the question.setting
 			if os.path.exists(question_setting_path):
 				# use the gvim to open the file
@@ -361,26 +318,12 @@ while (True):
 		# show the window
 		Thread(target=runApp, args=(json_path, question_setting_path, answer_dir, question_dir, record_dir)).start()
 		has_thread = True
-	elif key_val_0 == ord('l') or pipeline_dict.get("l", False):
-		pipeline_dict.clear()
-		cv.moveWindow(window_name, int(full_sc_width - 30 - width * 0.6), int(full_sc_height - 70 - height * 0.1))
-	elif (key_val_0 == ord('m') or pipeline_dict.get("m", False)) and is_use_duplicate_window:
-		pipeline_dict.clear()
-		cv.moveWindow(window_name, int(full_sc_width + 10), int(full_sc_height - 70 - height * 0.1))
-	elif (key_val_0 == ord('r') or pipeline_dict.get("r", False)) and is_use_duplicate_window:
-		pipeline_dict.clear()
-		cv.moveWindow(window_name, int(2*full_sc_width - 30 - width * 0.6), int(full_sc_height - 70 - height * 0.1))
-	elif (key_val_0 == ord('H')) or pipeline_dict.get('H', False):
-		# move the window out of the screen, so you can hide the gui window
-		pipeline_dict.clear()
-		cv.moveWindow(window_name, int(2 * full_sc_width), int(full_sc_height))
-	elif key_val_0 == ord('t') or pipeline_dict.get("t", False):
-		pipeline_dict.clear()
+
+	if key_val_0 == ord('t'):
 		is_live = (not is_live)
 		# set the bg_change_flag again
 		bg_change_flag = True
-	elif key_val_0 == ord('x') or pipeline_dict.get("x", False): # change the video source
-		pipeline_dict.clear()
+	if key_val_0 == ord('x'): # change the video source
 		if is_use_video and is_valid_video:
 			# change to the camera
 			if is_valid_camera:
@@ -399,8 +342,7 @@ while (True):
 				print("camera -> video: ok!")
 			else:
 				print("camera -> video: fail. Can not open the video!")
-	elif key_val_0 == ord('s') or pipeline_dict.get("s", False):
-		pipeline_dict.clear()
+	if key_val_0 == ord('s'):
 		if not is_end:
 			try:
 				out.release()
@@ -414,8 +356,7 @@ while (True):
 		is_save = True
 		is_record = True
 		is_end = False
-	elif key_val_0 == ord('p') or pipeline_dict.get("p", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord('p'):
 		# renew the questions
 		renew_question_command = "python get_json.py"
 		c_ret = os.system(renew_question_command)
@@ -423,8 +364,7 @@ while (True):
 			print(f"run {renew_question_command} successfully!")
 		else:
 			print(f"fail to run {renew_question_command}")
-	elif key_val_0 == ord('q') or pipeline_dict.get("q", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord('q'):
 		print("quit the video!")
 		if is_save:
 			is_record = False
@@ -434,8 +374,7 @@ while (True):
 		cv.destroyAllWindows()
 		# quit the tk windoiw
 		exit()
-	elif key_val_0 == ord('e') or pipeline_dict.get("e", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord('e'):
 		if is_save:
 			is_save = False
 			is_record = False
@@ -444,8 +383,7 @@ while (True):
 			out.release()
 		else:
 			print("Not starting to record the video!")
-	elif key_val_0 == ord('c') or pipeline_dict.get("c", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord('c'):
 		if is_save:
 			is_save = False
 			is_record = False
@@ -454,8 +392,7 @@ while (True):
 			os.remove(save_path)
 			is_end = True
 #
-	elif key_val_0 == ord(':') or pipeline_dict.get(":", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord(':'):
 		# record the old_play_video_path
 		old_play_video_path = play_video_path
 		# setting the parameter
@@ -493,8 +430,7 @@ while (True):
 		# the bg_change_flag <hgj : why use the change flag?>
 		bg_change_flag = False
 #
-	elif key_val_0 == ord('n') or pipeline_dict.get("n", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord('n'):
 		if not video_num.isdigit():
 			print("Now you are using the video source! Not the camera! Quit!")
 		new_video_num = (video_num + 1)  %  2
@@ -520,8 +456,7 @@ while (True):
 		#else:
 		video_num = new_video_num
 
-	elif key_val_0 == ord('h') or pipeline_dict.get("h", False):
-		pipeline_dict.clear()
+	elif key_val_0 == ord('h'):
 		# this is the help
 		# read the help text
 		help_path = "../config/main_help.txt"
@@ -545,20 +480,14 @@ while (True):
 		cv.waitKey(0)
 		# here have to set the bg change flag
 		bg_change_flag = True
-	elif (key_val_0 in [ord(str(i)) for i in range(10)]) or (timer_mins!=0):
-		if timer_mins:
-			count_tm = timer_mins * 60
-			#print(f"timer_mins: {timer_mins}")
-			timer_mins = 0 # very important part
-		else:
-			t_num = key_val_0 - ord('0')
-			if t_num == 0:
-				t_num = 10
-			count_tm = t_num * 60 * t_gap
+	elif key_val_0 in [ord(str(i)) for i in range(10)]:
+		t_num = key_val_0 - ord('0')
+		if t_num == 0:
+			t_num = 10
+		count_tm = t_num * 60 * t_gap
 		count_tm_copy = count_tm
 		# if the count_tm gt 10 min, you need to have the plan
 		quit_flag = False
-		''''
 		if  count_tm >= 10 * 60:
 			# pop the window to ask you to make the plan
 			# the pop text
@@ -590,7 +519,6 @@ while (True):
 					break
 			# destory the window
 			cv.destroyWindow("Information")
-		'''
 		# if you chose the quit, then continue
 		if quit_flag:
 			continue
@@ -630,8 +558,7 @@ while (True):
 			cv.putText(img_bg, count_down_show, (int(0.3*c_w), int(0.5*c_h)), cv.FONT_HERSHEY_COMPLEX, 1, count_down_color, 3)
 			cv.imshow(window_name, img_bg)
 			key_val_1 = cv.waitKey(1) & 0xff
-			if key_val_1 == ord('q') or pipeline_dict.get("q", False):
-				pipeline_dict.clear()
+			if key_val_1 == ord('q'):
 				print("quit the countdown!")
 				# set the quit flag
 				quit_flag = True
@@ -652,8 +579,7 @@ while (True):
 						with open(plan_path, "r", encoding="utf-8") as f:
 							lines = f.readlines()
 						#
-						if key_val_quit == ord('a') or pipeline_dict.get("a", False):
-							pipeline_dict.clear()
+						if key_val_quit == ord('a'):
 							# change the last time to now
 							time_that_write_plan = time.time()
 							change_time = time.strftime("%H:%M", time.localtime())
@@ -671,8 +597,7 @@ while (True):
 							# still need to add the content to the question and the record
 							is_need_to_write_file = True
 							is_count_end = True
-						elif key_val_quit == ord('b') or pipeline_dict.get("b", False):
-							pipeline_dict.clear()
+						elif key_val_quit == ord('b'):
 							flag_new_line = False
 							flag_item = False
 							# delete the plan's content of the last line
@@ -697,42 +622,31 @@ while (True):
 							is_need_to_write_file = False
 						# at last, will break the loop
 				break
-			elif key_val_1 == ord('x') or pipeline_dict.get("x", False): ## contenctrate, cover the weixin and the qq
-				pipeline_dict.clear()
+			elif key_val_1 == ord('x'): ## contenctrate, cover the weixin and the qq
 				count_down_is_in_concentrate_mode = not count_down_is_in_concentrate_mode
 				if count_down_is_in_concentrate_mode:
 					cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-20-c_h) # height -70 -> -20
 				else:
 					cv.moveWindow(window_name, full_sc_width-30-c_w, full_sc_height-70-c_h) # move back
 			#
-			elif key_val_1 == ord('l') or pipeline_dict.get("l", False):
-				pipeline_dict.clear()
+			elif key_val_1 == ord('l'):
 				# move to the first screen right bottom
 				cv.moveWindow(window_name, full_sc_width - 30 - c_w, full_sc_height - 70 - c_h)
 			#
-			elif key_val_1 == ord('H') or pipeline_dict.get("H", False):
-				pipeline_dict.clear()
-				# move the screen out of the display screen, inorder to hide it.
-				cv.moveWindow(window_name, 2*full_sc_width, full_sc_height)
-			#
-			elif (key_val_1 == ord('m') or pipeline_dict.get("a", False)) and is_double_screen and is_double_screen_computer:
-				pipeline_dict.clear()
+			elif key_val_1 == ord('m') and is_double_screen and is_double_screen_computer:
 				# move to the second screen left bottom
 				cv.moveWindow(window_name, full_sc_width+10, full_sc_height - 70 - c_h)
 			#
-			elif (key_val_1 == ord('r') or pipeline_dict.get("r", False)) and is_double_screen and is_double_screen_computer:
-				pipeline_dict.clear()
+			elif key_val_1 == ord('r') and is_double_screen and is_double_screen_computer:
 				# move to the second screen right bottom
 				cv.moveWindow(window_name, full_sc_width * 2 - 30 - c_w, full_sc_height - 70 - c_h)
 			#
-			elif key_val_1 == ord('s') or pipeline_dict.get("s", False):
-				pipeline_dict.clear()
+			elif key_val_1 == ord('s'):
 				cv.putText(img_bg, "stop! key 'c' to go!", (int(0.2*c_w), int(0.8*c_h)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 0, 255), 1)
 				while True:
 					cv.imshow(window_name, img_bg)
 					key_val_2 = cv.waitKey(1000) & 0xff
-					if key_val_2 == ord('c') or pipeline_dict.get("c", False):
-						pipeline_dict.clear()
+					if key_val_2 == ord('c'):
 						print("continue!")
 						break
 			# sleep
@@ -901,7 +815,5 @@ while (True):
 		# move window to the right bottom conner
 		cv.moveWindow(window_name, full_sc_width - 30 - width, full_sc_height - 70 - height)
 		cv.imshow(window_name, img_o)
-		# timer_mins set to 0
-		timer_mins = 0
 	if is_save:
 		out.write(img)
