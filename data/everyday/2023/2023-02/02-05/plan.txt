@@ -1,0 +1,39 @@
+==============================
+2023-2-5  Sun.     ARRAGEMENT 
+==============================
+[Y]t. 脑力体操。 # 10 min
+
+[Y]t. coding. About add the score to the file of everyday. # 40 min
+
+[Y]t. 脑力体操。# 10 min
+
+[Y]t. make the plan of today. # 15 min
+
+# morning
+[Y]t. 实验. 数据集标签的整理，分类，yolov4训练起来先。# time: 10:00 - 10:50
+
+[Y]t. 专利. 实施方式，开始具体写一大部分先。 # time: 10:55 - 11:40
+
+[Y]t. 论文. 看余博的图卷积那一块，仔细看看。 # time: 11:45 - 12:30
+
+# afternoon
+[Y]t. 脑力体操。# 15 min， time: 14:15 - 14:30
+
+[Y]t. 实验. 整理数据。
+
+[Y]t. 专利. 画一下那个模块图，然后实施方法继续写。
+
+[Y]t. English and typing. # 20 min
+
+[Y]t. 运动。 # 35 min, time: 17:45 - 18:20
+
+[X]t. 论文. 
+
+# evening
+[Y]t. 实验. # time: 7:00 - 8:00
+
+t. 专利. 写完实施方法，完成整个专利。 # time: 8:00 - 9:00
+
+t. 论文. # time: 9:00 - 10:00
+
+t. 论文. # time: 10:00 - 11:00

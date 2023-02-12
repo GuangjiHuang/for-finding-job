@@ -1,4 +1,4 @@
-t_gap = 6
+t_gap = 5
 is_show_random = 0
 is_live = 0
 # about the color
@@ -8,9 +8,14 @@ show_time_color = color_tb['black']
 full_sc_width = 1920
 full_sc_height = 1080
 count_down_is_in_concentrate_mode = False
-play_video_path = "../../study-app-data/beauty/scenery.mp4"
-#play_video_path = "../../study-app-data/beauty/euro.mp4"
+play_video_path = "../../study-app-data/beauty/scenery.mp4" #play_video_path = "../../study-app-data/beauty/euro.mp4"
 #play_video_path = "../../study-app-data/beauty/euro-high.mp4"
 is_use_duplicate_window = True
 is_shine_screen = False
-is_double_screen = False
+is_double_screen = True
+
+# video save
+save_fps_camera_0 = 60
+save_fps_camera_1 = 60
+
+save_dir = "g:\\video_save\\"

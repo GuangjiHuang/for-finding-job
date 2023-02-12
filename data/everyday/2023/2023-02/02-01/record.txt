@@ -1,0 +1,78 @@
+==============================
+2023-2-1  Wed.     RECORD 
+==============================
+
+09:07-09:22      15 mins
+P1. 脑力体操。
+-> Finished.
+
+09:22-09:23      1 mins  ---------- free ----------
+09:23-09:36      13 mins
+P2. make the plan of the today, write the ARRAGEMENT.
+-> Finished. Good job.
+
+09:36-09:40      4 mins  ---------- free ----------
+09:40-09:59      19 mins
+P3. modify the study-app code: adding the time, not show the editor when start working.
+-> I think that is ok, but need testing.
+
+09:59-10:37     38 mins  ---------- free ----------
+10:37-10:38       1 mins
+P4. here is the test.
+-> Ok.
+
+10:38-10:42      4 mins  ---------- free ----------
+10:42-10:57      15 mins
+P5. 脑力体操。
+-> OK.
+
+10:57-10:59      2 mins  ---------- free ----------
+10:59-11:44      45 mins
+P6. 写专利, 权利要求书后半部分。
+-> 30%, 1)复制含有格式的问题，批注； 2）latex公式插入的问题； 3）准备重构步骤的思路，改成模块的模式。
+
+11:44-11:55     11 mins  ---------- free ----------
+11:55-12:40      45 mins
+P7. 写专利, 说明书技术领域和背景问题。
+-> 0%. 1）搞掂了latex的插入问题；2）重构了一下，按照模块+步骤的形式来写。
+
+12:40-16:06     3.4 hours ---------- free ----------
+16:06-16:21      15 mins
+P8. 脑力体操。
+-> Finished.
+
+16:21-16:24      3 mins  ---------- free ----------
+16:24-17:09      45 mins
+P9. 写专利, 重新组织一下说明书摘要和权利要求书的语言。
+-> 80%. Do the good job.
+
+17:09-17:19     10 mins  ---------- free ----------
+17:19-17:54      35 mins
+P10. 运动。
+-> Finished.
+
+17:54-18:19     25 mins  ---------- free ----------
+18:19-18:39      20 mins
+P11. learn to use the vim's plugin to add the color to the content.
+-> 60%. type \h, and then format the string by the command.
+
+18:39-19:16     37 mins  ---------- free ----------
+19:16-19:36      20 mins
+P12. learn the vim's plugin: highligt.vim
+-> 50%. Not all do! Fail!
+
+19:36-20:12     36 mins  ---------- free ----------
+20:12-20:57      45 mins
+P13. 写专利, 写好权利要求书的内容。
+-> 50%. Can not finish. Need to be contined!
+
+
+20:57-21:20     23 mins  ---------- free ----------
+21:20-22:05      45 mins
+P14. 写专利, 写好说明书部分的技术领域和技术背景问题。
+-> 0%. Write the 权利要求书的内容。
+
+22:05-23:15     1.2 hours ---------- free ----------
+23:15-23:35      20 mins
+P15. typing.
+-> That is ok. Do the good job.

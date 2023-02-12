@@ -1,0 +1,7 @@
+==============================
+2023-1-13  Fri.     PLAN 
+==============================
+
+00:13-00:23      10 mins
+P1. try to test the usage of the time to calculate the multiple of the math.
+-> I think that is very ok. Good job, guy!

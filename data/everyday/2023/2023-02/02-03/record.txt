@@ -1,0 +1,68 @@
+==============================
+2023-2-3  Fri.     RECORD 
+==============================
+
+09:05-09:20      15 mins
+R1. 脑力体操。
+-> Finished.
+
+09:20-09:25      5 mins  ---------- free ----------
+09:25-09:40      15 mins
+R2. make the plan of today.
+-> Finished.
+
+09:40-09:45      5 mins  ---------- free ----------
+09:45-10:30      45 mins
+R3. fix the bug of wr merge, and find how to mark the tmux.
+-> Finished. 100%.
+
+10:30-10:43     13 mins  ---------- free ----------
+10:43-11:28      45 mins
+R4. write a count score system and algorithm.
+-> Finished. 96%.
+
+11:28-11:41     13 mins  ---------- free ----------
+11:41-12:21      40 mins
+R5. write a count score system and algorithm.
+-> 60%. Need to continue!
+
+12:21-14:59     2.6 hours ---------- free ----------
+14:59-15:14      15 mins
+R6. 脑力体操。
+-> 100%. Finished.
+
+15:14-15:17      3 mins  ---------- free ----------
+15:17-16:02      45 mins
+R7. 写好score system的代码。
+-> 90%. Nearly finished. But cost me too much time!
+
+16:02-17:41     1.6 hours ---------- free ----------
+17:41-18:21      40 mins
+R8. 运动。
+-> 100%. Finished.
+
+18:21-19:35     1.2 hours ---------- free ----------
+19:35-19:50      15 mins
+R9. typing 15 minutes.
+-> 98%. Finished.
+
+19:50-19:58      8 mins  ---------- free ----------
+19:58-20:13      15 mins
+R10. 脑力体操。
+-> 95%. Finished.
+
+20:13-20:15      2 mins  ---------- free ----------
+20:15-21:00      45 mins
+R11. 写专利。发明内容，直接copy过来就差不多了，然后再稍微具体再改一下。
+-> 95%. Almost finished.
+
+21:00-21:20     20 mins  ---------- free ----------
+21:20-21:30      10 mins
+R12. typing 10 timutes.
+-> 99%. Finished.
+
+
+21:30-21:35      5 mins  ---------- free ----------
+21:35-22:20      45 mins
+R13. 写专利。技术背景问题。
+-> 95%. Finished.
