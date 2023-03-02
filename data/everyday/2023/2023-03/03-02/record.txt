@@ -31,3 +31,12 @@ R5. typing 10 minutes.
 14:39-14:49      10 mins
 R6. change the countdown time code, make the rest time more bigger!
 -> 99%. I think that is ok, Do the good job, guy!
+
+14:49-15:08     19 mins  ---------- free ----------
+15:08-15:53      45 mins
+R7. write paper.
+
+
+15:53-15:08     -45 mins  ---------- free ----------
+15:08-15:53      45 mins
+R8. write paper.

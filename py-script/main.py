@@ -762,7 +762,7 @@ while (True):
         if quit_flag:
             continue
         # set the count after showing finish
-        count = int(count_tm / 45 * 10) # divide 8, just like the 5, some cost time to deal with the image and show image
+        count = int(count_tm / 45 * 10 * 0.6) # divide 8, just like the 5, some cost time to deal with the image and show image
         count_total = count
         img_o = img
         # resive the window
@@ -866,7 +866,7 @@ while (True):
                                     with open(record_path, "w", encoding="utf-8") as f:
                                         f.write("".join(lines))
                                     # renew the count and the count_total
-                                    count = int(new_time_duration * 60 / 45 * 10)
+                                    count = int(new_time_duration * 60 / 45 * 10 * 0.6)
                                     count_total = count
                                     # then break
                                     break
