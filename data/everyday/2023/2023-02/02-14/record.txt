@@ -1,0 +1,54 @@
+==============================
+2023-2-14  Tue.     RECORD 
+==============================
+
+08:49-09:04      15 mins
+R1. make the plan of today.
+-> 90%. I think that is very good.
+
+09:04-09:07      3 mins  ---------- free ----------
+09:07-09:22      15 mins
+R2. review the yesterday's question and the learning;
+-> 90%. pycharm remote to debug the code, not try!
+
+09:22-09:29      7 mins  ---------- free ----------
+09:29-10:14      45 mins
+R3. 实验; shield picture generation and the copy paste;
+-> 80%. I think that is a little ok. But not good.
+
+
+10:14-10:33     19 mins  ---------- free ----------
+10:33-10:43      10 mins
+R4. typing 10 minutes.
+-> 100%. I think that is very good job.
+
+
+10:43-10:47      4 mins  ---------- free ----------
+10:47-11:32      45 mins
+R5. other thing; buy the flower.
+-> 90%. I think that is ok.
+
+11:32-15:02     3.5 hours ---------- free ----------
+15:02-15:47      45 mins
+R6. other thing; buy the flower.
+-> 80%. I think that is ok. But cost me lots of time.
+
+15:47-16:16     29 mins  ---------- free ----------
+16:16-17:01      45 mins
+R7. 实验；
+-> 70%. I think that is a pretty good.
+
+17:01-18:43     1.7 hours ---------- free ----------
+18:43-19:23      40 mins
+R8. read the pudb documentation!
+-> 80%. Not very ok.
+
+19:23-20:14     51 mins  ---------- free ----------
+0:14-20:59      45 mins
+R9. 论文阅读；
+-> 50%. Still need to go on!
+
+20:59-21:51     52 mins  ---------- free ----------
+21:51-22:36      45 mins
+R10. read the attention.	
+-> 50%. Not very ok.

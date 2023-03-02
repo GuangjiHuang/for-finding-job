@@ -762,7 +762,7 @@ while (True):
         if quit_flag:
             continue
         # set the count after showing finish
-        count = int(count_tm / 8) # divide 8, just like the 5, some cost time to deal with the image and show image
+        count = int(count_tm / 45 * 10) # divide 8, just like the 5, some cost time to deal with the image and show image
         count_total = count
         img_o = img
         # resive the window
@@ -866,7 +866,7 @@ while (True):
                                     with open(record_path, "w", encoding="utf-8") as f:
                                         f.write("".join(lines))
                                     # renew the count and the count_total
-                                    count = int(new_time_duration * 60 / 8)
+                                    count = int(new_time_duration * 60 / 45 * 10)
                                     count_total = count
                                     # then break
                                     break
@@ -990,6 +990,8 @@ while (True):
                     else:
                         print(f"can not open the {scenery_video_path}, so show the random images!")
                     scen_cap.release()
+            rest_time_begin = time.time()
+            rest_time_end_progress = rest_time_begin + count
             while True:
                 # show the full red screen
                 if is_show_random:
@@ -1009,16 +1011,18 @@ while (True):
                     full_screen = cv.resize(full_screen, (full_sc_width, full_sc_height))
                 cv.imshow(count_end_named_window, full_screen)
                 if is_use_duplicate_window:
-                    full_screen_dp = progress(full_sc_height, full_sc_width, int(full_sc_height/66), count_total, count)
+                    #full_screen_dp = progress(full_sc_height, full_sc_width, int(full_sc_height/66), count_total, count)
+                    full_screen_dp = progress(full_sc_height, full_sc_width, int(full_sc_height/66), count_total, int(rest_time_end_progress-time.time()))
                     cv.imshow(count_end_named_window_dp, full_screen_dp)
                 key_val_3 = cv.waitKey(1000) & 0xff
-                count -= 1
-                if key_val_3 == ord('q') or count<0:
+                #count -= 1
+                #if key_val_3 == ord('q') or count<0:
+                if key_val_3 == ord('q') or rest_time_end_progress-time.time() < 0:
                     break
         if is_count_end and not is_show_random:
             scen_cap.release()
         # if count < 0, then show the other image instead of the camera's image
-        if count < 0:
+        if rest_time_end_progress-time.time() < 0:
             waiting_img = np.zeros((full_sc_height, full_sc_width, 3), np.uint8)
             cv.putText(waiting_img, "To be continued!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (0, 0, 255), 3)
             # wait_time
@@ -1033,10 +1037,11 @@ while (True):
                     break
             if wait_time < 0:
                 # enter the emergency mode
-                init_wt = 399
+                init_wt = 0
                 init_col = 22
                 n = 1
                 while True:
+                    random.seed(0)
                     if n < 0 and init_wt == 1:
                         n = 1
                         init_wt = 399
@@ -1053,16 +1058,21 @@ while (True):
                     else:
                         init_wt -= 0.02* n
                     init_wt = int(init_wt)
-                    if init_wt < 1:
-                        init_wt = 1
+                    #if init_wt < 1:
+                    #    init_wt = 1
                     init_col += 0.05 * n
                     init_col = int(init_col)
                     if init_col > 255:
                         init_col = 255
                     w_full_screen =  np.ones((full_sc_height, full_sc_width, 3), np.uint8)
-                    w_full_screen[..., 0] = col_b = random.randint(0, init_col)
-                    w_full_screen[..., 1] = col_g = random.randint(0, init_col)
-                    w_full_screen[..., 2] = col_r = random.randint(0, init_col)
+                    if init_wt > 0:
+                        w_full_screen[..., 0] = col_b = random.randint(0, init_col)
+                        w_full_screen[..., 1] = col_g = random.randint(0, init_col)
+                        w_full_screen[..., 2] = col_r = random.randint(0, init_col)
+                    else:
+                        w_full_screen[..., 0] = col_b = 18
+                        w_full_screen[..., 1] = col_g = 18
+                        w_full_screen[..., 2] = col_r = 18
                     # here copy the img to the be used by the duplicated window!
                     rest_time_end = time.time()
                     rest_time_gap = int(rest_time_end - rest_time_start)
@@ -1071,19 +1081,29 @@ while (True):
                     rest_seconds = int(rest_time_gap - rest_hours * 3600 - rest_minutes * 60)
                     #
                     rest_time_str = f"REST: {rest_hours:02}:{rest_minutes:02}:{rest_seconds:02}"
-                    rest_time_offset = 100
+                    rest_time_offset = 300
+                    is_show_bigger_time = True
                     if is_use_duplicate_window:
                         w_full_screen_cp = w_full_screen.copy()
-                        cv.putText(w_full_screen_cp, "Time Out!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-                        cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.5*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 0.5, (255-col_b, 255-col_g, 255-col_r), 1)
+                        if not is_show_bigger_time:
+                            cv.putText(w_full_screen_cp, "Time Out!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+                            #cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (255-col_b, 255-col_g, 255-col_r), 5)
+                            cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255-col_r), 5)
+                        else:
+                            #cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
+                            cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 255-col_g, 6), 6)
                         cv.imshow(count_end_named_window_dp, w_full_screen_cp)
-                    cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-                    cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.5 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 0.5, (255 - col_b, 255 - col_g, 255 - col_r), 1)
+                    if not is_show_bigger_time:
+                        cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+                        #cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.4 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (255 - col_b, 255 - col_g, 255 - col_r), 5)
+                        cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.4 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255 - col_r), 5)
+                    else:
+                        cv.putText(w_full_screen, rest_time_str, (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
                     cv.imshow(count_end_named_window, w_full_screen)
                     # is_shine_screen = False, set the inti_wt to 0
                     if not is_shine_screen:
                         init_wt = 0
-                    key_val_5 = cv.waitKey(init_wt)
+                    key_val_5 = cv.waitKey(500)
                     if key_val_5 in [ord(' '), ord('c'), ord('q'), ord('e')]:
                         break
                     if init_wt == 1:

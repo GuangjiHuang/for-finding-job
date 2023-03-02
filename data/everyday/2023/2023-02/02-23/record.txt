@@ -1,0 +1,62 @@
+==============================
+2023-2-23  Thu.     RECORD 
+==============================
+
+07:52-08:07      15 mins
+R1. make a plan of today.
+-> 100%. I think that is ok. Good job.
+
+08:07-08:12      5 mins  ---------- free ----------
+08:12-08:22      10 mins
+R2. typing 10 minutes.
+-> 99%. I think that is ok. 74MPW. 
+
+08:22-08:26      4 mins  ---------- free ----------
+08:26-09:11      45 mins
+R3. experiment. 1) make the mind mapping to make clear that what you have to do. 2)3080, occupy.
+-> 95%. Done. 1) finished. 2) list almost all the experiments that I should do in the future.
+
+09:11-09:25     14 mins  ---------- free ----------
+09:25-09:40      15 mins
+R4. review the qeustion and the learning.
+-> 90%. I don't remember the other python script that use to exploer the file system.
+
+09:40-09:50     10 mins  ---------- free ----------
+09:50-10:35      45 mins
+R5. write paper. read the action recognition and the try to write the part of it.
+-> 90%. Just read the paper, do nothing now.
+
+10:35-10:49     14 mins  ---------- free ----------
+10:49-11:29      40 mins
+R6. read paper. read the st-gcn's rest part.
+
+11:29-14:17     2.8 hours ---------- free ----------
+14:17-14:27      10 mins
+R7. typing 10 minutes.
+-> 90%. Not very good. finger not feel good, something wrong.  
+
+
+14:27-14:30      3 mins  ---------- free ----------
+14:30-15:15      45 mins
+R8. experiment. pyskl's code reading, read the demo part of the  code.
+-> 80%. Just read the demo of the pyskl, and I find it is very difficult. I can not understand the usage of the module register.    
+
+15:15-15:30     15 mins  ---------- free ----------
+15:30-16:15      45 mins
+R9. experiment. 1) Download the yolo7 code to the 3080. 2) read the pyskl's code structure.
+-> 90%. 1) model, dataset, utils, apis(inference, train), core.
+
+16:15-16:34     19 mins  ---------- free ----------
+16:34-17:19      45 mins
+R10. read paper. continue reading the st-gcn, try to uderstand all the details.
+-> 90%. Not very good, still need to learn more. 
+
+17:19-18:59     1.7 hours ---------- free ----------
+18:59-19:09      10 mins
+R11. type 10 minutes
+-> 99%. 1) type not very good; 2) download the autokey in window, and then blind the ctrl+h to the ctrl + backspace. I think that is a really good job.
+
+19:09-19:23     14 mins  ---------- free ----------
+19:23-20:08      45 mins
+R12. write paper.
+-> 60%. Bad, write nothing, play the globalgreedy vim. make the configuration of it.

@@ -1,0 +1,62 @@
+==============================
+2023-2-27  Mon.     RECORD 
+==============================
+
+08:41-08:56      15 mins
+R1. make the plan of today.
+-> 80%. Just finish part of it. Still need to be continued. Come on!
+
+08:56-09:03      7 mins  ---------- free ----------
+09:03-09:28      25 mins
+R2. make the plan of this week and the this week's goal.
+-> I think that is ok. Very good job.
+
+09:28-09:37      9 mins  ---------- free ----------
+09:37-10:22      45 mins
+R3. typing 10 minutes.
+-> 90%. Not very quick. 71PWM. Come on.
+
+10:22-09:48     -34 mins  ---------- free ----------
+09:48-10:33      45 mins
+R4. write the paper. 绪论部分的人体行为识别。
+-> 95%. I think that is ok. Very good job.
+
+10:33-10:46     13 mins  ---------- free ----------
+10:46-11:31      45 mins
+R5. write the paper. 绪论部分的人体行为识别。
+-> 100%. Finished, Good job.
+
+11:31-14:27     2.9 hours ---------- free ----------
+14:27-14:37      10 mins
+R6. typing 10 minutes.
+-> 95%. 9 races, 71WPM. I think that is a pretty good.
+
+14:37-14:40      3 mins  ---------- free ----------
+14:40-15:25      45 mins
+R7. experiment. st-gcn's code.
+-> 90%. Not very good. But I know that using the conv to implemention the stcn.
+
+15:25-15:54     29 mins  ---------- free ----------
+15:54-16:39      45 mins
+R8. read the paper. continue to read the code's st-gcn.
+-> 90%. don't understand the gcn's conv operation.
+
+16:39-16:53     14 mins  ---------- free ----------
+16:53-17:38      45 mins
+R9. write the paper. part of the content.
+-> finish part of the arragement of the paragraph. Do the good job.
+
+17:38-20:02     2.4 hours ---------- free ----------
+20:02-20:47      45 mins
+R10. do the experiment. see the dataset of the people action.
+-> 90%. Finsihed. See all the data.
+
+20:47-21:26     39 mins  ---------- free ----------
+21:26-22:11      45 mins
+R11. do the experiment. prunching structure.
+-> 90%. I think that is not very good. Transfer the files from the dear computer to the 3080.
+
+22:11-22:30     19 mins  ---------- free ----------
+22:30-23:15      45 mins
+R12. write the  paper. Give you one task to finish it!
+-> 100%. finished, good.

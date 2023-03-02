@@ -1,0 +1,57 @@
+==============================
+2023-2-17  Fri.     RECORD 
+==============================
+
+07:59-08:14      15 mins
+R1. make the plan of today.
+-> 99%. Ok. make the detailed plan of today, almost like the plan of yesterday.
+
+08:14-08:19      5 mins  ---------- free ----------
+08:19-08:29      10 mins
+R2. typing 10 minutes.
+-> 95%. I think that is pretty good, if I am clamn down, I can get the good score.
+
+08:29-08:35      6 mins  ---------- free ----------
+08:35-09:20      45 mins
+R3. 实验. gcn(公式 + 图卷积的操作)
+-> 90%. 1)np to get the inv of the matrix, np.linelg.rev; 2) about the formula of the: H^{l+1}=\alpha (\tilde D^{-\frac{1}{2}}*A\tilde D^{-\frac{1}{2}} * H^{l} * W)
+
+09:20-09:36     16 mins  ---------- free ----------
+09:36-09:51      15 mins
+R4. review the ql.
+-> 95%. I think that is ok. 1) still need to try to solve the problem that can not paste the content into the tmux.
+
+09:51-10:06     15 mins  ---------- free ----------
+10:06-10:51      45 mins
+R5. 论文阅读. se, 继续看一下代码.
+-> 90%. I think that is ok. But need to learn to use in my own code.
+
+10:51-11:04     13 mins  ---------- free ----------
+11:04-11:49      45 mins
+R6. 实验. resize bboxes。
+-> I think that is ok.
+
+11:49-14:23     2.6 hours ---------- free ----------
+14:23-14:33      10 mins
+R7. typing 10 minutes.
+-> 95%. Type slowly, not very good.
+
+14:33-14:36      3 mins  ---------- free ----------
+14:36-15:21      45 mins
+R8. 实验. 继续看图卷积的代码，看看骨架数据集是怎样的。
+-> 95%. I think that is, ok. Give you the input x, and then matrix mul the weight, get the middle hidden feature, and then mm the adj, repeat the step, ..., and then get the output.
+
+15:21-15:40     19 mins  ---------- free ----------
+15:40-16:25      45 mins
+R9. 论文阅读. 看一下人体骨架的数据集是怎样的。
+-> 80%. I think that's ok.
+
+16:25-16:54     29 mins  ---------- free ----------
+16:54-17:14      20 mins
+R10. 改好那个backward的dir script。
+-> 100%. That is ok.
+
+17:14-19:08     1.9 hours ---------- free ----------
+19:08-19:48      40 mins
+R11. write the forwards program to search the file path
+-> 90%. I think that is ok.

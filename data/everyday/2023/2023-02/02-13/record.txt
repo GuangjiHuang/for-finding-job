@@ -1,0 +1,49 @@
+==============================
+2023-2-13  Mon.     RECORD 
+==============================
+
+09:40-09:59      19 mins
+R1. make the plan of today.
+-> 95%. OK.
+
+09:59-10:04      5 mins  ---------- free ----------
+10:04-10:14      10 mins
+R2. typing 10 minutes.
+-> 99%. May be good.
+
+10:14-10:19      5 mins  ---------- free ----------
+10:19-11:04      45 mins
+R3. other thing.
+-> 70% progress. Need to be continued.
+
+
+11:04-11:24     20 mins  ---------- free ----------
+11:24-12:09      45 mins
+R4. 实验。
+-> 90%. I think that is ok.
+
+12:09-14:41     2.5 hours ---------- free ----------
+14:41-15:26      45 mins
+R5. other thing.
+-> 90%. I think that is ok. But still need to continue.
+
+15:26-16:01     35 mins  ---------- free ----------
+16:01-16:16      15 mins
+R6. typing. 
+-> 100%. Very good job.
+
+16:16-16:19      3 mins  ---------- free ----------
+16:19-17:04      45 mins
+R7. 实验。
+-> 80%. Not very good.
+
+17:04-19:08     2.1 hours ---------- free ----------
+19:08-19:53      45 mins
+R8. 实验。
+-> 70%. Not very good.
+
+
+19:53-22:27     2.6 hours ---------- free ----------
+22:27-22:57      30 mins
+R9. add the new function to the wr script.
+-> 90%. I think that is ok.

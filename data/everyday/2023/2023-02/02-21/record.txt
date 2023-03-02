@@ -1,0 +1,48 @@
+==============================
+2023-2-21  Tue.     RECORD 
+==============================
+
+07:48-08:00      12 mins
+R1. make the plan of today.
+-> 100%. I think that is ok. May need to write the plan quickly.
+
+08:00-08:03      3 mins  ---------- free ----------
+08:03-08:48      45 mins
+R2. experiment; continue to reading the gcn's code.
+-> 90%. There are lots of network need to be seen. May spare lots of time to do that.
+
+08:48-09:02     14 mins  ---------- free ----------
+09:02-09:47      45 mins
+R3. experiment; continue to reading the gcn's code.
+-> 90%. See the demo_skeleton.py, just part of the code. About the config, module, and load the path. That's, almost all of them was finished by the mmcv this package.
+
+
+09:47-10:02     15 mins  ---------- free ----------
+10:02-10:47      45 mins
+R4. write paper; 目标检测的研究现状。
+-> 80%. Finished part of the content: 1) 传统的机器学习的部分。
+
+10:47-11:05     18 mins  ---------- free ----------
+11:05-11:18      13 mins
+R5. typing 10 minuts.
+-> 95%. just 71 PWM. 10 races.
+
+11:18-12:32     1.2 hours ---------- free ----------
+12:32-13:17      45 mins
+R6. read paper;
+-> 50%. Not good, bad!
+
+13:17-14:14     57 mins  ---------- free ----------
+14:14-14:29      15 mins
+R7. vim: write the function to switch the workspace directory.
+-> 100%. That is ok. But cost me lost of time.
+
+14:29-14:57     28 mins  ---------- free ----------
+14:57-15:17      20 mins
+R8. write a script to backen the paper.
+-> 90%. something that it not very ok. Cost me lots of time! Bad work!
+
+15:17-15:42     25 mins  ---------- free ----------
+15:42-16:27      45 mins
+R9. read paper; 模型压缩的研究现状。
+-> 90%. I think that is ok. 1) see part of the downloaded paper. 2) shield paper reading.

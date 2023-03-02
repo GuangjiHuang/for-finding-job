@@ -1,0 +1,22 @@
+==============================
+2023-2-22  Wed.     ARRAGEMENT 
+==============================
+[Y]t. make the today's plan. # 20 min.
+
+# morning: 3 * task
+[Y]t. review the yesterday's questions and the learning. # 15 min
+[Y]t. 论文撰写。deep learning.
+[Y]t. 论文阅读。gcn and the st-gnc's formula.
+[Y]t. 实验。st-gcn's code.
+
+# afternoon: 4 * task
+[Y]t. 实验。read the gcn's model and the layer. and the pyskl's demo.
+[Y]t. 论文阅读。action recognition's rank and the d3c's impletement.
+[Y]t. 实验。read the code the c3D, as quick as possible.
+[Y]t. 论文撰写。finish the object tracking.
+
+# evening: 3 * task
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. 论文阅读。st-gcn.
+[Y]t. 实验。数据增强的东西。
+[Y]t. writing the script code: print the this month's score. # 20 min

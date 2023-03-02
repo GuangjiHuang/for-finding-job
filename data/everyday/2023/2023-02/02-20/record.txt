@@ -1,0 +1,74 @@
+==============================
+2023-2-20  Mon.     RECORD 
+==============================
+
+07:48-08:33      45 mins
+R1. experiment. 人体骨架数据的可视化。
+-> 90%. I think that is ok. Has read part of the code!
+
+08:33-08:47     14 mins  ---------- free ----------
+08:47-09:32      45 mins
+R2. experiment. 继续看完人体骨架数据的可视化的代码，把模型跑起来。
+-> 95%. Has been read the code, very simple way to visual the skeleton, just plot the point and the skeleton.
+
+09:32-09:42     10 mins  ---------- free ----------
+09:42-10:27      45 mins
+R3. read the paper; about the st-gcn, read the blog first.
+-> 90%. 1) read part of the paper; 2) try to read the paper again. come on!
+
+10:27-10:39     12 mins  ---------- free ----------
+10:39-10:45       6 mins
+R4. typing 10 minutes.
+-> 95%. 71WPM. I think that is pretty good.
+
+10:45-10:46      1 mins  ---------- free ----------
+10:46-11:30      44 mins
+R5. write the paper; 课题研究意义的后半部分，然后就是看视频监控的研究现状；
+-> 99%. Ok.
+
+11:30-12:46     1.3 hours ---------- free ----------
+12:46-13:16      30 mins
+R6. continue reading the st-gcn paper again.
+-> 90%. I think that is ok. Learn more from it! Continue doing the good job.
+
+13:16-14:12     56 mins  ---------- free ----------
+14:12-14:22      10 mins
+R7. typing 10 minutes.
+-> 100%. 74WPM. 10 racers, do the good job.
+
+14:22-14:47     25 mins  ---------- free ----------
+14:47-15:32      45 mins
+R8. experiment. Visual the skeleton data and then download the st-gcn code for running.
+-> 95%. I think that is ok. use the pyskl to do that. May be a good job, this github reposoty has many algorithm can be used.
+
+
+15:32-15:49     17 mins  ---------- free ----------
+15:49-16:34      45 mins
+R9. read the paper. the impletementation of the  st-gcn, code!
+-> 95%. read the code, use the three straty to construct the A.
+
+16:34-16:44     10 mins  ---------- free ----------
+16:44-17:29      45 mins
+R10. write the paper. 视频监控的研究现状。 
+-> 100%. Do the good job.
+
+
+17:29-19:50     2.4 hours ---------- free ----------
+19:50-20:00      10 mins
+R11. typing 10 minutes.
+-> 100%. 74WPM. I think that is a really good job.
+
+20:00-20:15     15 mins  ---------- free ----------
+20:15-21:00      45 mins
+R12. read the paper. still read the code of the st-gcn.
+-> 80%. Too slow to read the source code.
+
+21:00-21:17     17 mins  ---------- free ----------
+21:17-22:02      45 mins
+R13. write the paper. 检测算法的研究现状，仔细看一遍，然后再开始写。
+-> 80%. Just read the paper, not write the paper. I think that is not very ok.
+
+22:02-22:49     47 mins  ---------- free ----------
+22:49-23:17      28 mins
+R14. read the code of the st-gcn.
+-> 60%. not finish the coding reviewing.

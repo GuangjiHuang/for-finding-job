@@ -1,0 +1,25 @@
+==============================
+2023-2-23  Thu.     ARRAGEMENT 
+==============================
+
+[Y]t. make a plan of today. # 15 min
+# morning: 4 * task
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. experiment. 1) make the mind mapping to make clear that what you have to do. 2)3080, occupy.
+[Y]t. review the qeustion and the learning. # 15 min
+[Y]t. write paper. read the action recognition and the try to write the part of it.
+[Y]t. read paper. read the st-gcn's rest part.
+
+# afternoon: 3 * task
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. experiment. pyskl's code reading, read the demo part of the  code.
+[Y]t. experiment. 1) Download the yolo7 code to the 3080. 2) read the pyskl's code structure.
+[Y]t. read paper. continue reading the st-gcn, try to uderstand all the details.
+[Y]t. type 10 minutes # 10 min
+[Y]t. write paper.
+
+# evening: 4 * task
+t. experiment
+t. write paper.
+t. write paper.
+t. read paper.

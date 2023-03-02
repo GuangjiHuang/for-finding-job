@@ -1,0 +1,21 @@
+==============================
+2023-3-1  Wed.     ARRAGEMENT 
+==============================
+[Y]t. make the plan of today. # 15 min
+
+morning: 3 * task
+[Y]t. write paper; # 55 min
+[Y]t. write paper; 
+[Y]t. do experiment; # 30 min
+
+afternoon: 4 * task
+[Y]t. write paper; copy paste.
+[Y]t. review and then make the rule again. I think this is very important. 
+[Y]t. read paper; # 25 min
+
+evening: 3 * task
+[Y]t. 整理一下后面章节的目录，看看情况。
+[Y]t. change the code of the study app. About the time showing.
+t. read paper; 
+t. write paper; 
+t. do experiment;

@@ -1,0 +1,20 @@
+==============================
+2023-2-27  Mon.     ARRAGEMENT 
+==============================
+# morning: 3 * task;
+[Y]t. make the plan of today. # 15 min
+[Y]t. make the plan of this week and the this week's goal. 
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. write the paper. 绪论部分的人体行为识别。
+[Y]t. write the paper. 绪论部分的人体行为识别。
+
+#afternoon: 3 * task;  [14:30 - 17:30]
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. experiment. st-gcn's code. 
+[Y]t. read the paper. continue to read the code's st-gcn.
+[Y]t. write the paper. part of the content.
+
+#evening: 4 * task; [19:30 - 23:30]
+[Y]t. do the experiment. see the dataset of the people action. 
+[Y]t. do the experiment. prunching structure.
+[Y]t. write the  paper. Give you one task to finish it!
