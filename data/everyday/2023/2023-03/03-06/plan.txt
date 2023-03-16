@@ -1,0 +1,39 @@
+==============================
+2023-3-6  Mon.     ARRAGEMENT 
+==============================
+morning: 4 * task
+[Y]t. write the paper
+[Y]t. write the paper
+[Y]t. write the paper
+[Y]t. write the paper # 35 min
+
+afternoon: 4 * task
+[Y]t. write the paper
+[Y]t. write the paper
+[Y]t. just read the paper and think of how to write the paper again. # 30 min
+
+evening: 3 * task
+[Y]t. download the mathtype and try to use it. # 20 min
+[Y]t. write the paper
+[Y]t. write the paper
+t. review and make the plan of tomorrow. # 20 min
+
+--------------------------------------------------------------------------------
+tomorrow's plan:
+# morning: 4 * task; afternoon: 4 * task; evening: 3 * task
+morning: 4 * task
+t. write the paper; the adaboost part, So tonight, I will make it clear;
+t. modify the patent; the title, the gpu and the cpu part;
+t. write the paper;
+t. modify the patent; the backbone part.
+
+afternoon: 4 * task
+t. write the paper:
+t. modify the patent;
+t. write the paper:
+t. modify the patent;
+
+evening: 3 * task
+t. write the paper:
+t. write the paper:
+t. modify the patent;

@@ -1,0 +1,38 @@
+==============================
+2023-3-5  Sun.     ARRAGEMENT 
+==============================
+[Y]t. make the plan of today. # 20 min
+
+# morning (3 * task) [9:00 - 12:00]
+[Y]t. write the paper; Select the images, including the back and the front, generate the copy paste iamge.
+[Y]t. write the paper; Regulate the name of the dataset, generate the histogram of the dataset. Write the content of the copy paste.
+[Y]t. write the paper; recify the content.
+
+# afternoon (4 * task) [14:00 - 18:00]
+[X]t. write the paper;
+[X]t. write the paper;
+[X]t. write the paper;
+[X]t. write the paper;
+
+# evening (3 * task) [20:00 - 23:00]
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. make the plan of tomorrow, and the review and write the diary.
+
+# tomorrow
+morning: 4 * task
+t. write the paper
+t. write the paper
+t. write the paper
+t. write the paper
+
+afternoon: 4 * task
+t. write the paper
+t. write the paper
+t. write the paper
+t. write the paper
+
+evening: 3 * task
+t. write the paper
+t. write the paper
+t. write the paper

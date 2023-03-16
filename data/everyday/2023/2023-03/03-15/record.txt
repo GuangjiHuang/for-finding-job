@@ -1,0 +1,47 @@
+==============================
+2023-3-15  Wed.     RECORD 
+==============================
+
+08:26-08:40      14 mins
+R1. make the plan of today.
+-> 95%. 1) make the plan of today: -> the 3th chapter: people count.
+
+08:40-08:42      2 mins  ---------- free ----------
+08:42-09:27      45 mins
+R2. write the paper; people count based on the detection way.
+-> 95%. 1) write 700 charaters. 2) people count 引言； 3）整理了一下基于检测方法的思路；
+
+09:27-09:40     13 mins  ---------- free ----------
+09:40-10:25      45 mins
+R3. write the paper; people count based on the detection way, the algorithm process.
+-> 95%. 1) write part of the people count's algorithm. 2) contruct the tmeplate for it; 3) I think that is ok. Do the good job.
+
+10:25-10:41     16 mins  ---------- free ----------
+10:41-11:26      45 mins
+R4. 单片机51串口程序的修改. try use the series to transmit the data, the time data.
+-> 95%. 1) test the project, this way is ok. 2) good job.
+
+11:26-13:46     2.3 hours ---------- free ----------
+13:46-14:26      40 mins
+R5. 51 单片机串口程序修改。
+-> 90%. Just finish part of it. Still need to work.
+
+14:26-14:40     14 mins  ---------- free ----------
+14:40-15:25      45 mins
+R6. 51 单片机串口程序修改.
+-> 90%. Just finish part of it. Still need to be continued.
+
+15:25-15:28      3 mins  ---------- free ----------
+15:28-16:13      45 mins
+R7. 51 单片机串口程序修改.
+-> 90%. Do the good job; but still not finish, still need to be continued.
+
+16:13-20:10     4.0 hours ---------- free ----------
+20:10-20:20      10 mins
+R8. typing 10 minutes.
+-> 90%. Do the good job.
+
+20:20-23:11     2.9 hours ---------- free ----------
+23:11-23:31      20 mins
+R9. review and then make the plan of tomorrow.
+-> 90%. I think that is ok.

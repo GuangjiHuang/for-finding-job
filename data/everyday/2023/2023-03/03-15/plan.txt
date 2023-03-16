@@ -1,0 +1,22 @@
+==============================
+2023-3-15  Wed.     ARRAGEMENT 
+==============================
+[Y]t. make the plan of today. # 15 min
+
+# morning: 3 * task
+[Y]t. write the paper; people count based on the detection way.
+[Y]t. write the paper; people count based on the detection way, the algorithm process.
+[Y]t. 单片机51串口程序的修改.
+
+# afternoon: 4 * task
+[X]t. 51 单片机串口程序修改。# 40 min
+[X]t. 51 单片机串口程序修改.
+[X]t. write the paper;
+[X]t. write the paper;
+
+# evening: 3 * task
+[x]t. write the paper;
+[X]t. write the paper;
+[X]t. write the paper;
+[Y]t. review and then make the plan of tomorrow. # 20 min
+

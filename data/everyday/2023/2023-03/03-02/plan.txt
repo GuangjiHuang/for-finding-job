@@ -12,15 +12,35 @@
 [Y]t. typing 10 minutes. # 10 min
 [Y]t. change the countdown time code, make the rest time more bigger! # 10 min 
 [Y]t. write paper.
-[Y]t. write paper.
-t. write paper.
-t. review the patent.
+[Y]t. write paper. # 25 min
 
 # evening (3 * tasks)
-t. write paper.
-t. write paper.
-t. write paper.
+[Y]t. typing 5 minutes. # 5 min
+[Y]t. write paper.
+[Y]t. write paper.
+[Y]t. write paper.
 
 
 # write the tomorrow's plan and today's review
 # 23:00 - 23:30
+[Y]t. make the tomorrow plan and write the review of today. # 30 min
+
+# tomorrow:
+--------------------------------------------------------------------------------
+# morning: [4 * task]
+t. write the paper;
+t. write the paper;
+t. write the paper;
+t. read the patent and commit the patent;
+
+# afternoon: [4 * task]
+t. write the paper;
+t. write the paper;
+t. write the paper;
+t. write the paper;
+
+# evening: [3 * task]
+t. write the paper;
+t. write the paper;
+t. write the paper;
+

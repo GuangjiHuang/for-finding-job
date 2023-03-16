@@ -1,0 +1,24 @@
+==============================
+2023-3-7  Tue.     ARRAGEMENT 
+==============================
+# morning: 4 * task; afternoon: 4 * task; evening: 3 * task
+morning: 4 * task
+[Y]t. write the paper; the adaboost part, So tonight, I will make it clear;
+[Y]t. modify the patent; the title, the gpu and the cpu part;
+[Y]t. write the paper; begin to write the paper of the yolov4 part. Compare with the yolov3. 
+[Y]t. modify the patent; still add some new content. 
+
+afternoon: 4 * task
+[Y]t. write the paper: yolo network structure. 
+[Y]t. modify the patent; begin to write the patent.
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. write the paper: yolo network scturcture.
+
+evening: 4 * task
+[Y]t. modify the patent; change the patent. 6:45 - 7:45
+[Y]t. write the paper: 20 - 21
+[Y]t. write the paper: 21 -22 # 30 min
+[Y]t. modify the patent; 22 -23
+[Y]t. review and make the plan of tomorrow. # 25 min
+--------------------------------------------------------------------------------
+## tomorrow's plan

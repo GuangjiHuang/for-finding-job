@@ -1,0 +1,52 @@
+==============================
+2023-3-8  Wed.     RECORD 
+==============================
+
+07:58-08:43      45 mins
+R1. write the paper;
+-> 90%. 1) about how to use the multiple tracker; -> first is init, and then is update, that is.
+
+08:43-08:55     12 mins  ---------- free ----------
+08:55-09:40      45 mins
+R2. write the patent. please write more quick, more quick. At least 300 characters.
+-> 90%. I think that is ok. Do the good job. 1) just finish the formula of the IoU part.
+
+09:40-09:56     16 mins  ---------- free ----------
+09:56-10:41      45 mins
+R3. write the paper; write the code of the video's tracking of people.
+-> 80%. write the code of tracking, too slow, 1) cv2 wrong; 2) logic wrong. 3) ....
+
+10:41-10:53     12 mins  ---------- free ----------
+10:53-11:28      35 mins
+R4. modify the patent. Finish the part of the recify part.
+-> 90%. I think that is good.
+
+11:28-13:47     2.3 hours ---------- free ----------
+13:47-14:27      40 mins
+R5. write the paper; tracking code.
+-> 90%. Has been made the code run, just very simple code. 1) still need to add the traj; 2) auto show the result.
+
+14:27-14:41     14 mins  ---------- free ----------
+14:41-15:26      45 mins
+R6. modify the patent.
+-> 90%. I think that is good, but a little slow.
+
+15:26-15:44     18 mins  ---------- free ----------
+15:44-16:29      45 mins
+R7. write the paper; tracking code, make it ok. 1) add the traj; 2) auto save the result.
+-> 90%. I think that is ok. run the code, that is ok.
+
+16:29-16:46     17 mins  ---------- free ----------
+16:46-17:31      45 mins
+R8. modify the patent.
+-> 90%. Just finish part of it.
+
+17:31-20:50     3.3 hours ---------- free ----------
+20:50-21:35      45 mins
+R9. modify the patent. 
+-> 100%. Do the good job. To be continued. Good.
+
+21:35-22:31     56 mins  ---------- free ----------
+22:31-23:01      30 mins
+R10. modify the patent.
+-> 90%. I think that is ok. Do the good job.

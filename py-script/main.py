@@ -10,6 +10,7 @@ from threading import Thread
 from threading import Event
 import random
 from tk_question import *
+import serial
 
 
 color_tb = {"red":(0, 0, 255), "green": (0, 255, 0), "blue": (255, 0, 0), 
@@ -209,6 +210,27 @@ def checkVideoIdIsValid(video_id, video_id_ls):
     # return the True
     return True
 
+def lsToHexLs(ls, head):
+    #head = "11 "
+    tail = " 0d 0a"
+    hex_ls = list()
+    for i in ls:
+        hex_i = hex(i)[2:]
+        # check the len of the hex_i
+        if len(hex_i) == 1:
+            hex_ls.append("0"+hex_i)
+        elif len(hex_i) >= 3:
+            hex_ls.append(hex_i[:2])
+        else:
+            hex_ls.append(hex_i)
+    body = " ".join(hex_ls)
+    return bytes.fromhex(head + body + tail)
+
+def liveTimeHex(head):
+    t_str = time.strftime("%y-%m-%d-%H-%M-%S")
+    t_ls = list(map(int, t_str.split("-")))
+    return lsToHexLs(t_ls, head)
+
 # --------------------------------------------------
 # the global var that you have to set
 #save_dir = r"../../study-app-data/video-save/"
@@ -295,6 +317,19 @@ for c_id in video_id_ls:
         camera_id = c_id
         video_num = camera_id
         break
+
+# try to open the 51 serial
+is_open_serial = False
+port_name = "COM4"
+fre = 9600
+time_out = 5
+try:
+    ser = serial.Serial(port_name, fre, timeout=time_out)
+    if ser.isOpen():
+        is_open_serial = True
+        print(f"Open the 51 serial: {port_name}")
+except:
+    print(f"Can not open the 51 serial: {port_name}")
 
 #for c_id in [video_num, 0, 1, 2, 3]:
 #    cap_camera = cv.VideoCapture(c_id)
@@ -402,6 +437,12 @@ while (True):
         img = 166 * np.ones((int(height*0.1), int(width * 0.6), 3), np.uint8)
 # put the text in the image
     text = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    # 51 serial
+    # here send two line: one line is the: time, one line is the date
+    if is_open_serial:
+        mes_live_time = liveTimeHex("00")
+        ser.write(mes_live_time)
+    #
     if is_live:
         cv.putText(img, text, (int(0.4*width), 30), cv.FONT_HERSHEY_COMPLEX, 1, (0, 255, 255), 2)
     else:
@@ -669,6 +710,25 @@ while (True):
         cv.waitKey(0)
         # here have to set the bg change flag
         bg_change_flag = True
+    elif key_val_0 == ord("M") or pipeline_dict.get("M", False):
+        pipeline_dict.clear()
+        # switch the ser connection to the 51 MCU
+        if is_open_serial:
+            m_send_ms = lsToHexLs([0], "04")
+            for _ in range(4):
+                ser.write(m_send_ms) # just show the default part
+                time.sleep(1)
+            ser.close()
+            is_open_serial = False
+        else:
+            try:
+                ser = serial.Serial(port_name, fre, timeout=time_out)
+                if ser.isOpen():
+                    is_open_serial = True
+                    print(f"Open the 51 serial: {port_name}")
+            except:
+                print(f"Can not open the 51 serial: {port_name}")
+
     elif key_val_0 == ord("w") or pipeline_dict.get("w", False):
         pipeline_dict.clear()
         # try to read the file to get the item and the 
@@ -725,39 +785,6 @@ while (True):
         count_tm_copy = count_tm
         # if the count_tm gt 10 min, you need to have the plan
         quit_flag = False
-        ''''
-        if  count_tm >= 10 * 60:
-            # pop the window to ask you to make the plan
-            # the pop text
-            timer_text = f"{count_tm//60}min."
-            plan_text = f"Do you have plan? Yes[a], Think[b], Quit[q]!"
-            # make the new window
-            cv.namedWindow("Information")
-            cv.moveWindow("Information", int(0.5*full_sc_width), int(0.1*full_sc_height))  # move the window to the middle
-
-            infor_width = int(0.3 * full_sc_width)
-            infor_height = int(0.2 * full_sc_height)
-            information_img = np.zeros((infor_height, infor_width, 3), np.uint8)
-            cv.putText(information_img, plan_text, (int(0.1*infor_width), int(0.3*infor_height)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 255, 255), 1)
-            cv.putText(information_img, timer_text, (int(0.1*infor_width), int(0.3*infor_height+30)), cv.FONT_HERSHEY_COMPLEX, 0.5, (0, 255, 255), 1)
-            # show the image and then give you time to think
-            while True:
-                cv.imshow("Information", information_img)
-                key_val_infor = cv.waitKey(0)
-                if key_val_infor == ord('a'):
-                    break
-                elif key_val_infor == ord('b'):
-                    thinking_time = 20
-                    cv.putText(information_img, f"thinking {thinking_time}s ...", (int(0.1*infor_width), int(0.4*infor_height+60)), cv.FONT_HERSHEY_COMPLEX, 0.5, (255, 0, 255), 1)
-                    cv.imshow("Information", information_img)
-                    cv.waitKey(thinking_time * 1000)
-                    break
-                elif key_val_infor == ord('q'):
-                    quit_flag = True
-                    break
-            # destory the window
-            cv.destroyWindow("Information")
-        '''
         # if you chose the quit, then continue
         if quit_flag:
             continue
@@ -813,6 +840,11 @@ while (True):
             img_bg = np.zeros((c_h, c_w, 3), np.uint8)
             min_digit = int(count_tm // 60)
             sec_digit = int(count_tm - 60 * min_digit)
+            # 51 serial
+            if is_open_serial:
+                count_down_mes = lsToHexLs([min_digit//60, min_digit-(min_digit//60*60), sec_digit], "01")
+                ser.write(count_down_mes)
+            #
             count_down_show = f"{min_digit:0>2} : {sec_digit:0>2}"
             cv.putText(img_bg, count_down_show, (int(0.3*c_w), int(0.5*c_h)), cv.FONT_HERSHEY_COMPLEX, 1, count_down_color, 3)
             cv.imshow(window_name, img_bg)
@@ -993,6 +1025,11 @@ while (True):
             rest_time_begin = time.time()
             rest_time_end_progress = rest_time_begin + count
             while True:
+                # 51 serial
+                # here show "Have a break!"
+                if is_open_serial:
+                    mes_send_break = lsToHexLs([0], "02")
+                    ser.write(mes_send_break)
                 # show the full red screen
                 if is_show_random:
                     full_screen = 22 * np.ones((full_sc_height, full_sc_width, 3), np.uint8)
@@ -1019,97 +1056,105 @@ while (True):
                 #if key_val_3 == ord('q') or count<0:
                 if key_val_3 == ord('q') or rest_time_end_progress-time.time() < 0:
                     break
-        if is_count_end and not is_show_random:
-            scen_cap.release()
-        # if count < 0, then show the other image instead of the camera's image
-        if rest_time_end_progress-time.time() < 0:
-            waiting_img = np.zeros((full_sc_height, full_sc_width, 3), np.uint8)
-            cv.putText(waiting_img, "To be continued!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (0, 0, 255), 3)
-            # wait_time
-            wait_time = 2
-            while True:
-                cv.imshow(count_end_named_window, waiting_img)
-                if is_use_duplicate_window:
-                    cv.imshow(count_end_named_window_dp, waiting_img)
-                key_val_4 = cv.waitKey(1000)
-                wait_time -= 1
-                if wait_time <0 or key_val_4 in [ord(' '), ord('c'), ord('q'), ord('e')]:
-                    break
-            if wait_time < 0:
-                # enter the emergency mode
-                init_wt = 0
-                init_col = 22
-                n = 1
+        # indent to solve the bug <3-15, hgj>
+            if is_count_end and not is_show_random:
+                scen_cap.release()
+            # if count < 0, then show the other image instead of the camera's image
+            if rest_time_end_progress-time.time() < 0:
+                waiting_img = np.zeros((full_sc_height, full_sc_width, 3), np.uint8)
+                cv.putText(waiting_img, "To be continued!", (int(0.3*full_sc_width), int(0.5*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (0, 0, 255), 3)
+                # wait_time
+                wait_time = 2
                 while True:
-                    random.seed(0)
-                    if n < 0 and init_wt == 1:
-                        n = 1
-                        init_wt = 399
-                        init_col = 22
-                    # renew the wt and the color
-                    if init_wt > 100:
-                        init_wt -= 0.06 * n
-                    elif init_wt > 80:
-                        init_wt -= 0.05 * n
-                    elif init_wt > 60:
-                        init_wt -= 0.04 * n
-                    elif init_wt > 30:
-                        init_wt -= 0.04 * n
-                    else:
-                        init_wt -= 0.02* n
-                    init_wt = int(init_wt)
-                    #if init_wt < 1:
-                    #    init_wt = 1
-                    init_col += 0.05 * n
-                    init_col = int(init_col)
-                    if init_col > 255:
-                        init_col = 255
-                    w_full_screen =  np.ones((full_sc_height, full_sc_width, 3), np.uint8)
-                    if init_wt > 0:
-                        w_full_screen[..., 0] = col_b = random.randint(0, init_col)
-                        w_full_screen[..., 1] = col_g = random.randint(0, init_col)
-                        w_full_screen[..., 2] = col_r = random.randint(0, init_col)
-                    else:
-                        w_full_screen[..., 0] = col_b = 18
-                        w_full_screen[..., 1] = col_g = 18
-                        w_full_screen[..., 2] = col_r = 18
-                    # here copy the img to the be used by the duplicated window!
-                    rest_time_end = time.time()
-                    rest_time_gap = int(rest_time_end - rest_time_start)
-                    rest_hours = int(rest_time_gap // 3600)
-                    rest_minutes = int((rest_time_gap - rest_hours * 3600) // 60)
-                    rest_seconds = int(rest_time_gap - rest_hours * 3600 - rest_minutes * 60)
-                    #
-                    rest_time_str = f"REST: {rest_hours:02}:{rest_minutes:02}:{rest_seconds:02}"
-                    rest_time_offset = 300
-                    is_show_bigger_time = True
+                    cv.imshow(count_end_named_window, waiting_img)
                     if is_use_duplicate_window:
-                        w_full_screen_cp = w_full_screen.copy()
-                        if not is_show_bigger_time:
-                            cv.putText(w_full_screen_cp, "Time Out!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-                            #cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (255-col_b, 255-col_g, 255-col_r), 5)
-                            cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255-col_r), 5)
-                        else:
-                            #cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
-                            cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 255-col_g, 6), 6)
-                        cv.imshow(count_end_named_window_dp, w_full_screen_cp)
-                    if not is_show_bigger_time:
-                        cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
-                        #cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.4 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (255 - col_b, 255 - col_g, 255 - col_r), 5)
-                        cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.4 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255 - col_r), 5)
-                    else:
-                        cv.putText(w_full_screen, rest_time_str, (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
-                    cv.imshow(count_end_named_window, w_full_screen)
-                    # is_shine_screen = False, set the inti_wt to 0
-                    if not is_shine_screen:
-                        init_wt = 0
-                    key_val_5 = cv.waitKey(500)
-                    if key_val_5 in [ord(' '), ord('c'), ord('q'), ord('e')]:
+                        cv.imshow(count_end_named_window_dp, waiting_img)
+                    key_val_4 = cv.waitKey(1000)
+                    wait_time -= 1
+                    if wait_time <0 or key_val_4 in [ord(' '), ord('c'), ord('q'), ord('e')]:
                         break
-                    if init_wt == 1:
-                        n -= 0.2
-                    else:
-                        n += 1
+                if wait_time < 0:
+                    # enter the emergency mode
+                    init_wt = 0
+                    init_col = 22
+                    n = 1
+                    while True:
+                        random.seed(0)
+                        if n < 0 and init_wt == 1:
+                            n = 1
+                            init_wt = 399
+                            init_col = 22
+                        # renew the wt and the color
+                        if init_wt > 100:
+                            init_wt -= 0.06 * n
+                        elif init_wt > 80:
+                            init_wt -= 0.05 * n
+                        elif init_wt > 60:
+                            init_wt -= 0.04 * n
+                        elif init_wt > 30:
+                            init_wt -= 0.04 * n
+                        else:
+                            init_wt -= 0.02* n
+                        init_wt = int(init_wt)
+                        #if init_wt < 1:
+                        #    init_wt = 1
+                        init_col += 0.05 * n
+                        init_col = int(init_col)
+                        if init_col > 255:
+                            init_col = 255
+                        w_full_screen =  np.ones((full_sc_height, full_sc_width, 3), np.uint8)
+                        if init_wt > 0:
+                            w_full_screen[..., 0] = col_b = random.randint(0, init_col)
+                            w_full_screen[..., 1] = col_g = random.randint(0, init_col)
+                            w_full_screen[..., 2] = col_r = random.randint(0, init_col)
+                        else:
+                            w_full_screen[..., 0] = col_b = 18
+                            w_full_screen[..., 1] = col_g = 18
+                            w_full_screen[..., 2] = col_r = 18
+                        # here copy the img to the be used by the duplicated window!
+                        rest_time_end = time.time()
+                        rest_time_gap = int(rest_time_end - rest_time_start)
+                        rest_hours = int(rest_time_gap // 3600)
+                        rest_minutes = int((rest_time_gap - rest_hours * 3600) // 60)
+                        rest_seconds = int(rest_time_gap - rest_hours * 3600 - rest_minutes * 60)
+                        #
+                        rest_time_str = f"REST: {rest_hours:02}:{rest_minutes:02}:{rest_seconds:02}"
+                        rest_time_offset = 300
+                        is_show_bigger_time = True
+                        if is_use_duplicate_window:
+                            w_full_screen_cp = w_full_screen.copy()
+                            if not is_show_bigger_time:
+                                cv.putText(w_full_screen_cp, "Time Out!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+                                #cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (255-col_b, 255-col_g, 255-col_r), 5)
+                                cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255-col_r), 5)
+                            else:
+                                #cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
+                                cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 255-col_g, 6), 6)
+                            cv.imshow(count_end_named_window_dp, w_full_screen_cp)
+                        if not is_show_bigger_time:
+                            cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
+                            #cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.4 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (255 - col_b, 255 - col_g, 255 - col_r), 5)
+                            cv.putText(w_full_screen, rest_time_str, (int(0.3 * full_sc_width), int(0.4 * full_sc_height) + rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255 - col_r), 5)
+                        else:
+                            cv.putText(w_full_screen, rest_time_str, (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
+                        cv.imshow(count_end_named_window, w_full_screen)
+                        # 51 serial
+                        # here send two line, one line is the time: one line is the rest:
+                        if is_open_serial:
+                            mes_ls = [rest_hours, rest_minutes, rest_seconds] + list(map(int, time.strftime("%H:%M:%S").split(":")))
+                            mes_send = lsToHexLs(mes_ls, "03")
+                            ser.write(mes_send)
+                        #
+                        # is_shine_screen = False, set the inti_wt to 0
+                        if not is_shine_screen:
+                            init_wt = 0
+                        key_val_5 = cv.waitKey(500)
+                        if key_val_5 in [ord(' '), ord('c'), ord('q'), ord('e')]:
+                            break
+                        if init_wt == 1:
+                            n -= 0.2
+                        else:
+                            n += 1
         # here destroy the count_end_named_window, this is very important
         if is_count_end:
             cv.destroyWindow(count_end_named_window)

@@ -1,0 +1,27 @@
+==============================
+2023-3-3  Fri.     ARRAGEMENT 
+==============================
+# morning: [4 * task]
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. read the patent and commit the patent; # 40 min
+
+# afternoon: [4 * task]
+[Y]t. recify the patent again. # 20 min
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. typing 15 minuts. # 15 min
+
+# evening: [3 * task]
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. make the conclusion and review. # 20 min
+--------------------------------------------------------------------------------
+tomorrow's arragement:
+# morning 4 * task:
+t. write the paper
+t. write the paper
+t. write the paper
+t. write the paper
+--------------------------------------------------------------------------------

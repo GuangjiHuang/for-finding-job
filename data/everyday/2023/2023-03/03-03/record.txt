@@ -1,0 +1,57 @@
+==============================
+2023-3-3  Fri.     RECORD 
+==============================
+
+07:44-08:29      45 mins
+R1. write the paper; 1)put the image to the paper.
+-> 99%. Do the good job, I think, do well done, guy!
+
+08:29-08:44     15 mins  ---------- free ----------
+08:44-09:29      45 mins
+R2. write the paper;
+-> 95%. Do the good job, Go ahead.
+
+09:29-09:48     19 mins  ---------- free ----------
+09:48-10:33      45 mins
+R3. write the paper; 1)画好那个流程图；2）关于数据处理的一些图片，继续完善。
+-> 90%. Still need to more quicker.
+
+10:33-10:47     14 mins  ---------- free ----------
+10:47-11:27      40 mins
+R4. read the patent and commit the patent;
+-> 90%. Still do the good job.
+
+11:27-14:29     3.0 hours ---------- free ----------
+14:29-14:49      20 mins
+R5. recify the patent again.
+-> 100%. Do the good job, that is ok.
+
+14:49-15:07     18 mins  ---------- free ----------
+15:07-15:52      45 mins
+R6. write the paper; 1)扶梯数据集的数据增强； 2）去运动模糊；代码跑出来，弄好。
+-> 90%. Just finish part of the paper. Still need to use the deblur image.
+
+15:52-16:10     18 mins  ---------- free ----------
+16:10-16:55      45 mins
+R7. write the paper;
+-> 90%. I think that is ok. Do the good job.
+
+16:55-17:14     19 mins  ---------- free ----------
+17:14-17:29      15 mins
+R8. typing 15 minuts.
+-> 80%. Not very good.
+
+17:29-19:59     2.5 hours ---------- free ----------
+19:59-20:44      45 mins
+R9. write the paper; copy paste 进行resize。
+-> 90%. Too slow to do that.
+
+20:44-21:00     16 mins  ---------- free ----------
+21:00-21:45      45 mins
+R10. write the paper;
+->  90%. Just finish part of the code.
+
+21:45-23:01     1.3 hours ---------- free ----------
+23:01-23:21      20 mins
+R11. make the conclusion and review.
+-> 90%. I think that is very good job.
