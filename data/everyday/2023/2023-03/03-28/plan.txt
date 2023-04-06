@@ -1,0 +1,18 @@
+==============================
+2023-3-28  Tue.     ARRAGEMENT 
+==============================
+# morning: 4 * task
+[Y]t. write the paper; 3rd
+[Y]t. write the paper; 3rd
+[Y]t. write the paper; 2nd
+
+# afternoon: 4 * task
+[Y]t. write the paper; 3rd
+[Y]t. write the paper; 3rd
+[Y]t. write the paper; 2nd
+[Y]t. write the paper; 3rd
+
+# evening: 4 * task
+[Y]t. write the paper; 2nd
+[Y]t. write the paper; 5th
+t. review and make the tomorrow's plan. # 20 min

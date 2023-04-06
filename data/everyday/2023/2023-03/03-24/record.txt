@@ -1,0 +1,57 @@
+==============================
+2023-3-24  Fri.     RECORD 
+==============================
+
+07:49-08:34      45 mins
+R1. write the paper; prune 1) the persudo code of the prune.
+-> 90%. 1) persudo code. almost finish, but cost me lots of time. Very Slow.
+
+08:34-08:49     15 mins  ---------- free ----------
+08:49-09:34      45 mins
+R2. write the paper; tracking: 1)确定多目标跟踪部分应该怎样写；2）匹配部分
+-> 90%. 1) make clear of the outline; 2) try to write the matrix weight. 3) maybe ok.
+
+09:34-09:57     23 mins  ---------- free ----------
+09:57-10:42      45 mins
+R3. write the paper; prune; 1) pseudo code, finish; 2) backbone and the head prune part, maybe draw the figure.
+-> 90%. 1)finish the pseudo code; 2) thinking about how to write the prune structure before training.
+
+10:42-11:00     18 mins  ---------- free ----------
+11:00-11:28      28 mins
+R4. play the 51MCU. 1) fix the bug that: -> can not show the live time when count down; -> real time renew the weekday.
+-> 90%. fix the bug, ok. Do well done.
+
+11:28-14:13     2.8 hours ---------- free ----------
+14:13-14:23      10 mins
+R5. typing 10 minutes.
+-> 90%. Not very good. error rate is high.
+
+14:23-14:30      7 mins  ---------- free ----------
+14:30-15:15      45 mins
+R6. write the paper; shield 1) shield reason; 2) loss improvement.
+-> 89%. 1) re see the document of the replusion loss, 2) think of how to change the replusion loss now.
+
+15:15-15:30     15 mins  ---------- free ----------
+15:30-16:15      45 mins
+R7. write the paper; tracking: 1) KM matrix weights value, write it.
+-> 90%. 1) write the KM matrix, that is good.
+
+16:15-16:40     25 mins  ---------- free ----------
+16:40-17:25      45 mins
+R8. write the paper; shield 1) loss; 2) shield reason analysize 
+-> 90%. 1) make clear the loss. but still not very clear. How to do that.
+
+17:25-19:30     2.1 hours ---------- free ----------
+19:30-20:15      45 mins
+R9. write the paper; shield 1) continue to finish the shield.
+-> 80%. 1) just draw the figure of the DIoU; 2) too slow.
+
+20:15-20:45     30 mins  ---------- free ----------
+20:45-21:30      45 mins
+R10. write the paper; tracking 20
+-> 60%. just try to draw the figure.
+
+21:30-23:08     1.6 hours ---------- free ----------
+23:08-23:28      20 mins
+R11. review and then make the  plan of the tomorrow.
+-> 90%. Finsihed. Tomorrow focus to the shield part's content, You should more quick.

@@ -1,0 +1,20 @@
+==============================
+2023-4-1  Sat.     ARRAGEMENT 
+==============================
+# morning: 3 * task
+[Y]t. make the plan of today. # 15 min
+[Y]t. write the paper; hardware: 
+[Y]t. write the paper; hardware
+[Y]t. write the paper; software:
+
+# afternoon: 4 * task
+[X]t. write the paper; software:
+[X]t. write the paper; software:
+[X]t. write the paper; gui 
+[Y]t. write the paper; software
+
+# evening: 4 * task
+[Y]t. write the paper; software # 30 min
+[Y]t. write the paper; software
+[Y]t. write the paper; gui 
+t. review and then make the plan of tomorrow; # 20 min

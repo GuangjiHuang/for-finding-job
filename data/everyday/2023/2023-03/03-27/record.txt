@@ -1,0 +1,62 @@
+==============================
+2023-3-27  Mon.     RECORD 
+==============================
+
+08:26-09:11      45 mins
+R1. write the paper. 3rd: loss.
+-> 90%. 1) almost finish the loss part. I think that is ok. Do the good job.
+
+09:11-09:24     13 mins  ---------- free ----------
+09:24-10:09      45 mins
+R2. write the paper; 2nd: tracker's weight matrix and the prune.
+-> 90%. 1) finish the weight part. 2) a little prune weight. Still need to be continued.
+
+10:09-10:23     14 mins  ---------- free ----------
+10:23-11:08      45 mins
+R3. write the paper; 3rd: select the shield figure.
+-> 90%. 1) just finish the program. 2) I think that is ok. Do the good job. 
+
+11:08-11:46     38 mins  ---------- free ----------
+11:46-11:56      10 mins
+R4. typing 10 minutes.
+-> 90%. Not very good. A bit little slow.
+
+
+11:56-14:31     2.6 hours ---------- free ----------
+14:31-15:16      45 mins
+R5. write the paper; 3rd: 1) select the shield figure; 2) adaptive nms.
+-> 60%. 1) just finish selecting the figure of the back and the front. No time to write the adatpive nms part.
+
+15:16-15:34     18 mins  ---------- free ----------
+15:34-16:19      45 mins
+R6. write the paper; 2nd: tracker's prune matrix.
+-> 90%. 1) draw the figure; 2) write the part of the content; 3) occure the error when copy the formula from the mathtype to the word.
+
+16:19-16:40     21 mins  ---------- free ----------
+16:40-17:25      45 mins
+R7. write the paper; 5th: read the zhaoyi's paper of the chaphter 5.
+-> 90%. 1) read the zhaoyi's chapther 5; 2) copy the tempalte of the chapther 5, and the outline.
+
+17:25-18:42     1.3 hours ---------- free ----------
+18:42-18:52      10 mins
+R8. typing 10 minutes.
+-> 90%. do the good job. 91WPM, the best.
+
+18:52-18:53      1 mins  ---------- free ----------
+18:53-19:38      45 mins
+R9. write the paper; 2nd: draw the faster R-CNN's figure;
+
+19:38-20:01     23 mins  ---------- free ----------
+20:01-20:46      45 mins
+R10. write the paper; 3rd: adaptive nms
+-> 90%. 1) just thinking how to creat the formula of the adaptive nms.
+
+20:46-21:03     17 mins  ---------- free ----------
+21:03-21:48      45 mins
+R11. write the paper; 2nd
+-> 90%. finish the weight prune of the tracking.
+
+21:48-22:10     22 mins  ---------- free ----------
+22:10-22:55      45 mins
+R12. write the paper; 3rd: 1)adaptive nms 2) the introduction of the shield situation and the solution;
+-> 90%. 1) think of the function.

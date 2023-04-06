@@ -14,3 +14,34 @@ R2. write the paper; 1) the confidence part;  2) the sheild part, to be continue
 09:55-10:08     13 mins  ---------- free ----------
 10:08-10:53      45 mins
 R3. write the paper; 1) continue to the shield part.
+-> 90%. 1) write the introduction of the sheild; 2) introduction of the quantative.
+
+10:53-11:22     29 mins  ---------- free ----------
+11:22-11:29       7 mins
+R4. typing 7 minutes.
+-> 90%. Do the good job.
+
+11:29-14:35     3.1 hours ---------- free ----------
+14:35-15:20      45 mins
+R5. write the paper; 1) continue to write the sheild part, you need to write the paper more quickly. 
+-> 90%. 1) write the most content of the sheild; 2) the experiment's outline; 3) do the good job.
+
+15:20-15:34     14 mins  ---------- free ----------
+15:34-15:53      19 mins
+R6. modify the 51 MCU, add the progress bar.
+-> 90%. 1) finish part of it. But still need to test, so I interrupt it.
+
+15:53-17:14     1.4 hours ---------- free ----------
+17:14-17:31      17 mins
+R7. write the paper; write the quantity part.
+-> 90%. just write a little.
+
+17:31-19:29     2.0 hours ---------- free ----------
+19:29-20:14      45 mins
+R8. write the paper;
+-> 90%. 1) just read the paper of the quantity. 2) understand most part of it.
+
+20:14-20:28     14 mins  ---------- free ----------
+20:28-20:58      30 mins
+R9. play the MCU51. 1) add the function to test the beep.
+-> 80%. Just finish part of it. 1) add the beep test module.

@@ -20,7 +20,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 print(__file__)
 
 def progress(img_h, img_w, p_h, t_toal, t_left):
-    img = 66 * np.ones((img_h, img_w, 3), np.uint8)
+    img = 65 * np.ones((img_h, img_w, 3), np.uint8)
     # the progress width and the height
     if p_h > img_h:
         p_h = img_h
@@ -214,6 +214,8 @@ def lsToHexLs(ls, head):
     #head = "11 "
     tail = " 0d 0a"
     hex_ls = list()
+    if len(ls) == 0:
+        return bytes.fromhex(head + tail)
     for i in ls:
         hex_i = hex(i)[2:]
         # check the len of the hex_i
@@ -226,9 +228,13 @@ def lsToHexLs(ls, head):
     body = " ".join(hex_ls)
     return bytes.fromhex(head + body + tail)
 
-def liveTimeHex(head):
-    t_str = time.strftime("%y-%m-%d-%H-%M-%S")
-    t_ls = list(map(int, t_str.split("-")))
+def liveTimeHex(head, _51MCU_serial_delay_sec):
+    tm = time.localtime();
+    year, mon, day, wday = tm.tm_year, tm.tm_mon, tm.tm_mday, tm.tm_wday
+    hour, minute, sec = tm.tm_hour, tm.tm_min, tm.tm_sec
+    #t_str = time.strftime("%y-%m-%d-%H-%M-%S", time.localtime(time.time() + _51MCU_serial_delay_sec))
+    #t_ls = list(map(int, t_str.split("-")))
+    t_ls = [year%1000, mon, day, wday, hour, minute, sec]
     return lsToHexLs(t_ls, head)
 
 # --------------------------------------------------
@@ -319,9 +325,14 @@ for c_id in video_id_ls:
         break
 
 # try to open the 51 serial
+_51MCU_serial_delay_sec = 2
 is_open_serial = False
-port_name = "COM4"
-fre = 9600
+port_name = "COM6"
+#fre = 9600 # 0xfa
+#fre = 14400 # 0xfc
+fre = 4800 # 0xf4
+fre = 1200 # 0xE8
+fre = 600 # 0xA0
 time_out = 5
 try:
     ser = serial.Serial(port_name, fre, timeout=time_out)
@@ -398,6 +409,11 @@ cv.setWindowProperty(window_name, cv.WND_PROP_TOPMOST, 1)
 bg_change_flag = True
 has_thread = False
 while (True):
+    # 51 serial
+    # here send two line: one line is the: time, one line is the date
+    if is_open_serial:
+        mes_live_time = liveTimeHex("53", _51MCU_serial_delay_sec)
+        ser.write(mes_live_time)
     # add the time_check_count and then check if you have the plan
     time_check_count += 1
     if time_check_count == time_check_threshold:
@@ -433,15 +449,15 @@ while (True):
             if is_debug:
                 print("change to the time!")
             cv.moveWindow(window_name, int(full_sc_width-30-width*0.6), int(full_sc_height-70-height*0.1))
+            if is_open_serial:
+                # just use the small screen, no need to use the screen
+                # move the screen out of the display screen, inorder to hide it.
+                cv.moveWindow(window_name, 2*full_sc_width, full_sc_height)
+                #pass
             bg_change_flag = False
         img = 166 * np.ones((int(height*0.1), int(width * 0.6), 3), np.uint8)
 # put the text in the image
     text = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    # 51 serial
-    # here send two line: one line is the: time, one line is the date
-    if is_open_serial:
-        mes_live_time = liveTimeHex("00")
-        ser.write(mes_live_time)
     #
     if is_live:
         cv.putText(img, text, (int(0.4*width), 30), cv.FONT_HERSHEY_COMPLEX, 1, (0, 255, 255), 2)
@@ -714,7 +730,7 @@ while (True):
         pipeline_dict.clear()
         # switch the ser connection to the 51 MCU
         if is_open_serial:
-            m_send_ms = lsToHexLs([0], "04")
+            m_send_ms = lsToHexLs([], "a7")
             for _ in range(4):
                 ser.write(m_send_ms) # just show the default part
                 time.sleep(1)
@@ -728,6 +744,40 @@ while (True):
                     print(f"Open the 51 serial: {port_name}")
             except:
                 print(f"Can not open the 51 serial: {port_name}")
+    elif is_open_serial and len(pipeline_dict)>0 and list(pipeline_dict.keys())[0].startswith("T"):
+        args = list(pipeline_dict.keys())[0].strip()
+        # for example: gui T3, get the 3
+        task_number = 1
+        if args[1:].isdigit():
+            task_number = int(args[1:])
+            task_number = min(99, task_number)
+        for _ in range(6):
+            ser.write(lsToHexLs([task_number], "e6"))
+            time.sleep(1)
+        print(f"set the 51MCU serial task number:  {task_number}")
+        pipeline_dict.clear()
+        #args_ls = args.strip().split(" ")
+    # for test the MCU51's beep
+    # some bug,  c++'s gui command will not write all the args to the pipeline file!
+    elif is_open_serial and len(pipeline_dict)>0 and list(pipeline_dict.keys())[0].startswith("B"):
+        args = list(pipeline_dict.keys())[0]
+        args_ls = args.strip()[1:].split(",")
+        b_du_1 = 100
+        b_du_2 = 10
+        b_fre = 5
+        try: 
+            b_du_1 = int(args_ls[0])
+            b_du_2 = int(args_ls[1])
+            b_fre = int(args_ls[2])
+        except:
+            pass
+        print(args_ls)
+        pipeline_dict.clear()
+        # switch the ser connection to the 51 MCU
+        print(f"test Beep: {b_du_1} {b_du_2} {b_fre}")
+        for _ in range(5):
+            ser.write(lsToHexLs([b_du_1, b_du_2, b_fre], "cd"))
+            time.sleep(1)
 
     elif key_val_0 == ord("w") or pipeline_dict.get("w", False):
         pipeline_dict.clear()
@@ -765,6 +815,7 @@ while (True):
 
 
     elif (key_val_0 in [ord(str(i)) for i in range(10)]) or (timer_mins!=0) or auto_work_time:
+
         # if is live, do nothing
         if is_live or is_save:
             # solve the bug that can not save the video
@@ -802,6 +853,11 @@ while (True):
         else:
             # move the first screen right bottom
             cv.moveWindow(window_name, full_sc_width - 30 - c_w, full_sc_height - 70 - c_h)
+        if is_open_serial:
+            # just use the small screen, no need to use the screen
+            # move the screen out of the display screen, inorder to hide it.
+            cv.moveWindow(window_name, 2*full_sc_width, full_sc_height)
+            pass
         # the end flag
         is_count_end = False
         # here set the flag that mark if you need to record
@@ -836,14 +892,59 @@ while (True):
             else:
                 os.system(f"{editor} {record_path}") # no matter how, show the editor
         #
+        s_total_min_digit = int(count_tm_copy//60)
         while count_tm>0:
             img_bg = np.zeros((c_h, c_w, 3), np.uint8)
             min_digit = int(count_tm // 60)
             sec_digit = int(count_tm - 60 * min_digit)
             # 51 serial
             if is_open_serial:
-                count_down_mes = lsToHexLs([min_digit//60, min_digit-(min_digit//60*60), sec_digit], "01")
+                s_count_tm = count_tm-_51MCU_serial_delay_sec+2
+                if s_count_tm < 0:
+                    s_count_tm = 0
+                s_hour_digit = int(s_count_tm//3600)
+                s_min_digit = int((s_count_tm-s_hour_digit*3600) // 60)
+                s_sec_digit = int(s_count_tm % 60)
+
+                #print(s_hour_digit, s_min_digit, s_sec_digit)
+                # get the current time
+                tm = time.localtime()
+                cur_hour, cur_min, cur_sec = tm.tm_hour, tm.tm_min, tm.tm_sec
+                #print(cur_hour, cur_min, cur_sec)
+                count_down_mes = lsToHexLs([s_hour_digit, s_min_digit, s_sec_digit, s_total_min_digit, cur_hour, cur_min, cur_sec], "36")
                 ser.write(count_down_mes)
+            # when in countdown, you can shutdown the serial
+            if pipeline_dict.get("M", False):
+                pipeline_dict.clear()
+                # switch the ser connection to the 51 MCU
+                if is_open_serial:
+                    m_send_ms = lsToHexLs([], "a7")
+                    for _ in range(4):
+                        ser.write(m_send_ms) # just show the default part
+                        time.sleep(1)
+                    ser.close()
+                    is_open_serial = False
+                else:
+                    try:
+                        ser = serial.Serial(port_name, fre, timeout=time_out)
+                        if ser.isOpen():
+                            is_open_serial = True
+                            print(f"Open the 51 serial: {port_name}")
+                    except:
+                        print(f"Can not open the 51 serial: {port_name}")
+            # test if you need to set the task number
+            if is_open_serial and len(pipeline_dict)>0 and list(pipeline_dict.keys())[0].startswith("T"):
+                args = list(pipeline_dict.keys())[0].strip()
+                # for example: gui T3, get the 3
+                task_number = 1
+                if args[1:].isdigit():
+                    task_number = int(args[1:])
+                    task_number = min(99, task_number)
+                for _ in range(3):
+                    ser.write(lsToHexLs([task_number], "e6"))
+                    time.sleep(1)
+                #print(f"set the 51MCU serial task number:  {task_number}")
+                pipeline_dict.clear()
             #
             count_down_show = f"{min_digit:0>2} : {sec_digit:0>2}"
             cv.putText(img_bg, count_down_show, (int(0.3*c_w), int(0.5*c_h)), cv.FONT_HERSHEY_COMPLEX, 1, count_down_color, 3)
@@ -851,6 +952,8 @@ while (True):
             key_val_1 = cv.waitKey(1) & 0xff
             if key_val_1 == ord('q') or pipeline_dict.get("q", False):
                 pipeline_dict.clear()
+                # move the window to the left, easy to see
+                cv.moveWindow(window_name, full_sc_width - 30 - c_w, full_sc_height - 70 - c_h)
                 print("quit the countdown!")
                 # set the quit flag
                 quit_flag = True
@@ -1024,11 +1127,13 @@ while (True):
                     scen_cap.release()
             rest_time_begin = time.time()
             rest_time_end_progress = rest_time_begin + count
+            progress_number_for_51_MCU = 0
             while True:
                 # 51 serial
                 # here show "Have a break!"
                 if is_open_serial:
-                    mes_send_break = lsToHexLs([0], "02")
+                    #print(progress_number_for_51_MCU)
+                    mes_send_break = lsToHexLs([progress_number_for_51_MCU], "99")
                     ser.write(mes_send_break)
                 # show the full red screen
                 if is_show_random:
@@ -1054,6 +1159,9 @@ while (True):
                 key_val_3 = cv.waitKey(1000) & 0xff
                 #count -= 1
                 #if key_val_3 == ord('q') or count<0:
+                progress_number_for_51_MCU = 15 - round((rest_time_end_progress-time.time()-3) / count * 15)
+                if progress_number_for_51_MCU > 15:
+                    progress_number_for_51_MCU = 15
                 if key_val_3 == ord('q') or rest_time_end_progress-time.time() < 0:
                     break
         # indent to solve the bug <3-15, hgj>
@@ -1117,8 +1225,18 @@ while (True):
                         rest_hours = int(rest_time_gap // 3600)
                         rest_minutes = int((rest_time_gap - rest_hours * 3600) // 60)
                         rest_seconds = int(rest_time_gap - rest_hours * 3600 - rest_minutes * 60)
+                        # 51 serial
+                        # here send two line, one line is the time: one line is the rest:
+                        if is_open_serial:
+                            s_rest_time_gap = _51MCU_serial_delay_sec + rest_time_gap
+                            s_rest_hours = int(s_rest_time_gap // 3600)
+                            s_rest_minutes = int((s_rest_time_gap - s_rest_hours * 3600) // 60)
+                            s_rest_seconds = int(s_rest_time_gap % 60)
+                            mes_ls = [s_rest_hours, s_rest_minutes, s_rest_seconds] + list(map(int, time.strftime("%H:%M:%S", time.localtime(time.time()+_51MCU_serial_delay_sec)).split(":")))
+                            mes_send = lsToHexLs(mes_ls, "dd")
+                            ser.write(mes_send)
                         #
-                        rest_time_str = f"REST: {rest_hours:02}:{rest_minutes:02}:{rest_seconds:02}"
+                        rest_time_str = f"MOYU: {rest_hours:02}:{rest_minutes:02}:{rest_seconds:02}"
                         rest_time_offset = 300
                         is_show_bigger_time = True
                         if is_use_duplicate_window:
@@ -1129,7 +1247,7 @@ while (True):
                                 cv.putText(w_full_screen_cp, rest_time_str, (int(0.3*full_sc_width), int(0.4*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 4, (6, 6, 255-col_r), 5)
                             else:
                                 #cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
-                                cv.putText(w_full_screen_cp, time.strftime("TIME: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 255-col_g, 6), 6)
+                                cv.putText(w_full_screen_cp, time.strftime("LIFE: %H:%M:%S"), (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 255-col_g, 6), 6)
                             cv.imshow(count_end_named_window_dp, w_full_screen_cp)
                         if not is_show_bigger_time:
                             cv.putText(w_full_screen, "Need Working!", (int(0.3*full_sc_width), int(0.4*full_sc_height)), cv.FONT_HERSHEY_COMPLEX, 3, (255-col_b, 255-col_g, 255-col_r), 5)
@@ -1138,12 +1256,6 @@ while (True):
                         else:
                             cv.putText(w_full_screen, rest_time_str, (int(0.1*full_sc_width), int(0.3*full_sc_height)+rest_time_offset), cv.FONT_HERSHEY_COMPLEX, 6, (6, 6, 255-col_r), 6)
                         cv.imshow(count_end_named_window, w_full_screen)
-                        # 51 serial
-                        # here send two line, one line is the time: one line is the rest:
-                        if is_open_serial:
-                            mes_ls = [rest_hours, rest_minutes, rest_seconds] + list(map(int, time.strftime("%H:%M:%S").split(":")))
-                            mes_send = lsToHexLs(mes_ls, "03")
-                            ser.write(mes_send)
                         #
                         # is_shine_screen = False, set the inti_wt to 0
                         if not is_shine_screen:

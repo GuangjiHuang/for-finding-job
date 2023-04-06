@@ -1,0 +1,58 @@
+==============================
+2023-4-3  Mon.     RECORD 
+==============================
+
+08:32-08:52      20 mins
+R1. make the plan of today.
+-> 90%. ok, make the detailed plans and the today's arragements. Do the good job.
+
+08:52-08:55     3 mins  ---------- free ----------
+08:55-09:40      45 mins
+R2. read paper and write the outline;
+-> 90%. Maybe ok; 1) write the outline; 2) make it three part.
+
+09:40-09:52     12 mins  ---------- free ----------
+09:52-10:37      45 mins
+R3. read paper and write the outline;
+-> 90%. 1) select the data; 2) plan to change the abnormal's class: 
+
+10:37-10:45      8 mins  ---------- free ----------
+10:45-11:30      45 mins
+R4. select the data, and try to run, if we can get the result;
+-> 90%. 1) select the data of the video, and then run the video test. Ok.
+
+
+11:30-14:32     3.0 hours ---------- free ----------
+14:32-15:17      45 mins
+R5. do experiment; 1) read code, learn how to save the result. the demo code.
+-> 90%. 1) see the code of the demo; not understand the dist; 2) try to use the pycharm to remote debug.
+
+15:17-15:34     17 mins  ---------- free ----------
+15:34-16:19      45 mins
+R6. read paper, write outline; 1) read the liguang's skeleton's dist. 2) solve the problem that using the pycharm to do the remote debug.
+-> 90%. 1) read the dis of hte skelton; 2) try to configurate the pycharm with the remote funciton, but seems to fail, why so difficult?
+
+16:19-16:33     14 mins  ---------- free ----------
+16:33-17:18      45 mins
+R7. do experiment;
+-> 90%. 1) cost much time to configurating the pycharm. 2) try to run.
+
+17:18-18:55     1.6 hours ---------- free ----------
+18:55-19:40      45 mins
+R8. do experiment; 1) try to configure the data of the remote pycharm. 2) debug the code.
+-> 90%. 1) remote fail. 2) try to debug, I think that is ok. change the code now. 
+
+19:40-20:00     20 mins  ---------- free ----------
+20:00-20:45      45 mins
+R9. read paper and write the outline; 1) try to understand how to visual the pos and the class. That is very important.
+-> 90%. 1) just debug part of the code; 2) local pycharm remote seems ok!?
+
+20:45-20:56     11 mins  ---------- free ----------
+20:56-21:41      45 mins
+R10. read paper and write the ouline; 1) see the visual code; 2) finish the remote pycharm.
+-> 90%. 1) see the code, can change it maybe.
+
+21:41-21:57     16 mins  ---------- free ----------
+21:57-22:42      45 mins
+R11. read paper and write the ouline; 1) try to change the code; 2) learn to change the box's label.
+-> 90%. 1) ok.

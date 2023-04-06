@@ -1,0 +1,47 @@
+==============================
+2023-3-22  Wed.     RECORD 
+==============================
+
+08:35-09:20      45 mins
+R1. write the paper; 1) the quantity part;
+-> 90%. 1) 整理一下第三章的大纲； 2）好像是不知道要写一些什么了。
+
+09:20-09:33     13 mins  ---------- free ----------
+09:33-10:18      45 mins
+R2. write the paper; clean up the outline of the 3th chapter. Knowing that what you have to prepare next time.
+-> 90%. 1) just re clean the outline of the 3th chapter.
+
+10:18-10:35     17 mins  ---------- free ----------
+10:35-11:20      45 mins
+R3. write the paper;
+-> 90%. maybe ok.
+
+11:20-14:04     2.7 hours ---------- free ----------
+14:04-14:49      45 mins
+R4. write the paper;
+-> 90%. 1) begin to draw the yolov4's block picture.
+
+14:49-15:01     12 mins  ---------- free ----------
+15:01-15:46      45 mins
+R5. write the paper; 1) draw the yolov4's block; 2) the csp's block; 3) spp; 
+-> 80%. 1) just draw part of the figure of the yolov4's block.
+
+15:46-16:00     14 mins  ---------- free ----------
+16:00-16:45      45 mins
+R6. write the paper; 1) draw the yolov4's block; 2) draw the csp block;
+-> 90%. 1) draw the csp block.
+
+16:45-20:23     3.6 hours ---------- free ----------
+20:23-21:08      45 mins
+R7. write the paper; 1) draw the figure; 2) write the detection part.
+-> 90%. 1) just draw part of the figure.
+
+21:08-21:38     30 mins  ---------- free ----------
+21:38-22:23      45 mins
+R8. write the paper;
+-> 10%. 1) do nothing, still need to be more quick.
+
+22:23-23:16     53 mins  ---------- free ----------
+23:16-23:31      15 mins
+R9. review and then make the plan of tomorrow.
+-> 90%. 1) make the detailed plan. I think that is ok. Do the good job.

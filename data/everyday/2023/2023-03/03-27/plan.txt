@@ -1,0 +1,21 @@
+==============================
+2023-3-27  Mon.     ARRAGEMENT 
+==============================
+# morning: 3 * task
+[Y]t. write the paper; 3rd: loss
+[Y]t. write the paper; 2nd: tracker's weight matrix and the prune.
+[Y]t. write the paper; 3rd: select the shield figure.
+[Y]t. typing 10 minutes. # 10 min
+
+# afternoon: 4 * task
+[Y]t. write the paper; 3rd: 1) select the shield figure; 2) adaptive nms.
+[Y]t. write the paper; 2nd: tracker's prune matrix.
+[Y]t. write the paper; 5th: read the zhaoyi's paper of the chaphter 5.
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. write the paper; 2nd: draw the faster R-CNN's figure;
+
+# evening: 4 * task
+[Y]t. write the paper; 3rd: adaptive nms
+[Y]t. write the paper; 2nd: weight matrix prune.
+[Y]t. write the paper; 3rd: 1)adaptive nms 2) the introduction of the shield situation and the solution;
+t. review and make the plan of tomorrow. # 25 min

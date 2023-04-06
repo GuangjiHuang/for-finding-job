@@ -1,0 +1,22 @@
+==============================
+2023-3-29  Wed.     ARRAGEMENT 
+==============================
+# morning: 4 * task
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. write the paper;
+[X]t. write the paper;
+
+# afternoon: 4 * task
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. write the paper;
+[Y]t. write the paper;
+[Y]t. write the paper;
+
+# evening: 4 * task
+[Y]t. typing 10 minutes. # 10 min
+[Y]t. write the paper; 
+[Y]t. write the paper; 
+[Y]t. write the paper; 
+[Y]t. write the paper; # 40 min
+[Y]t. review and then make the plan of tomorrow; # 20 min

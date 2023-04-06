@@ -1,0 +1,37 @@
+==============================
+2023-3-25  Sat.     RECORD 
+==============================
+
+08:46-09:31      45 mins
+R1. write the paper; shield data; 1) the algorithm process; 2) the image.
+-> 90%. 1) add the table to put the image, but not generate the image now.
+
+09:31-09:44     13 mins  ---------- free ----------
+09:44-10:29      45 mins
+R2. write the paper; gen the data; continue;
+-> 90%. 1) add some figure of the shield. 2) but other is too slow.
+
+10:29-10:59     30 mins  ---------- free ----------
+10:59-11:44      45 mins
+R3. write the paper; shield data; 1) the whole data; 2) the algorithm.
+-> 90%. 1) just draw the figure. finish the figure.
+
+11:44-17:46     6.0 hours ---------- free ----------
+17:46-18:31      45 mins
+R4. write the paper; shield data 1) finish the sheild data's generation's algorithm.
+-> 90%. 1) write the algorithm of the generator. 
+
+18:31-19:16     45 mins  ---------- free ----------
+19:16-20:01      45 mins
+R5. write the paper; copy paste and the generate algorithm.
+-> 90%. data generate ok.
+
+20:01-20:37     36 mins  ---------- free ----------
+20:37-21:22      45 mins
+R6. write the paper; loss
+-> 90%. Write part of the shield loss. Need more.
+
+21:22-21:56     34 mins  ---------- free ----------
+21:56-22:41      45 mins
+R7. write the paper; loss
+-> 90%. ok.

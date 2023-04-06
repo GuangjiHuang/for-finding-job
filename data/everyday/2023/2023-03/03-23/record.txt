@@ -1,0 +1,62 @@
+==============================
+2023-3-23  Thu.     RECORD 
+==============================
+
+07:47-08:32      45 mins
+R1. write the paper; Detection: Yolo
+-> 95%. 1) write the yolo backbone; 2) the cpsdarknet53; 3) res unit; 4) draw the anchore head [part of it].
+
+08:32-08:45     13 mins  ---------- free ----------
+08:45-09:30      45 mins
+R2. write the paper; tracking: Kalman: 1) reference to the LiGuang's part.
+-> 95%. 1) 跟踪部分的引言； 2）卡尔曼滤波部分的公式；
+
+09:30-09:46     16 mins  ---------- free ----------
+09:46-10:31      45 mins
+R3. write the paper; detection: Yolo 1) draw the head; 2) draw the PANet; 3) write the content of the PANet and the yolo head.  4) the mish activation.
+-> 80%. 1) draw the head; 2) draw the PANet, just part of it.
+
+10:31-10:43     12 mins  ---------- free ----------
+10:43-11:28      45 mins
+R4. write the paper; tracking: Mossef
+-> 90%. 1) draw the Mosse process figure; 2)write part of the MOSSE's content.
+
+11:28-14:05     2.6 hours ---------- free ----------
+14:05-14:50      45 mins
+R5. write the paper; quantity: 非饱和截断
+-> 90%. 1) finish part of the quantity. 2) But the step has not been finish.
+
+14:50-15:03     13 mins  ---------- free ----------
+15:03-15:48      45 mins
+R6. write the paper; 1) yolo PANet; 2) yolo head; 3) more quick please.
+-> 90%. 1) finish the PANet; 2) part of the yolo head! 3) still need to be continued.
+
+15:48-16:01     13 mins  ---------- free ----------
+16:01-16:31      30 mins
+R7. play the MCU51 to rest 30 minutes. 1) fix the bug that in the rest time can not renew the task; 2) task display not show the 0; 3) show the live time at the last 5 minute.
+-> 90%. 1) solve the 1) 2) ; 2) not finish, some bug happen.
+
+16:31-16:41     10 mins  ---------- free ----------
+16:41-17:26      45 mins
+R8. write the paper; quantity: KL 散度 1) finish the step of compare the similarity of the p(x) and q(x).
+-> 1) write part of the content. No finish it yet! 2) need to write the persudo code for more quick.
+
+17:26-19:15     1.8 hours ---------- free ----------
+19:15-20:00      45 mins
+R9. write the paper; Detection: other network 17
+-> 90%. 1) copy the centerent; 2) copy part of the Faster R-CNN. 3) still need to more quick.
+
+20:00-20:20     20 mins  ---------- free ----------
+20:20-21:05      45 mins
+R10. write the paper; tracking: kfc 1) tracking: finish the kfc part. Need to be more quick.
+-> 90%. finish the kfc's content. But too slow.
+
+21:05-21:35     30 mins  ---------- free ----------
+21:35-22:20      45 mins
+R11. write the paper; quantity: write the persudo code of the int quantity.
+-> 90%. Just finish part of the presucode.
+
+22:20-23:12     52 mins  ---------- free ----------
+23:12-23:28      16 mins
+R12. review and then make the plan of the tomorrow.
+-> 90%. finished. Has made the plan.

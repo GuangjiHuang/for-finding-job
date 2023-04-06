@@ -1,0 +1,57 @@
+==============================
+2023-4-4  Tue.     RECORD 
+==============================
+
+07:44-08:29      45 mins
+R1. do the experiment: 1) clip the video; 2) save the different type video;
+-> 90%. 1) write the select video code; 2) select the video clip, and then save it.
+
+08:29-08:44     15 mins  ---------- free ----------
+08:44-09:29      45 mins
+R2. write the paper; chapter 4, the first part.
+-> 80%. 1) see the liguang's paper, how to write it; 2) just try to draw the figure of the camera's installation' position and the process figure, but not think clearly how to write.
+
+09:29-09:43     14 mins  ---------- free ----------
+09:43-10:28      45 mins
+R3. select the normal standing video; 2) change the code, and run, save the result.
+-> 60%. 1) some wrong, not configure good with my note computer. I don't know why? Bad.
+
+10:28-10:46     18 mins  ---------- free ----------
+10:46-11:26      40 mins
+R4. 1) configure good the pc's environment; 2) run the result;
+-> 70%. 1) make it good for the pc's enviroment; 2) but still not good for the program.
+
+11:26-14:28     3.0 hours ---------- free ----------
+14:28-15:13      45 mins
+R5. do experiment; 1) get the video result.
+-> 90%. 1) change the code, seem ok. That is good.
+
+15:13-15:28     15 mins  ---------- free ----------
+15:28-16:13      45 mins
+R6. write the paper; 1) begin from the chapter 2: -> the detection result compare. -> the tracking compare.
+-> 90%. 1) write part of the chapter 2's introduction.
+
+16:13-16:30     17 mins  ---------- free ----------
+16:30-17:15      45 mins
+R7. 1) finish the chapter2's introduction; 2) think of how to do the experiment of the tracking; 3) think of the result of the comparison of the data dealing and the detection module.
+-> 90%. 1) just write part of it. 2) make it clear how to finish the chapther 2.
+
+17:15-19:28     2.2 hours ---------- free ----------
+19:28-20:13      45 mins
+R8. do experiment; 1) get all the results.
+-> 90%. 1) copy the code to the scut_3080; 2) try to run the code.
+
+20:13-20:27     14 mins  ---------- free ----------
+20:27-21:12      45 mins
+R9. chapter 2: -> detection result; -> data result; 
+-> 80%. Too slow, still need to more quick. Come on.
+
+21:12-21:41     29 mins  ---------- free ----------
+21:41-22:26      45 mins
+R10. 1) continue write the paper; 2) see the result of the experiment.
+-> 80%. 1) make the framework. 2) still need to make the .
+
+22:26-22:47     21 mins  ---------- free ----------
+22:47-23:32      45 mins
+R11. continue to write the paper;
+-> 80%. 1) just write part of te paper.
