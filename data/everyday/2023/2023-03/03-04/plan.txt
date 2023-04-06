@@ -1,8 +1,0 @@
-==============================
-2023-3-4  Sat.     ARRAGEMENT 
-==============================
-# morning: 4 * task
-[Y]t. write the paper
-[Y]t. write the paper
-[Y]t. write the paper
-t. write the paper
